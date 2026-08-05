@@ -42,7 +42,13 @@ export default [
                 {
                     "code": 100
                 }
-            ]
+            ],
+            "no-multiple-empty-lines": [
+                "warn",
+                {
+                    "max": 1
+                }
+            ],
         }
     }
 ];

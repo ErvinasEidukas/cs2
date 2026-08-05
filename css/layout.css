@@ -1,0 +1,43 @@
+body {
+    background: #1b1b1b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #252525;
+    border-bottom: 2px solid #333;
+    gap: 15px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 320px;
+    min-height: calc(100vh - 120px);
+}
+
+#map-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+#info-panel {
+    background: #242424;
+    border-left: 2px solid #333;
+    padding: 25px;
+}
+
+#info-panel h2 {
+    margin-bottom: 15px;
+}
+
+#area-name {
+    margin-bottom: 20px;
+}

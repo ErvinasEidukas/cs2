@@ -1,0 +1,40 @@
+#maps-menu {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#editor-controls {
+    display: flex;
+    gap: 10px;
+}
+
+#maps-menu button,
+#editor-controls button {
+    height: 35px;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#maps-menu button {
+    width: 120px;
+}
+
+#editor-controls button {
+    width: 140px;
+}
+
+#maps-menu button:hover,
+#editor-controls button:hover {
+    background: #444;
+}
+
+#maps-menu button:active,
+#editor-controls button:active {
+    background: #555;
+}

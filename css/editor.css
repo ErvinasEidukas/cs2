@@ -1,0 +1,21 @@
+.map-overlay.drawing {
+    cursor: crosshair;
+}
+
+.draw-point {
+    fill: red;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.draw-line {
+    stroke: red;
+    stroke-width: 3;
+    fill: none;
+}
+
+.drawing-polygon {
+    fill: rgb(255 0 0 / 25%);
+    stroke: red;
+    stroke-width: 3;
+}
