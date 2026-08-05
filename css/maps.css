@@ -40,3 +40,7 @@
     stroke: gold;
     stroke-width: 4;
 }
+
+.map-overlay.drawing .callout {
+    pointer-events:none;
+}

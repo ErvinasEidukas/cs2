@@ -1,3 +1,5 @@
+import { setCalloutsEnabled } from "./callouts.js"
+
 let drawing = false
 let points = []
 
@@ -14,6 +16,8 @@ export function setupDrawing() {
         if (svg) {
             svg.classList.add("drawing")
         }
+
+        setCalloutsEnabled(false)
 
         console.log("Drawing mode enabled")
     })
@@ -33,6 +37,8 @@ export function setupDrawing() {
         if (svg) {
             svg.classList.remove("drawing")
         }
+
+        setCalloutsEnabled(true)
 
         drawing = false
     })

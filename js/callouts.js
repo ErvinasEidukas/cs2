@@ -1,4 +1,14 @@
 let mapData = {}
+let calloutsEnabled = true
+
+export function setCalloutsEnabled(value) {
+    calloutsEnabled = value
+
+    document.querySelectorAll(".callout")
+        .forEach(callout => {
+            callout.style.pointerEvents = value ? "auto" : "none"
+        })
+}
 
 export function createCallouts(data) {
     mapData = data
@@ -41,6 +51,10 @@ export function createCallouts(data) {
         shape.dataset.id = id
 
         shape.addEventListener("click", () => {
+            if (!calloutsEnabled) {
+                return
+            }
+
             selectCallout(shape)
             showInfo(id)
         })
