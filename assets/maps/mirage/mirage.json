@@ -2,6 +2,111 @@
     "map": "Mirage",
 
     "areas": {
+        "tiket": {
+            "name": "Tiket",
+            "shape": {
+                "type": "polygon",
+                "points": "467,826 414,849 465,870 478,851"
+            }
+        },
+        "a-default": {
+            "name": "A Default",
+            "shape": {
+                "type": "polygon",
+                "points": "577,774 582,794 620,778 606,759"
+            }
+        },
+        "fireBox": {
+            "name": "Fire Box",
+            "shape": {
+                "type": "polygon",
+                "points": "500,756 484,767 499,797 555,769 545,754 514,776"
+            }
+        },
+        "sandwich": {
+            "name": "Sandwich / Между",
+            "shape": {
+                "type": "polygon",
+                "points": "570,641 595,643 595,669 570,669"
+            }
+        },
+        "tetris": {
+            "name": "Tetris",
+            "shape": {
+                "type": "polygon",
+                "points": "611,623 611,659 644,660 643,622"
+            }
+        },
+        "apex": {
+            "name": "Apex",
+            "shape": {
+                "type": "polygon",
+                "points": "680,668 660,669 660,686 683,689"
+            }
+        },
+        "palas": {
+            "name": "Palas",
+            "shape": {
+                "type": "polygon",
+                "points": "644,778 668,780 669,795 697,796 694,819 646,817"
+            }
+        },
+        "wood": {
+            "name": "Wood/Underwood / Ковры?",
+            "shape": {
+                "type": "polygon",
+                "points": "637,710 656,709 656,721 678,723 678,754 664,754 666,781 633,780"
+            }
+        },
+        "pit": {
+            "name": "Pit",
+            "shape": {
+                "type": "polygon",
+                "points": "739,645 743,686 796,690 797,648"
+            }
+        },
+        "second-floor": {
+            "name": "Second Floor",
+            "shape": {
+                "type": "polygon",
+                "points": "796,580 798,686 811,687 813,596 877,596 877,582"
+            }
+        },
+        "top-mid": {
+            "name": "Top mid",
+            "shape": {
+                "type": "polygon",
+                "points": "678,355 749,361 751,436 669,442"
+            }
+        },
+        "white-box": {
+            "name": "White Box",
+            "shape": {
+                "type": "polygon",
+                "points": "719,452 720,494 749,497 748,451"
+            }
+        },
+        "fridge": {
+            "name": "Fridge",
+            "shape": {
+                "type": "polygon",
+                "points": "673,517 693,518 692,531 674,531"
+            }
+        },
+        "chair": {
+            "name": "Chair",
+            "shape": {
+                "type": "polygon",
+                "points": "569,503 569,529 591,530 591,504"
+            }
+        },
+        "tv": {
+            "name": "TV",
+            "shape": {
+                "type": "polygon",
+                "points": "675,165 675,186 776,191 780,160"
+            }
+        },
         "connector": {
             "name": "Connector",
             "description": "Connects Mid to A site.",
@@ -16,6 +121,97 @@
             "shape": {
                 "type": "polygon",
                 "points": "391,429 423,430 424,497 390,493"
+            }
+        },
+        "ladder-room": {
+            "name":"Ladder room",
+            "shape":{
+                "type":"polygon",
+                "points":"400,351 456,352 459,384 420,390 420,422 401,424"
+            }
+        },
+        "jungle": {
+            "name":"Jungle",
+            "shape":{
+                "type":"polygon",
+                "points":"386,577 419,579 419,637 404,639 404,649 387,650"
+            }
+        },
+        "stairs": {
+            "name":"Stairs",
+            "shape":{
+                "type":"polygon",
+                "points":"537,599 536,644 547,645 548,599"
+            }
+        },
+        "bench": {
+            "name":"Bench",
+            "shape":{
+                "type":"polygon",
+                "points":"459,489 459,499 483,500 483,490"
+            }
+        },
+        "edvard": {
+            "name":"Edvard",
+            "shape":{
+                "type":"polygon",
+                "points":"377,230 376,252 399,253 399,233"
+            }
+        },
+        "b-default": {
+            "name":"B Default",
+            "shape":{
+                "type":"polygon",
+                "points":"232,253 234,288 268,293 272,274 249,273 249,255"
+            }
+        },
+        "simple": {
+            "name":"Simple",
+            "shape":{
+                "type":"polygon",
+                "points":"193,293 191,332 177,332 177,296"
+            }
+        },
+        "forest": {
+            "name":"Forest",
+            "shape":{
+                "type":"polygon",
+                "points":"148,268 148,291 130,291 129,266"
+            }
+        },
+        "jaile": {
+            "name":"Jaile",
+            "shape":{
+                "type":"polygon",
+                "points":"111,234 112,252 150,250 149,230"
+            }
+        },
+        "car": {
+            "name":"Car",
+            "shape":{
+                "type":"polygon",
+                "points":"171,175 161,225 218,230 222,173"
+            }
+        },
+        "b-apps": {
+            "name":"B Apps",
+            "shape":{
+                "type":"polygon",
+                "points":"401,178 404,265 447,271 447,178"
+            }
+        },
+        "kitchen": {
+            "name":"Kitchen",
+            "shape":{
+                "type":"polygon",
+                "points":"168,398 168,479 336,488 333,442 285,440 269,402 223,399 223,433 189,436 188,399"
+            }
+        },
+        "rocket": {
+            "name":"Rocket",
+            "shape":{
+                "type":"polygon",
+                "points":"184,246 182,265 195,266 194,250"
             }
         },
         "underpass": {

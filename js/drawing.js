@@ -22,13 +22,22 @@ export function setupDrawing() {
         console.log("Drawing mode enabled")
     })
 
-    finishButton.addEventListener("click", () => {
+    finishButton.addEventListener("click", async () => {
         if (points.length < 3) {
             console.log("Need at least 3 points")
             return
         }
 
-        console.log(points.join(" "))
+        const polygonData = points.join(" ")
+
+        console.log(polygonData)
+
+        try {
+            await navigator.clipboard.writeText(polygonData)
+            console.log("Copied to clipboard")
+        } catch (error) {
+            console.error("Clipboard error:", error)
+        }
 
         clearDrawing()
 
