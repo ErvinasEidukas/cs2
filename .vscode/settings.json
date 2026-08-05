@@ -1,0 +1,16 @@
+{
+    "eslint.validate": [
+        "javascript"
+    ],
+
+    "stylelint.validate": [
+        "css"
+    ],
+
+    "htmlhint.enable": true,
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.stylelint": "explicit"
+    }
+}

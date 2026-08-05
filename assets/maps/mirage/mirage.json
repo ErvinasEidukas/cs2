@@ -1,0 +1,30 @@
+{
+    "map": "Mirage",
+
+    "areas": {
+        "connector": {
+            "name": "Connector",
+            "description": "Connects Mid to A site.",
+            "shape": {
+                "type": "polygon",
+                "points": "420,380 480,380 500,430 440,450"
+            }
+        },
+        "window": {
+            "name": "Window",
+            "description": "AWP position overlooking Mid.",
+            "shape": {
+                "type": "polygon",
+                "points": "600,300 660,300 660,360 600,360"
+            }
+        },
+        "underpass": {
+            "name":"Underpass",
+            "description":"Hidden route under Mid.",
+            "shape":{
+                "type":"polygon",
+                "points":"100,200 150,200 150,250 100,250"
+            }
+        }
+    }
+}

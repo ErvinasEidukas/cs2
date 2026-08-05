@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS2 Callout Trainer</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>CS2 Callout Trainer</h1>
-    </header>
+<header>
+    <h1>
+        CS2 Callout Trainer
+    </h1>
 
-    <main>
+    <nav id="maps-menu">
+        <button data-map="mirage">
+            Mirage
+        </button>
+        <button data-map="dust2">
+            dust 2
+        </button>
+    </nav>
+</header>
 
-        <section id="map-section">
+<main>
+    <section id="map-section">
+        <div id="map-container">
+            <!-- map loads here -->
+        </div>
+    </section>
 
-            <svg
-                id="map"
-                viewBox="0 0 1024 1024"
-                preserveAspectRatio="xMidYMid meet">
+    <aside id="info-panel">
+        <h2>
+            Area
+        </h2>
 
-                <image
-                    href="assets/maps/mirage.webp"
-                    width="1024"
-                    height="1024" />
+        <h3 id="area-name">
+            Select area
+        </h3>
 
-                    <polygon
-                        class="callout"
-                        data-id="connector"
-                        points="420,380 480,380 500,430 440,450"
-                    />
-                    <polygon
-                        class="callout"
-                        data-id="window"
-                        points="600,300 660,300 660,360 600,360"
-                    />
-            </svg>
+        <p id="description">
+            Click a position.
+        </p>
+    </aside>
+</main>
 
-        </section>
-
-        <aside id="info-panel">
-
-            <h2>Area</h2>
-
-            <h3 id="area-name">
-                Select an area
-            </h3>
-
-            <p id="description">
-                Click an area on the map.
-            </p>
-
-        </aside>
-
-    </main>
-
-    <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>

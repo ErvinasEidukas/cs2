@@ -1,70 +1,102 @@
-const callouts = document.querySelectorAll(".callout");
+let mapData = {}
 
-callouts.forEach(area => {
+const mapContainer = document.getElementById("map-container")
+const buttons = document.querySelectorAll("#maps-menu button")
 
-    area.addEventListener("click", () => {
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const mapName = button.dataset.map
+        loadMap(mapName)
+    })
+})
 
+function loadMap(mapName){
+    mapContainer.innerHTML = `
+        <div class="map-wrapper">
+            <img 
+                class="map-image"
+                src="assets/maps/${mapName}/${mapName}.webp"
+            >
+            <svg
+                class="map-overlay"
+                viewBox="0 0 1024 1024">
+            </svg>
+        </div>
 
-        // remove old selection
+    `
+    loadMapData(mapName)
+}
 
-        callouts.forEach(item => {
+function loadMapData(mapName){
+    fetch(
+        `assets/maps/${mapName}/${mapName}.json`
+    ).then(response => {
+        return response.json()
+    }).then(data => {
+        mapData = data
+        createCallouts()
+    }).catch(error => {
+        console.error(
+            "JSON loading error:",
+            error
+        )
+    })
+}
 
-            item.classList.remove("selected");
+function createCallouts(){
+    const svg = document.querySelector(".map-overlay")
 
-        });
+    Object.entries(mapData.areas)
+    .forEach(([id, area]) => {
+        let shape
+        if (area.shape.type === "polygon") {
+            shape =
+            document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "polygon"
+            )
+            shape.setAttribute(
+                "points",
+                area.shape.points
+            )
+        }
+        else if(area.shape.type === "rectangle"){
+            shape = document.createElementNS("http://www.w3.org/2000/svg", "rect")
 
-
-        // select clicked area
-
-        area.classList.add("selected");
-
-
-        // get area name
-
-        const id =
-            area.dataset.id;
-
-
-        showInfo(id);
-
-
-    });
-
-});
-
-
-function showInfo(id){
-    const data = {
-
-        connector: {
-
-            name:"Connector",
-
-            description:
-            "Connects Mid to A Site."
-
-        },
-
-
-        window: {
-
-            name:"Window",
-
-            description:
-            "Important AWP position overlooking Mid."
-
+            shape.setAttribute("x", area.shape.x)
+            shape.setAttribute("y", area.shape.y)
+            shape.setAttribute("width", area.shape.width)
+            shape.setAttribute("height",area.shape.height)
         }
 
-    };
-
-
-    document.getElementById("area-name")
-        .textContent =
-        data[id].name;
-
-
-    document.getElementById("description")
-        .textContent =
-        data[id].description;
-
+        if (shape) {
+            shape.classList.add("callout")
+            shape.dataset.id = id
+            shape.addEventListener("click", () => {
+                selectCallout(shape)
+                showInfo(id)
+            })
+            svg.appendChild(shape)
+        }
+    })
 }
+
+function selectCallout(selected){
+    document.querySelectorAll(".callout").forEach(area => {
+        area.classList.remove("selected")
+    })
+    selected.classList.add("selected")
+}
+
+function showInfo(id){
+    const area = mapData.areas[id]
+
+    if (!area) {
+        return
+    }
+
+    document.getElementById("area-name").textContent = area.name
+    document.getElementById("description").textContent = area.description
+}
+
+loadMap("mirage")
