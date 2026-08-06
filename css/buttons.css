@@ -39,3 +39,8 @@
 #editor-controls button:active {
     background: #555;
 }
+
+#editor-controls #draw-mode.active,
+#maps-menu button.active {
+    background: #b00303;
+}

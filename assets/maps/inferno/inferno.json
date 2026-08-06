@@ -1,0 +1,12 @@
+{
+    "map": "Inferno",
+    "areas": {
+        "tiket": {
+            "name": "T",
+            "shape": {
+                "type": "polygon",
+                "points": ""
+            }
+        }
+    }
+}

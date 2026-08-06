@@ -8,6 +8,7 @@ export function setupDrawing() {
     const finishButton = document.getElementById("finish-shape")
 
     drawButton.addEventListener("click", () => {
+        drawButton.classList.add("active")
         const svg = document.querySelector(".map-overlay")
 
         drawing = true
@@ -18,11 +19,10 @@ export function setupDrawing() {
         }
 
         setCalloutsEnabled(false)
-
-        console.log("Drawing mode enabled")
     })
 
     finishButton.addEventListener("click", async () => {
+        drawButton.classList.remove("active")
         if (points.length < 3) {
             console.log("Need at least 3 points")
             return

@@ -1,0 +1,12 @@
+{
+    "map": "Nuke",
+    "areas": {
+        "tiket": {
+            "name": "T",
+            "shape": {
+                "type": "polygon",
+                "points": ""
+            }
+        }
+    }
+}

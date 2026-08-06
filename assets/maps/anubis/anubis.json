@@ -1,0 +1,12 @@
+{
+    "map": "Anubis",
+    "areas": {
+        "tiket": {
+            "name": "T",
+            "shape": {
+                "type": "polygon",
+                "points": ""
+            }
+        }
+    }
+}

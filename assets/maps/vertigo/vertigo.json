@@ -1,0 +1,12 @@
+{
+    "map": "Vertigo",
+    "areas": {
+        "tiket": {
+            "name": "T",
+            "shape": {
+                "type": "polygon",
+                "points": ""
+            }
+        }
+    }
+}

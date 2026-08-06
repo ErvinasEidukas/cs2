@@ -9,7 +9,18 @@ export function setupMapButtons() {
     buttons.forEach(button => {
         button.addEventListener("click", () => {
             loadMap(button.dataset.map)
+            setActiveMapButton(buttons, button.dataset.map)
         })
+    })
+}
+
+function setActiveMapButton(buttons, mapName) {
+    buttons.forEach(btn => {
+        if (btn.dataset.map === mapName) {
+            btn.classList.add("active")
+        } else {
+            btn.classList.remove("active")
+        }
     })
 }
 
