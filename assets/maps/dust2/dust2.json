@@ -1,0 +1,246 @@
+{
+    "map": "Dust 2",
+
+    "areas": {
+        "pit": {
+            "name": "Pit",
+            "ru": "Яма",
+            "shape": {
+                "type": "polygon",
+                "points": "847,562 851,694 922,699 917,564"
+            }
+        },
+        "box": {
+            "name": "Box",
+            "ru": "Каробка",
+            "shape": {
+                "type": "polygon",
+                "points": "679,566 735,570 734,663 679,664"
+            }
+        },
+        "long": {
+            "name": "Long",
+            "shape": {
+                "type": "polygon",
+                "points": "842,282 842,412 876,411 875,449 922,451 930,284"
+            }
+        },
+        "blue-box": {
+            "name": "Blue Box",
+            "ru": "Синий",
+            "shape": {
+                "type": "polygon",
+                "points": "670,467 674,494 720,489 723,463"
+            }
+        },
+        "a-site-box": {
+            "name": "???",
+            "ru": "Испанский",
+            "shape": {
+                "type": "polygon",
+                "points": "826,142 828,160 844,161 844,141"
+            }
+        },
+        "ramp": {
+            "name": "Ramp",
+            "shape": {
+                "type": "polygon",
+                "points": "852,100 849,211 922,216 927,110"
+            }
+        },
+        "double-box": {
+            "name": "Double Box",
+            "shape": {
+                "type": "polygon",
+                "points": "778,141 776,186 811,187 813,145"
+            }
+        },
+        "goose": {
+            "name": "Goose",
+            "shape": {
+                "type": "polygon",
+                "points": "790,37 788,104 810,104 812,41"
+            }
+        },
+        "ninja": {
+            "name": "Ninja",
+            "ru": "Гендольф",
+            "shape": {
+                "type": "polygon",
+                "points": "670,105 671,118 691,120 691,106"
+            }
+        },
+        "short": {
+            "name": "Short",
+            "shape": {
+                "type": "polygon",
+                "points": "614,301 616,384 675,387 678,301"
+            }
+        },
+        "catwalk": {
+            "name": "Catwalk",
+            "shape": {
+                "type": "polygon",
+                "points": "508,443 532,442 533,562 505,562"
+            }
+        },
+        "palm": {
+            "name": "Palm",
+            "ru": "Пальма",
+            "shape": {
+                "type": "polygon",
+                "points": "496,613 529,613 533,637 493,637"
+            }
+        },
+        "8": {
+            "name": "8",
+            "shape": {
+                "type": "polygon",
+                "points": "392,620 413,620 415,637 391,637"
+            }
+        },
+        "suicide": {
+            "name": "Suicide",
+            "shape": {
+                "type": "polygon",
+                "points": "442,692 474,694 474,867 447,869"
+            }
+        },
+        "titanic": {
+            "name": "Titanic",
+            "shape": {
+                "type": "polygon",
+                "points": "158,764 344,772 339,869 163,873"
+            }
+        },
+        "t-car": {
+            "name": "Car / Taxi",
+            "shape": {
+                "type": "polygon",
+                "points": "696,769 721,767 719,721 733,722 733,771 733,782 701,782"
+            }
+        },
+        "window": {
+            "name": "Window",
+            "ru": "Окно",
+            "shape": {
+                "type": "polygon",
+                "points": "245,122 245,141 281,143 280,120"
+            }
+        },
+        "firebox": {
+            "name": "Firebox",
+            "shape": {
+                "type": "polygon",
+                "points": "175,168 184,168 182,152 205,150 204,134 170,134"
+            }
+        },
+        "b-xbox": {
+            "name": "B X-Box",
+            "shape": {
+                "type": "polygon",
+                "points": "171,184 170,164 140,165 138,187"
+            }
+        },
+        "mid-xbox": {
+            "name": "Mid X-Box",
+            "shape": {
+                "type": "polygon",
+                "points": "501,424 501,440 477,438 478,425"
+            }
+        },
+        "b-car": {
+            "name": "B Car",
+            "shape": {
+                "type": "polygon",
+                "points": "216,292 230,287 240,316 211,338 202,324 225,308"
+            }
+        },
+        "bricks": {
+            "name": "Bricks",
+            "ru": "Грибы",
+            "shape": {
+                "type": "polygon",
+                "points": "340,154 341,177 385,179 382,152"
+            }
+        },
+        "construction": {
+            "name": "Construction",
+            "shape": {
+                "type": "polygon",
+                "points": "310,120 312,145 322,146 319,120"
+            }
+        },
+        "bunny": {
+            "name": "Bunny",
+            "shape": {
+                "type": "polygon",
+                "points": "308,241 285,242 286,270 303,271"
+            }
+        },
+        "??": {
+            "name": "??",
+            "ru": "За дальным",
+            "shape": {
+                "type": "polygon",
+                "points": "86,68 102,69 102,81 86,81"
+            }
+        },
+        "b-default": {
+            "name": "B Default",
+            "shape": {
+                "type": "polygon",
+                "points": "240,156 243,173 257,175 255,156"
+            }
+        },
+        "kennys": {
+            "name": "Kennys",
+            "shape": {
+                "type": "polygon",
+                "points": "674,256 676,270 685,271 685,255"
+            }
+        },
+        "a-car": {
+            "name": "A Car",
+            "shape": {
+                "type": "polygon",
+                "points": "941,250 956,296 970,293 958,250"
+            }
+        },
+        "jumpare": {
+            "name": "Jumpare",
+            "shape": {
+                "type": "polygon",
+                "points": "685,193 685,212 702,212 697,196"
+            }
+        },
+        "long-start": {
+            "name": "Long Start",
+            "shape": {
+                "type": "polygon",
+                "points": "842,416 868,415 870,458 843,456"
+            }
+        },
+        "elevator": {
+            "name": "Elevator",
+            "shape": {
+                "type": "polygon",
+                "points": "772,195 771,212 790,214 788,196"
+            }
+        },
+        "upper-tunnel": {
+            "name": "Upper Tunnel",
+            "shape": {
+                "type": "polygon",
+                "points": "98,417 99,444 67,444 66,500 139,500 140,513 213,516 211,498 275,503 272,444 185,444 182,415"
+            }
+        },
+        "lower-tunnel": {
+            "name": "Lower Tunnel",
+            "shape": {
+                "type": "polygon",
+                "points": "285,388 433,389 436,435 282,433"
+            }
+        }
+    }
+}

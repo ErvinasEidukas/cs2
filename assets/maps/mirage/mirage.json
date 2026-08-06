@@ -24,7 +24,8 @@
             }
         },
         "sandwich": {
-            "name": "Sandwich / Между",
+            "name": "Sandwich",
+            "ru": "Между",
             "shape": {
                 "type": "polygon",
                 "points": "570,641 595,643 595,669 570,669"
@@ -109,7 +110,6 @@
         },
         "connector": {
             "name": "Connector",
-            "description": "Connects Mid to A site.",
             "shape": {
                 "type": "polygon",
                 "points": "479,504 548,506 545,593 478,590"
@@ -117,7 +117,6 @@
         },
         "window": {
             "name": "Window",
-            "description": "AWP position overlooking Mid.",
             "shape": {
                 "type": "polygon",
                 "points": "391,429 423,430 424,497 390,493"
@@ -214,9 +213,22 @@
                 "points":"184,246 182,265 195,266 194,250"
             }
         },
+        "ninja": {
+            "name":"Ninja",
+            "shape":{
+                "type":"polygon",
+                "points":"565,806 560,813 566,827 578,819"
+            }
+        },
+        "backside": {
+            "name":"Backside",
+            "shape":{
+                "type":"polygon",
+                "points":"194,338 271,337 273,356 195,356"
+            }
+        },
         "underpass": {
             "name":"Underpass",
-            "description":"Hidden route under Mid.",
             "shape":{
                 "type":"polygon",
                 "points":"431,243 423,440 456,448 458,244"

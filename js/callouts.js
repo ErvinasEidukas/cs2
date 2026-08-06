@@ -80,5 +80,10 @@ function showInfo(id) {
     }
 
     document.getElementById("area-name").textContent = area.name
-    document.getElementById("description").textContent = area.description
+    document.getElementById("area-name-ru").textContent = area.ru || ""
+}
+
+export function resetPositionDescription() {
+    document.getElementById("area-name").textContent = "Click a position"
+    document.getElementById("area-name-ru").textContent = ""
 }

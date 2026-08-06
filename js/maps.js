@@ -1,4 +1,4 @@
-import { createCallouts } from "./callouts.js"
+import { createCallouts, resetPositionDescription } from "./callouts.js"
 import { enableDrawing } from "./drawing.js"
 
 let mapData = {}
@@ -17,14 +17,15 @@ export function loadMap(mapName) {
     const mapContainer = document.getElementById("map-container")
 
     mapContainer.innerHTML = `
-    <div class="map-wrapper">
-        <img class="map-image" src="assets/maps/${mapName}/${mapName}.webp">
-        <svg class="map-overlay" viewBox="0 0 1024 1024"></svg>
-    </div>
+        <div class="map-wrapper">
+            <img class="map-image" src="assets/maps/${mapName}/${mapName}.webp">
+            <svg class="map-overlay" viewBox="0 0 1024 1024"></svg>
+        </div>
     `
 
     enableDrawing()
     loadMapData(mapName)
+    resetPositionDescription()
 }
 
 function loadMapData(mapName) {
