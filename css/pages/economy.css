@@ -1,0 +1,115 @@
+@import url("../components/reset.css");
+@import url("../components/layout.css");
+@import url("../components/buttons.css");
+@import url("../components/header.css");
+@import url("../components/page.css");
+
+main {
+    display: block;
+}
+
+/* Economy page layout */
+
+.page-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-content section {
+    background: #1b1b1b;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+
+/* Titles */
+
+.page-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.page-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* Text */
+
+.page-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 25px;
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+thead {
+    background: #292929;
+}
+
+
+th {
+    text-align: left;
+    padding: 14px;
+    font-size: 16px;
+}
+
+
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+}
+
+
+tbody tr:hover {
+    background: #252525;
+}
+
+
+/* Money column */
+
+td:last-child,
+th:last-child {
+    text-align: right;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive */
+
+@media (width <= 700px) {
+    .page-content {
+        padding: 10px;
+    }
+
+
+    table {
+        font-size: 14px;
+    }
+
+
+    th,
+    td {
+        padding: 10px;
+    }
+}

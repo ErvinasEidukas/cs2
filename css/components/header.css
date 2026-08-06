@@ -1,0 +1,28 @@
+.header-top {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-link {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    flex-shrink: 0;
+}
+
+.home-link:hover {
+    color: #ec7dcc;
+}
+
+.header-top h1 {
+    margin: 0;
+}

@@ -29,7 +29,7 @@ export function loadMap(mapName) {
 
     mapContainer.innerHTML = `
         <div class="map-wrapper">
-            <img class="map-image" src="assets/maps/${mapName}/${mapName}.webp">
+            <img class="map-image" src="../assets/maps/${mapName}/${mapName}.webp">
             <svg class="map-overlay" viewBox="0 0 1024 1024"></svg>
         </div>
     `
@@ -40,7 +40,7 @@ export function loadMap(mapName) {
 }
 
 function loadMapData(mapName) {
-    fetch(`assets/maps/${mapName}/${mapName}.json`)
+    fetch(`../assets/maps/${mapName}/${mapName}.json`)
         .then(response => response.json())
         .then(data => {
             mapData = data

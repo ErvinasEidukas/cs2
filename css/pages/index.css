@@ -1,0 +1,27 @@
+@import url("../components/reset.css");
+@import url("../components/layout.css");
+@import url("../components/buttons.css");
+
+.home-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    height: 100px;
+}
+
+.menu-card {
+    display: block;
+    padding: 24px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: .2s;
+}
+
+.menu-card:hover {
+    border-color: #3fa9f5;
+    transform: translateY(-3px);
+}

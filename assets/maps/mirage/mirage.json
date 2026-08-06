@@ -53,7 +53,8 @@
             }
         },
         "wood": {
-            "name": "Wood/Underwood / Ковры?",
+            "name": "Wood/Underwood",
+            "ru": "Ковры",
             "shape": {
                 "type": "polygon",
                 "points": "637,710 656,709 656,721 678,723 678,754 664,754 666,781 633,780"
