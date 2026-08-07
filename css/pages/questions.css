@@ -1,5 +1,168 @@
-@import url("../components/reset.css");
+/* @import url("../components/reset.css");
 @import url("../components/layout.css");
 @import url("../components/buttons.css");
 @import url("../components/header.css");
-@import url("../components/page.css");
+@import url("../components/page.css"); */
+
+/* ===========================
+   FAQ Page
+=========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111827;
+    color: #f3f4f6;
+    line-height: 1.6;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.page-header {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.header-spacer {
+    width: 80px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 999px;
+    background: #3b82f6;
+}
+
+/* ===========================
+   FAQ Section
+=========================== */
+
+section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* ===========================
+   FAQ Item
+=========================== */
+
+details {
+    background: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    transition: all .25s ease;
+}
+
+details:hover {
+    border-color: #3b82f6;
+}
+
+details[open] {
+    border-color: #3b82f6;
+}
+
+/* ===========================
+   Question
+=========================== */
+
+summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    user-select: none;
+    position: relative;
+    transition: background .2s ease;
+}
+
+summary:hover {
+    background: rgb(59 130 246 / 8%);
+}
+
+/* Remove default arrow */
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom arrow */
+
+summary::after {
+    content: "+";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #60a5fa;
+    transition: transform .2s ease;
+}
+
+details[open] summary::after {
+    content: "−";
+}
+
+/* ===========================
+   Answer
+=========================== */
+
+details p {
+    margin: 0;
+    padding: 0 24px 18px;
+    color: #d1d5db;
+}
+
+details p:first-of-type {
+    padding-top: 4px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (width <= 768px) {
+    .page-header {
+        padding-top: 50px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    summary {
+        font-size: 1rem;
+        padding: 16px 18px;
+    }
+
+    summary::after {
+        right: 18px;
+    }
+
+    details p {
+        padding: 0 18px 16px;
+    }
+}
