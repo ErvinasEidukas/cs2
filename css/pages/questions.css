@@ -1,8 +1,4 @@
-/* @import url("../components/reset.css");
-@import url("../components/layout.css");
-@import url("../components/buttons.css");
 @import url("../components/header.css");
-@import url("../components/page.css"); */
 
 /* ===========================
    FAQ Page
@@ -18,29 +14,6 @@ body {
     background: #111827;
     color: #f3f4f6;
     line-height: 1.6;
-}
-
-/* ===========================
-   Header
-=========================== */
-
-.page-header {
-    text-align: center;
-    padding: 70px 20px 40px;
-}
-
-.page-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.header-spacer {
-    width: 80px;
-    height: 4px;
-    margin: 20px auto 0;
-    border-radius: 999px;
-    background: #3b82f6;
 }
 
 /* ===========================
