@@ -1,11 +1,46 @@
 {
     "map": "Anubis",
     "areas": {
-        "tiket": {
-            "name": "T",
+        "temple": {
+            "name": "Temple",
             "shape": {
                 "type": "polygon",
-                "points": ""
+                "points": "340,404 339,449 372,454 373,429 387,430 388,443 441,442 440,406"
+            }
+        },
+        "camera": {
+            "name": "Camera",
+            "shape": {
+                "type": "polygon",
+                "points": "611,378 614,404 665,407 665,374 625,371"
+            }
+        },
+        "water": {
+            "name": "Water",
+            "shape": {
+                "type": "polygon",
+                "points": "775,457 775,616 703,614 676,639 534,625 536,581 557,582 557,570 605,566 607,582 674,584 678,456"
+            }
+        },
+        "a-main": {
+            "name": "A main",
+            "shape": {
+                "type": "polygon",
+                "points": "836,361 870,362 883,384 884,443 839,486 780,481 779,463 822,461 817,425 806,421 804,411 830,410"
+            }
+        },
+        "B-main": {
+            "name": "B main",
+            "shape": {
+                "type": "polygon",
+                "points": "191,548 152,584 180,608 180,667 286,669 289,623"
+            }
+        },
+        "connector": {
+            "name": "Connector",
+            "shape": {
+                "type": "polygon",
+                "points": "380,561 385,627 426,630 423,556"
             }
         }
     }
