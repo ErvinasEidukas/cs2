@@ -1,8 +1,99 @@
 {
     "map": "Nuke",
     "areas": {
-        "tiket": {
-            "name": "T",
+        "hut": {
+            "name": "Hut",
+            "shape": {
+                "type": "polygon",
+                "points": "527,617 528,655 545,659 545,622"
+            }
+        },
+        "lobby": {
+            "name": "Lobby",
+            "shape": {
+                "type": "polygon",
+                "points": "450,586 450,649 500,649 497,589"
+            }
+        },
+        "silo": {
+            "name": "Silo",
+            "shape": {
+                "type": "polygon",
+                "points": "505,692 516,705 523,722 514,741 492,751 478,741 469,721 467,708 483,695"
+            }
+        },
+        "secret": {
+            "name": "Secret",
+            "shape": {
+                "type": "polygon",
+                "points": "655,787 652,828 767,836 767,818 688,814 684,785"
+            }
+        },
+        "garage": {
+            "name": "Garage",
+            "shape": {
+                "type": "polygon",
+                "points": "692,716 692,769 706,773 710,813 771,817 771,716"
+            }
+        },
+        "a-main": {
+            "name": "A main",
+            "shape": {
+                "type": "polygon",
+                "points": "552,707 552,731 597,737 598,707"
+            }
+        },
+        "red": {
+            "name": "Red",
+            "shape": {
+                "type": "polygon",
+                "points": "550,804 550,822 587,829 587,808"
+            }
+        },
+        "doors": {
+            "name": "Doors / Double doors",
+            "shape": {
+                "type": "polygon",
+                "points": "263,312 263,334 295,334 299,310 277,308 276,312"
+            }
+        },
+        "heaven": {
+            "name": "Heaven",
+            "shape": {
+                "type": "polygon",
+                "points": "621,534 627,566 669,570 671,535"
+            }
+        },
+        "squeaky": {
+            "name": "Squeaky",
+            "shape": {
+                "type": "polygon",
+                "points": "515,655 515,681 477,678 481,655"
+            }
+        },
+        "fork": {
+            "name": "Fork",
+            "shape": {
+                "type": "polygon",
+                "points": "184,172 182,187 253,187 253,168"
+            }
+        },
+        "radio": {
+            "name": "Radio",
+            "shape": {
+                "type": "polygon",
+                "points": "519,471 518,582 483,581 479,534 501,534 493,480"
+            }
+        },
+        "aquarium": {
+            "name": "Aquarium",
+            "shape": {
+                "type": "polygon",
+                "points": "280,239 284,275 332,280 331,237"
+            }
+        },
+        "": {
+            "name": "",
             "shape": {
                 "type": "polygon",
                 "points": ""
