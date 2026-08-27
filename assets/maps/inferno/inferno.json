@@ -1,8 +1,121 @@
 {
     "map": "Inferno",
     "areas": {
-        "tiket": {
-            "name": "T",
+        "church": {
+            "name": "Church",
+            "shape": {
+                "type": "polygon",
+                "points": "600,81 602,169 696,170 694,120 641,122 642,77"
+            }
+        },
+        "a-default": {
+            "name": "A default",
+            "shape": {
+                "type": "polygon",
+                "points": "441,239 440,265 424,268 423,243"
+            }
+        },
+        "ninja": {
+            "name": "Ninja",
+            "shape": {
+                "type": "polygon",
+                "points": "422,125 423,145 441,143 441,125"
+            }
+        },
+        "coffin": {
+            "name": "Coffin",
+            "shape": {
+                "type": "polygon",
+                "points": "524,137 527,161 541,164 541,137"
+            }
+        },
+        "headshot": {
+            "name": "Headshot",
+            "shape": {
+                "type": "polygon",
+                "points": "554,180 557,216 589,218 589,191"
+            }
+        },
+        "car": {
+            "name": "Car",
+            "shape": {
+                "type": "polygon",
+                "points": "505,355 499,364 525,372 531,357"
+            }
+        },
+        "banana": {
+            "name": "Banana",
+            "shape": {
+                "type": "polygon",
+                "points": "493,378 515,431 476,498 446,486 447,467"
+            }
+        },
+        "ramp": {
+            "name": "Ramp",
+            "shape": {
+                "type": "polygon",
+                "points": "331,602 333,636 423,635 427,603"
+            }
+        },
+        "vietnam": {
+            "name": "Vietnam",
+            "shape": {
+                "type": "polygon",
+                "points": "487,637 488,777 478,778 477,649 463,648 464,635"
+            }
+        },
+        "apartment": {
+            "name": "Apartment",
+            "shape": {
+                "type": "polygon",
+                "points": "661,780 683,778 684,840 797,841 798,820 812,818 817,861 652,864 651,844 662,844"
+            }
+        },
+        "boiler": {
+            "name": "Boiler",
+            "shape": {
+                "type": "polygon",
+                "points": "664,712 662,735 683,739 683,712"
+            }
+        },
+        "pitt": {
+            "name": "Pitt",
+            "shape": {
+                "type": "polygon",
+                "points": "921,788 924,826 958,831 958,794"
+            }
+        },
+        "library": {
+            "name": "Library",
+            "shape": {
+                "type": "polygon",
+                "points": "929,521 967,524 972,579 927,577"
+            }
+        },
+        "long": {
+            "name": "Long",
+            "shape": {
+                "type": "polygon",
+                "points": "728,536 728,582 911,591 911,535"
+            }
+        },
+        "short": {
+            "name": "Short",
+            "shape": {
+                "type": "polygon",
+                "points": "730,760 734,806 807,810 813,758"
+            }
+        },
+        "ribs": {
+            "name": "???",
+            "ru": "Ребра",
+            "shape": {
+                "type": "polygon",
+                "points": "702,590 729,590 730,750 692,750"
+            }
+        },
+        "": {
+            "name": "",
             "shape": {
                 "type": "polygon",
                 "points": ""
