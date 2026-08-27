@@ -1,8 +1,134 @@
 {
     "map": "Cache",
     "areas": {
-        "tiket": {
-            "name": "T",
+        "heaven": {
+            "name": "Heaven",
+            "shape": {
+                "type": "polygon",
+                "points": "249,662 280,664 284,730 252,728"
+            }
+        },
+        "headshot": {
+            "name": "Headshot",
+            "shape": {
+                "type": "polygon",
+                "points": "287,774 303,774 303,840 285,840"
+            }
+        },
+        "b-default": {
+            "name": "B default",
+            "shape": {
+                "type": "polygon",
+                "points": "312,806 313,817 341,818 344,803"
+            }
+        },
+        "useless": {
+            "name": "Useless",
+            "shape": {
+                "type": "polygon",
+                "points": "515,620 514,663 605,666 606,620"
+            }
+        },
+        "toxic": {
+            "name": "Toxic",
+            "shape": {
+                "type": "polygon",
+                "points": "441,808 577,808 580,855 446,854"
+            }
+        },
+        "garage": {
+            "name": "Garage",
+            "shape": {
+                "type": "polygon",
+                "points": "510,506 509,613 674,614 671,504"
+            }
+        },
+        "boost": {
+            "name": "Boost",
+            "shape": {
+                "type": "polygon",
+                "points": "472,445 473,479 513,480 514,498 531,499 532,447"
+            }
+        },
+        "car": {
+            "name": "Car",
+            "shape": {
+                "type": "polygon",
+                "points": "199,390 200,430 172,426 173,389"
+            }
+        },
+        "highway": {
+            "name": "Highway",
+            "shape": {
+                "type": "polygon",
+                "points": "300,410 354,415 354,490 305,490"
+            }
+        },
+        "white-box": {
+            "name": "White box",
+            "shape": {
+                "type": "polygon",
+                "points": "351,495 354,517 326,517 331,495"
+            }
+        },
+        "vent": {
+            "name": "Vent",
+            "shape": {
+                "type": "polygon",
+                "points": "452,617 468,617 469,643 435,644 432,634 455,630"
+            }
+        },
+        "sand-bags": {
+            "name": "Sand bags",
+            "shape": {
+                "type": "polygon",
+                "points": "368,584 374,604 386,607 388,617 353,617 354,585"
+            }
+        },
+        "z": {
+            "name": "Z / Connector",
+            "shape": {
+                "type": "polygon",
+                "points": "230,541 231,566 257,567 263,614 301,616 299,539"
+            }
+        },
+        "vent-room": {
+            "name": "Vent room",
+            "shape": {
+                "type": "polygon",
+                "points": "319,634 321,664 438,668 442,648 427,645 424,632"
+            }
+        },
+        "yellow": {
+            "name": "Yellow",
+            "shape": {
+                "type": "polygon",
+                "points": "426,320 427,337 385,338 386,356 447,357 447,321"
+            }
+        },
+        "squeaky": {
+            "name": "Squeaky",
+            "shape": {
+                "type": "polygon",
+                "points": "388,169 390,210 441,219 445,173"
+            }
+        },
+        "pitt": {
+            "name": "Pitt",
+            "shape": {
+                "type": "polygon",
+                "points": "385,763 386,774 403,776 401,762"
+            }
+        },
+        "a-default": {
+            "name": "A default",
+            "shape": {
+                "type": "polygon",
+                "points": "335,248 335,262 351,265 353,248"
+            }
+        },
+        "": {
+            "name": "",
             "shape": {
                 "type": "polygon",
                 "points": ""
