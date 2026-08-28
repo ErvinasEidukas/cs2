@@ -1,7 +1,18 @@
 import { drawGrenades, loadGrenadeData } from "./grenades.js"
 
 let currentMode = "callouts"
-let enabledNadeTypes = new Set(["smoke", "flash", "molotov"])
+
+let enabledNadeTypes = new Set([
+    "smoke",
+    "flash",
+    "molotov",
+    "he"
+])
+
+let enabledNadeSides = new Set([
+    "ct",
+    "t"
+])
 
 function setCalloutsVisibility(show) {
     document.querySelectorAll(".callout").forEach(callout => {
@@ -19,6 +30,7 @@ export function setupDisplayMode() {
         if (!calloutsRadio.checked) return
 
         currentMode = "callouts"
+
         calloutControls.classList.remove("hidden")
         lineupControls.classList.add("hidden")
 
@@ -30,6 +42,7 @@ export function setupDisplayMode() {
         if (!lineupsRadio.checked) return
 
         currentMode = "lineups"
+
         calloutControls.classList.add("hidden")
         lineupControls.classList.remove("hidden")
 
@@ -52,6 +65,22 @@ export function setupDisplayMode() {
             }
         })
     })
+
+    document.querySelectorAll(".nade-side-filter").forEach(checkbox => {
+        checkbox.addEventListener("change", () => {
+            const side = checkbox.value
+
+            if (checkbox.checked) {
+                enabledNadeSides.add(side)
+            } else {
+                enabledNadeSides.delete(side)
+            }
+
+            if (currentMode === "lineups") {
+                redrawGrenades()
+            }
+        })
+    })
 }
 
 export function setCurrentMap(mapName) {
@@ -61,11 +90,16 @@ export function setCurrentMap(mapName) {
 }
 
 function redrawGrenades() {
-    drawGrenades([...enabledNadeTypes])
+    drawGrenades(
+        [...enabledNadeTypes],
+        [...enabledNadeSides]
+    )
 }
 
 function clearGrenades() {
-    document.querySelectorAll(".grenade-trajectory").forEach(element => element.remove())
+    document
+        .querySelectorAll(".grenade-trajectory")
+        .forEach(element => element.remove())
 }
 
 export function getCurrentMode() {
@@ -74,4 +108,8 @@ export function getCurrentMode() {
 
 export function getEnabledNadeTypes() {
     return [...enabledNadeTypes]
+}
+
+export function getEnabledNadeSides() {
+    return [...enabledNadeSides]
 }

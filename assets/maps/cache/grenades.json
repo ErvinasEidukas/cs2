@@ -1,0 +1,332 @@
+{
+    "grenades": [
+        {
+            "id": "a-main-smoke",
+            "name": "A main smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 458, "y": 285},
+            "throws": [
+                {
+                    "id": "car",
+                    "type": "LKM",
+                    "start": {"x": 202, "y": 394},
+                    "image": [
+                        "car-a-main-smoke-1.png",
+                        "car-a-main-smoke-2.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "3",
+                    "type": "Jump + LKM",
+                    "start": {"x": 285, "y": 186},
+                    "image": [
+                        "3-a-main.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "site",
+                    "type": "W + LKM + PKM",
+                    "start": {"x": 314, "y": 310},
+                    "image": [
+                        "site-a-main-smoke.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "site-2",
+                    "type": "W + LKM + PKM",
+                    "start": {"x": 284, "y": 278},
+                    "image": [
+                        "site-a-main-smoke-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "a-main-he",
+            "name": "A main He",
+            "type": "he",
+            "side": "ct",
+            "end": {"x": 492, "y": 305},
+            "throws": [
+                {
+                    "id": "3",
+                    "type": "W + LKM",
+                    "start": {"x": 285, "y": 179},
+                    "image": [
+                        "3-a-main-he.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "a-stairs-smoke",
+            "name": "A stairs smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 496, "y": 466},
+            "throws": [
+                {
+                    "id": "3",
+                    "type": "W + Jump + LKM",
+                    "start": {"x": 295, "y": 196},
+                    "bounces": [
+                        {"x": 604, "y": 408}
+                    ],
+                    "image": [
+                        "3-a-stairs-smoke-1.png",
+                        "3-a-stairs-smoke-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "a-main-flash",
+            "name": "A main flash",
+            "type": "flash",
+            "side": "ct",
+            "end": {"x": 472, "y": 301},
+            "throws": [
+                {
+                    "id": "3",
+                    "type": "Jump + LKM",
+                    "start": {"x": 286, "y": 188},
+                    "image": [
+                        "3-a-main-flash.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "help",
+                    "type": "LKM",
+                    "start": {"x": 278, "y": 323},
+                    "image": [
+                        "a-main-push-flash-1.png",
+                        "a-main-push-flash-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "a-main-push-smoke",
+            "name": "A main push smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 487, "y": 339},
+            "throws": [
+                {
+                    "id": "help",
+                    "type": "W + Jump + LKM",
+                    "start": {"x": 231, "y": 388},
+                    "bounces": [
+                        {"x": 394, "y": 221}
+                    ],
+                    "image": [
+                        "help-a-main-push-1.png",
+                        "help-a-main-push-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "a-main-push-molotov",
+            "name": "A main push molotov",
+            "type": "molotov",
+            "side": "ct",
+            "end": {"x": 490, "y": 458},
+            "throws": [
+                {
+                    "id": "a-main",
+                    "type": "W + LKM",
+                    "start": {"x": 450, "y": 294},
+                    "bounces": [
+                        {"x": 506, "y": 383}
+                    ],
+                    "image": [
+                        "a-main-push-molotov.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "boost-molotov",
+            "name": "Boost molotov",
+            "type": "molotov",
+            "side": "ct",
+            "end": {"x": 525, "y": 481},
+            "throws": [
+                {
+                    "id": "z",
+                    "type": "W + Jump + LKM + PKM",
+                    "start": {"x": 301, "y": 584},
+                    "image": [
+                        "boost-molotov.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "z-2",
+                    "type": "Jump + LKM",
+                    "start": {"x": 317, "y": 604},
+                    "image": [
+                        "boost-molotov.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "boost-he",
+            "name": "Boost he",
+            "type": "he",
+            "side": "ct",
+            "end": {"x": 538, "y": 492},
+            "throws": [
+                {
+                    "id": "white",
+                    "type": "W + LKM",
+                    "start": {"x": 346, "y": 513},
+                    "image": [
+                        "boost-he.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "middle-smoke",
+            "name": "Middle smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 520, "y": 540},
+            "throws": [
+                {
+                    "id": "white",
+                    "type": "LKM",
+                    "start": {"x": 301, "y": 511},
+                    "image": [
+                        "middle-smoke.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "ticket",
+                    "type": "LKM",
+                    "start": {"x": 304, "y": 413},
+                    "image": [
+                        "middle-smoke-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "b-main-smoke",
+            "name": "B main smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 444, "y": 737},
+            "throws": [
+                {
+                    "id": "9",
+                    "type": "W + LKM",
+                    "start": {"x": 287, "y": 727},
+                    "bounces": [
+                        {"x": 382, "y": 673}
+                    ],
+                    "image": [
+                        "b-main-smoke.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "default",
+                    "type": "W + LKM",
+                    "start": {"x": 336, "y": 812},
+                    "bounces": [
+                        {"x": 404, "y": 692}
+                    ],
+                    "image": [
+                        "b-main-smoke-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "b-main-flash",
+            "name": "B main flash",
+            "type": "flash",
+            "side": "ct",
+            "end": {"x": 433, "y": 701},
+            "throws": [
+                {
+                    "id": "headshot",
+                    "type": "LKM",
+                    "start": {"x": 289, "y": 804},
+                    "image": [
+                        "b-main-flash.png"
+                    ],
+                    "video": null
+                },
+                {
+                    "id": "generator",
+                    "type": "LKM",
+                    "start": {"x": 291, "y": 854},
+                    "image": [
+                        "b-main-flash-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "b-main-molotov",
+            "name": "B main molotov",
+            "type": "molotov",
+            "side": "ct",
+            "end": {"x": 427, "y": 713},
+            "throws": [
+                {
+                    "id": "default",
+                    "type": "W + LKM",
+                    "start": {"x": 328, "y": 836},
+                    "bounces": [
+                        {"x": 406, "y": 695}
+                    ],
+                    "image": [
+                        "b-main-molotov.png"
+                    ],
+                    "video": null
+                }
+            ]
+        },
+        {
+            "id": "b-main-he",
+            "name": "B main he",
+            "type": "he",
+            "side": "ct",
+            "end": {"x": 500, "y": 756},
+            "throws": [
+                {
+                    "id": "9",
+                    "type": "W + LKM",
+                    "start": {"x": 310, "y": 675},
+                    "image": [
+                        "b-main-he.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }
+    ]
+}

@@ -10,25 +10,8 @@
             },
             "throws": [
                 {
-                    "id": "window-smoke-tspawn",
-                    "name": "T Spawn",
-                    "start": {
-                        "x": 180,
-                        "y": 850
-                    },
-                    "bounces": [
-                        {
-                            "x": 350,
-                            "y": 650
-                        }
-                    ],
-                    "instructions": "PLACEHOLDER: Stand in T Spawn. Aim at the specified position and perform a jumpthrow.",
-                    "image": null,
-                    "video": null
-                },
-                {
                     "id": "window-smoke-palace",
-                    "name": "Palace",
+                    "name": "Palace Smoke",
                     "start": {
                         "x": 260,
                         "y": 720
@@ -43,11 +26,11 @@
                             "y": 450
                         }
                     ],
-                    "instructions": "PLACEHOLDER: Stand in Palace. Aim at the corner and perform a jumpthrow.",
+                    "type": "LKM",
                     "image": [
                         "window-smoke-tspawn.png"
                     ],
-                    "video": null
+                    "video": "window-smoke-palace.mp4"
                 }
             ]
         }

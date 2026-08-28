@@ -7,6 +7,7 @@ const grenadeIcons = {
 
 let currentMap = null
 let currentEnabledTypes = []
+let currentEnabledSides = []
 let selectedGrenadeId = null
 let selectedThrowId = null
 let currentGrenades = []
@@ -36,19 +37,23 @@ export function loadGrenadeData(mapName) {
 }
 
 function redrawCurrentGrenades() {
-    drawGrenades(currentEnabledTypes)
+    drawGrenades(currentEnabledTypes, currentEnabledSides)
 }
 
-export function drawGrenades(enabledTypes = []) {
+export function drawGrenades(enabledTypes = [], enabledSides = []) {
     currentEnabledTypes = [...enabledTypes]
+    currentEnabledSides = [...enabledSides]
 
     const svg = document.querySelector(".map-overlay")
-    if (!svg) return
+    if (!svg) {
+        return
+    }
 
     svg.querySelectorAll(".grenade-trajectory")
         .forEach(element => element.remove())
 
-    let visibleGrenades = currentGrenades.filter(grenade => enabledTypes.includes(grenade.type)
+    let visibleGrenades = currentGrenades.filter(
+        grenade => enabledTypes.includes(grenade.type) && enabledSides.includes(grenade.side)
     )
 
     if (selectedGrenadeId) {
@@ -226,30 +231,106 @@ function showThrowInfo(grenade, throwData) {
     addDeselectButton()
 }
 
-function showThrowImages(images = []) {
+function showThrowImages(images) {
+    if (!Array.isArray(images) || images.length === 0) {
+        return
+    }
+
     const infoPanel = document.getElementById("info-panel")
-    if (!infoPanel) return
 
-    const oldImages = infoPanel.querySelector(".lineup-images")
-
-    if (oldImages) oldImages.remove()
-
-    if (!Array.isArray(images) || images.length === 0) return
+    if (!infoPanel) {
+        return
+    }
 
     const imageContainer = document.createElement("div")
+
+    imageContainer.id = "lineup-images"
     imageContainer.classList.add("lineup-images")
 
     images.forEach(imageName => {
         const image = document.createElement("img")
 
-        image.src = `../assets/maps/${currentMap}/grenades/images/${imageName}`
+        image.src =
+            `../assets/maps/${currentMap}/grenades/images/${imageName}`
+
         image.alt = "Grenade lineup"
         image.classList.add("lineup-image")
+
+        image.addEventListener("click", () => {
+            openImagePopup(image.src, image.alt)
+        })
 
         imageContainer.appendChild(image)
     })
 
     infoPanel.appendChild(imageContainer)
+}
+
+function openImagePopup(src, alt = "Grenade lineup") {
+    const existingPopup =
+        document.getElementById("image-popup")
+
+    if (existingPopup) {
+        existingPopup.remove()
+    }
+
+    const popup =
+        document.createElement("div")
+
+    popup.id = "image-popup"
+    popup.classList.add("image-popup")
+
+    const image =
+        document.createElement("img")
+
+    image.src = src
+    image.alt = alt
+    image.classList.add("image-popup-content")
+
+    const closeButton =
+        document.createElement("button")
+
+    closeButton.classList.add("image-popup-close")
+    closeButton.textContent = "×"
+    closeButton.setAttribute(
+        "aria-label",
+        "Close image"
+    )
+
+    closeButton.addEventListener(
+        "click",
+        event => {
+            event.stopPropagation()
+            closeImagePopup()
+        }
+    )
+
+    popup.addEventListener(
+        "click",
+        event => {
+            if (event.target === popup) {
+                closeImagePopup()
+            }
+        }
+    )
+
+    popup.appendChild(image)
+    popup.appendChild(closeButton)
+
+    document.body.appendChild(popup)
+
+    document.body.style.overflow = "hidden"
+}
+
+function closeImagePopup() {
+    const popup =
+        document.getElementById("image-popup")
+
+    if (popup) {
+        popup.remove()
+    }
+
+    document.body.style.overflow = ""
 }
 
 function addDeselectButton() {
