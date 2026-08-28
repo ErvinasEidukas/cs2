@@ -1,0 +1,159 @@
+/* =========================
+   GRENADE TRAJECTORY
+========================= */
+
+.grenade-line {
+    fill: none;
+    stroke-width: 3;
+    stroke-dasharray: 8 8;
+}
+
+
+/* =========================
+   SMOKE
+========================= */
+
+.grenade-smoke .grenade-line {
+    stroke: #aaa;
+}
+
+.grenade-smoke .grenade-start,
+.grenade-smoke .grenade-end,
+.grenade-smoke .grenade-bounce {
+    fill: #aaa;
+}
+
+
+/* =========================
+   FLASH
+========================= */
+
+.grenade-flash .grenade-line {
+    stroke: white;
+}
+
+.grenade-flash .grenade-start,
+.grenade-flash .grenade-end,
+.grenade-flash .grenade-bounce {
+    fill: white;
+}
+
+
+/* =========================
+   MOLOTOV
+========================= */
+
+.grenade-molotov .grenade-line {
+    stroke: orange;
+}
+
+.grenade-molotov .grenade-start,
+.grenade-molotov .grenade-end,
+.grenade-molotov .grenade-bounce {
+    fill: orange;
+}
+
+
+/* =========================
+   HE
+========================= */
+
+.grenade-he .grenade-line {
+    stroke: red;
+}
+
+.grenade-he .grenade-start,
+.grenade-he .grenade-end,
+.grenade-he .grenade-bounce {
+    fill: red;
+}
+
+
+/* =========================
+   GRENADE END ICON
+========================= */
+
+.grenade-end-icon {
+    pointer-events: auto;
+}
+
+
+/* =========================
+   SELECTED START
+========================= */
+
+.grenade-start.selected {
+    r: 12;
+}
+
+
+/* =========================
+   DESELECT BUTTON
+========================= */
+
+#deselect-grenade {
+    margin-top: 15px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   LINEUP DRAWING
+========================= */
+
+.lineup-drawing {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-dasharray: 8 6;
+}
+
+.lineup-drawing-point {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.lineup-drawing-point.lineup-start {
+    fill: #0f0;
+}
+
+.lineup-drawing-point.lineup-end {
+    fill: #f00;
+}
+
+
+/* =========================
+   LINEUP DRAWING CONTROLS
+========================= */
+
+#lineup-drawing-controls {
+    margin-top: 10px;
+}
+
+#lineup-drawing-controls button {
+    margin-right: 5px;
+}
+
+#lineup-drawing-controls button.active {
+    outline: 2px solid currentcolor;
+}
+
+
+/* =========================
+   LINEUP IMAGES
+========================= */
+
+.lineup-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.lineup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}

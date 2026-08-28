@@ -5,14 +5,16 @@
     flex-wrap: wrap;
 }
 
-#editor-controls {
+#editor-controls,
+#lineup-drawing-controls {
     display: flex;
     gap: 10px;
     padding-bottom: 10px;
 }
 
 #maps-menu button,
-#editor-controls button {
+#editor-controls button,
+#lineup-drawing-controls button {
     height: 35px;
     background: #333;
     color: white;
@@ -26,21 +28,25 @@
     width: 120px;
 }
 
-#editor-controls button {
+#editor-controls button,
+#lineup-drawing-controls button {
     width: 140px;
 }
 
 #maps-menu button:hover,
-#editor-controls button:hover {
+#editor-controls button:hover,
+#lineup-drawing-controls button:hover {
     background: #444;
 }
 
 #maps-menu button:active,
-#editor-controls button:active {
+#editor-controls button:active,
+#lineup-drawing-controls button:active {
     background: #555;
 }
 
 #editor-controls #draw-mode.active,
+#lineup-drawing-controls #draw-lineup.active,
 #maps-menu button.active {
     background: #b00303;
 }

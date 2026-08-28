@@ -21,7 +21,34 @@
         <div class="header-spacer"></div>
     </div>
 
-    <nav id="maps-menu">
+    <div id="mode-selector">
+
+        <label>
+            <input
+                type="radio"
+                name="display-mode"
+                value="callouts"
+                id="callouts-radio"
+                checked
+            >
+
+            <span>Callouts</span>
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="display-mode"
+                value="lineups"
+                id="lineups-radio"
+            >
+
+            <span>Nade Lineups</span>
+        </label>
+
+    </div>
+
+    <div id="maps-menu">
         <button data-map="mirage" class="active">
             Mirage
         </button>
@@ -46,17 +73,88 @@
         <button data-map="vertigo">
             Vertigo
         </button>
-    </nav>
+    </div>
 
-    <div id="editor-controls">
 
-        <button id="draw-mode">
-            Draw Polygon
-        </button>
+    <!-- =========================
+        CALLOUT CONTROLS
+    ========================= -->
 
-        <button id="finish-shape">
-            Finish Shape
-        </button>
+    <div id="callout-controls">
+        <div id="editor-controls">
+            <button id="draw-mode">
+                Draw Polygon
+            </button>
+            <button id="finish-shape">
+                Finish Shape
+            </button>
+        </div>
+    </div>
+
+
+    <!-- =========================
+        NADE LINEUP CONTROLS
+    ========================= -->
+
+    <div
+        id="lineup-controls"
+        class="hidden"
+    >
+
+        <span>Show:</span>
+
+        <label>
+            <input
+                type="checkbox"
+                class="nade-filter"
+                value="smoke"
+                checked
+            >
+            Smoke
+        </label>
+
+        <label>
+            <input
+                type="checkbox"
+                class="nade-filter"
+                value="flash"
+                checked
+            >
+            Flash
+        </label>
+
+        <label>
+            <input
+                type="checkbox"
+                class="nade-filter"
+                value="molotov"
+                checked
+            >
+            Molotov
+        </label>
+
+        <label>
+            <input
+                type="checkbox"
+                class="nade-filter"
+                value="he"
+                checked
+            >
+            HE
+        </label>
+
+
+        <div id="lineup-drawing-controls">
+
+            <button id="draw-lineup">
+                Draw Lineup
+            </button>
+
+            <button id="finish-lineup">
+                Finish Lineup
+            </button>
+
+        </div>
 
     </div>
 </header>
@@ -69,7 +167,7 @@
     </section>
 
     <aside id="info-panel">
-        <h2>
+        <h2 id="info-title">
             Area callout
         </h2>
 

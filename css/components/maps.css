@@ -44,3 +44,13 @@
 .map-overlay.drawing .callout {
     pointer-events:none;
 }
+
+/* =========================
+   MAP MENU
+========================= */
+
+#maps-menu {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}

@@ -26,3 +26,40 @@
 .header-top h1 {
     margin: 0;
 }
+
+/* =========================
+   MODE SELECTOR
+========================= */
+
+#mode-selector {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#mode-selector label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   LINEUP FILTERS
+========================= */
+
+#lineup-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#lineup-controls label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}

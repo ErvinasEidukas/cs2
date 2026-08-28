@@ -1,0 +1,55 @@
+{
+    "grenades": [
+        {
+            "id": "window-smoke",
+            "name": "Window Smoke",
+            "type": "smoke",
+            "end": {
+                "x": 620,
+                "y": 340
+            },
+            "throws": [
+                {
+                    "id": "window-smoke-tspawn",
+                    "name": "T Spawn",
+                    "start": {
+                        "x": 180,
+                        "y": 850
+                    },
+                    "bounces": [
+                        {
+                            "x": 350,
+                            "y": 650
+                        }
+                    ],
+                    "instructions": "PLACEHOLDER: Stand in T Spawn. Aim at the specified position and perform a jumpthrow.",
+                    "image": null,
+                    "video": null
+                },
+                {
+                    "id": "window-smoke-palace",
+                    "name": "Palace",
+                    "start": {
+                        "x": 260,
+                        "y": 720
+                    },
+                    "bounces": [
+                        {
+                            "x": 420,
+                            "y": 570
+                        },
+                        {
+                            "x": 520,
+                            "y": 450
+                        }
+                    ],
+                    "instructions": "PLACEHOLDER: Stand in Palace. Aim at the corner and perform a jumpthrow.",
+                    "image": [
+                        "window-smoke-tspawn.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }
+    ]
+}

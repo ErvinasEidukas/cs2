@@ -4,3 +4,30 @@
 @import url("../components/buttons.css");
 @import url("../components/editor.css");
 @import url("../components/header.css");
+@import url("../components/grenades.css");
+
+.hidden {
+    display: none !important;
+}
+
+.lineup-type {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.lineup-video {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+#info-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+#deselect-grenade {
+    margin-top: 15px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
