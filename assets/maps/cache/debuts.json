@@ -1,0 +1,32 @@
+{
+    "debuts": [
+        {
+            "id": "a-main-execute",
+            "name": "A Main Execute",
+            "nades": [
+                {
+                    "id": "a-main-smoke",
+                    "throw": "car"
+                },
+                {
+                    "id": "a-site-flash",
+                    "throw": "default"
+                }
+            ]
+        },
+        {
+            "id": "b-execute",
+            "name": "B Execute",
+            "nades": [
+                {
+                    "id": "b-site-smoke",
+                    "throw": "window"
+                },
+                {
+                    "id": "b-site-molotov",
+                    "throw": "short"
+                }
+            ]
+        }
+    ]
+}

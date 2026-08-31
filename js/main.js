@@ -9,6 +9,8 @@ setupDrawing()
 setupDisplayMode()
 setupLineupDrawing()
 
-const savedMap = getCookie("selectedMap")
+const savedMap = getCookie("selectedMap") || "mirage"
 
-loadMap(savedMap || "mirage")
+loadMap(savedMap)
+
+document.body.classList.remove("loading")

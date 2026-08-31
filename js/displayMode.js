@@ -1,7 +1,9 @@
-import { drawGrenades, loadGrenadeData } from "./grenades.js"
+import { drawGrenades } from "./grenades.js"
 import { setCookie, getCookie } from "./helper.js"
+import { getEnabledDebuts } from "./debuts.js"
 
 let currentMode = "callouts"
+let currentMap = null
 
 let enabledNadeTypes = new Set([
     "smoke",
@@ -15,30 +17,91 @@ let enabledNadeSides = new Set([
     "t"
 ])
 
+function getLineupSettings() {
+    const cookie = getCookie("lineupSettings")
+
+    if (!cookie) {
+        return {}
+    }
+
+    try {
+        return JSON.parse(cookie)
+    } catch (error) {
+        console.error("Failed to parse lineup settings:", error)
+        return {}
+    }
+}
+
+function saveLineupSettings() {
+    if (!currentMap) {
+        return
+    }
+
+    const settings = getLineupSettings()
+
+    settings[currentMap] = {
+        sides: [...enabledNadeSides],
+        types: [...enabledNadeTypes],
+        debuts: getEnabledDebuts()
+    }
+
+    setCookie(
+        "lineupSettings",
+        JSON.stringify(settings)
+    )
+}
+
+function loadLineupSettings(mapName) {
+    const settings = getLineupSettings()
+    const mapSettings = settings[mapName]
+
+    if (!mapSettings) {
+        enabledNadeTypes = new Set([
+            "smoke",
+            "flash",
+            "molotov",
+            "he"
+        ])
+
+        enabledNadeSides = new Set([
+            "ct",
+            "t"
+        ])
+
+        return
+    }
+
+    enabledNadeTypes = new Set(
+        mapSettings.types || []
+    )
+
+    enabledNadeSides = new Set(
+        mapSettings.sides || []
+    )
+}
+
 function setCalloutsVisibility(show) {
-    document.querySelectorAll(".callout").forEach(callout => {
-        callout.style.display = show ? "" : "none"
-    })
+    document
+        .querySelectorAll(".callout")
+        .forEach(callout => {
+            callout.style.display = show ? "" : "none"
+        })
 }
 
 export function setupDisplayMode() {
+    const calloutsRadio =
+        document.getElementById("callouts-radio")
 
-    const calloutsRadio = document.getElementById("callouts-radio")
-    const lineupsRadio = document.getElementById("lineups-radio")
+    const lineupsRadio =
+        document.getElementById("lineups-radio")
 
-    const calloutControls = document.getElementById("callout-controls")
-    const lineupControls = document.getElementById("lineup-controls")
+    const calloutControls =
+        document.getElementById("callout-controls")
 
-    // =========================
-    // RESTORE SAVED SETTINGS
-    // =========================
+    const lineupControls =
+        document.getElementById("lineup-controls")
 
     const savedMode = getCookie("displayMode")
-
-    const savedNadeTypes = getCookie("nadeTypes")
-    const savedNadeSides = getCookie("nadeSides")
-
-    // Restore display mode
 
     if (savedMode === "lineups") {
         currentMode = "lineups"
@@ -48,7 +111,6 @@ export function setupDisplayMode() {
 
         calloutControls.classList.add("hidden")
         lineupControls.classList.remove("hidden")
-
     } else {
         currentMode = "callouts"
 
@@ -59,43 +121,10 @@ export function setupDisplayMode() {
         lineupControls.classList.add("hidden")
     }
 
-    // Restore grenade types
-    if (savedNadeTypes !== null) {
-
-        enabledNadeTypes = new Set(
-            savedNadeTypes
-                .split(",")
-                .filter(type => type)
-        )
-
-    }
-
-    // Restore grenade sides
-    if (savedNadeSides !== null) {
-
-        enabledNadeSides = new Set(
-            savedNadeSides
-                .split(",")
-                .filter(side => side)
-        )
-
-    }
-
-    // Update checkbox UI
-    document.querySelectorAll(".nade-filter").forEach(checkbox => {
-        checkbox.checked = enabledNadeTypes.has(checkbox.value)
-    })
-
-    document.querySelectorAll(".nade-side-filter").forEach(checkbox => {
-        checkbox.checked = enabledNadeSides.has(checkbox.value)
-    })
-
-    // =========================
-    // RADIO BUTTONS
-    // =========================
     calloutsRadio.addEventListener("change", () => {
-
-        if (!calloutsRadio.checked) return
+        if (!calloutsRadio.checked) {
+            return
+        }
 
         currentMode = "callouts"
 
@@ -109,8 +138,9 @@ export function setupDisplayMode() {
     })
 
     lineupsRadio.addEventListener("change", () => {
-
-        if (!lineupsRadio.checked) return
+        if (!lineupsRadio.checked) {
+            return
+        }
 
         currentMode = "lineups"
 
@@ -123,71 +153,86 @@ export function setupDisplayMode() {
         redrawGrenades()
     })
 
-    // =========================
-    // GRENADE TYPE CHECKBOXES
-    // =========================
-    document.querySelectorAll(".nade-filter").forEach(checkbox => {
-        checkbox.addEventListener("change", () => {
-            const type = checkbox.value
+    document
+        .querySelectorAll(".nade-filter")
+        .forEach(checkbox => {
+            checkbox.addEventListener("change", () => {
+                const type = checkbox.value
 
-            if (checkbox.checked) {
-                enabledNadeTypes.add(type)
-            } else {
-                enabledNadeTypes.delete(type)
-            }
+                if (checkbox.checked) {
+                    enabledNadeTypes.add(type)
+                } else {
+                    enabledNadeTypes.delete(type)
+                }
 
-            // Save to cookie
-            setCookie(
-                "nadeTypes",
-                [...enabledNadeTypes].join(",")
-            )
+                saveLineupSettings()
 
-            if (currentMode === "lineups") {
-                redrawGrenades()
-            }
+                if (currentMode === "lineups") {
+                    redrawGrenades()
+                }
+            })
         })
+
+    document
+        .querySelectorAll(".nade-side-filter")
+        .forEach(checkbox => {
+            checkbox.addEventListener("change", () => {
+                const side = checkbox.value
+
+                if (checkbox.checked) {
+                    enabledNadeSides.add(side)
+                } else {
+                    enabledNadeSides.delete(side)
+                }
+
+                saveLineupSettings()
+
+                if (currentMode === "lineups") {
+                    redrawGrenades()
+                }
+            })
+        })
+
+    document.addEventListener("debutsChanged", () => {
+        saveLineupSettings()
+
+        if (currentMode === "lineups") {
+            redrawGrenades()
+        }
     })
 
-    // =========================
-    // CT / T CHECKBOXES
-    // =========================
-    document.querySelectorAll(".nade-side-filter").forEach(checkbox => {
-        checkbox.addEventListener("change", () => {
-            const side = checkbox.value
-
-            if (checkbox.checked) {
-                enabledNadeSides.add(side)
-            } else {
-                enabledNadeSides.delete(side)
-            }
-
-            // Save to cookie
-            setCookie(
-                "nadeSides",
-                [...enabledNadeSides].join(",")
-            )
-
-            if (currentMode === "lineups") {
-                redrawGrenades()
-            }
-        })
+    document.addEventListener("debutsLoaded", () => {
+        if (currentMode === "lineups") {
+            redrawGrenades()
+        }
     })
 
-    // =========================
-    // INITIAL DISPLAY
-    // =========================
-    if (currentMode === "callouts") {
-        setCalloutsVisibility(true)
-    } else {
-        setCalloutsVisibility(false)
-        redrawGrenades()
-    }
+    setCalloutsVisibility(
+        currentMode === "callouts"
+    )
 }
 
 export function setCurrentMap(mapName) {
-    if (currentMode === "lineups") {
-        loadGrenadeData(mapName)
-    }
+    currentMap = mapName
+
+    loadLineupSettings(mapName)
+    updateNadeCheckboxes()
+}
+
+function updateNadeCheckboxes() {
+    document
+        .querySelectorAll(".nade-filter")
+        .forEach(checkbox => {
+            checkbox.checked =
+                enabledNadeTypes.has(checkbox.value)
+        })
+
+    document
+        .querySelectorAll(".nade-side-filter")
+        .forEach(checkbox => {
+            checkbox.checked =
+                enabledNadeSides.has(checkbox.value)
+        })
 }
 
 function redrawGrenades() {
@@ -200,7 +245,9 @@ function redrawGrenades() {
 function clearGrenades() {
     document
         .querySelectorAll(".grenade-trajectory")
-        .forEach(element => element.remove())
+        .forEach(element => {
+            element.remove()
+        })
 }
 
 export function getCurrentMode() {

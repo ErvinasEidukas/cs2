@@ -1,3 +1,5 @@
+import { getDebutNades } from "./debuts.js"
+
 const grenadeIcons = {
     smoke: "../assets/icons/grenades/smoke.svg",
     flash: "../assets/icons/grenades/flash.svg",
@@ -40,11 +42,17 @@ function redrawCurrentGrenades() {
     drawGrenades(currentEnabledTypes, currentEnabledSides)
 }
 
-export function drawGrenades(enabledTypes = [], enabledSides = []) {
+export function drawGrenades(
+    enabledTypes = [],
+    enabledSides = []
+) {
+
     currentEnabledTypes = [...enabledTypes]
     currentEnabledSides = [...enabledSides]
 
-    const svg = document.querySelector(".map-overlay")
+    const svg =
+        document.querySelector(".map-overlay")
+
     if (!svg) {
         return
     }
@@ -52,37 +60,99 @@ export function drawGrenades(enabledTypes = [], enabledSides = []) {
     svg.querySelectorAll(".grenade-trajectory")
         .forEach(element => element.remove())
 
-    let visibleGrenades = currentGrenades.filter(
-        grenade => enabledTypes.includes(grenade.type) && enabledSides.includes(grenade.side)
-    )
+    let visibleGrenades =
+        currentGrenades.filter(
+            grenade => enabledTypes.includes(grenade.type) &&
+                enabledSides.includes(grenade.side)
+        )
+
+    /*
+        Debut filtering
+    */
+
+    const debutNades = getDebutNades()
+
+    const hasDebutFilter =
+        debutNades.length > 0
+
+    if (hasDebutFilter) {
+
+        visibleGrenades =
+            visibleGrenades.filter(
+                grenade => debutNades.some(
+                        nade => nade.grenadeId === grenade.id
+                    )
+            )
+
+    }
+
+    /*
+        Selected grenade
+    */
 
     if (selectedGrenadeId) {
-        visibleGrenades = visibleGrenades.filter(
-            grenade => grenade.id === selectedGrenadeId
-        )
+
+        visibleGrenades =
+            visibleGrenades.filter(
+                grenade => grenade.id === selectedGrenadeId
+            )
+
     }
 
     visibleGrenades.forEach(grenade => {
-        const grenadeGroup = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "g"
-        )
+
+        const grenadeGroup =
+            document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "g"
+            )
 
         grenadeGroup.classList.add(
             "grenade-trajectory",
             `grenade-${grenade.type}`
         )
 
-        grenadeGroup.dataset.grenadeId = grenade.id
+        grenadeGroup.dataset.grenadeId =
+            grenade.id
 
-        grenade.throws.forEach(throwData => {
-            const throwGroup = document.createElementNS(
-                "http://www.w3.org/2000/svg",
-                "g"
+        /*
+            Determine which throws should
+            be displayed.
+        */
+
+        let visibleThrows =
+            grenade.throws
+
+        if (hasDebutFilter) {
+
+            visibleThrows =
+                grenade.throws.filter(
+                    throwData => debutNades.some(
+                            nade => nade.grenadeId === grenade.id &&
+                                nade.throwId === throwData.id
+                        )
+                )
+
+        }
+
+        /*
+            Render throws
+        */
+
+        visibleThrows.forEach(throwData => {
+
+            const throwGroup =
+                document.createElementNS(
+                    "http://www.w3.org/2000/svg",
+                    "g"
+                )
+
+            throwGroup.classList.add(
+                "grenade-throw"
             )
 
-            throwGroup.classList.add("grenade-throw")
-            throwGroup.dataset.throwId = throwData.id
+            throwGroup.dataset.throwId =
+                throwData.id
 
             const points = [
                 throwData.start,
@@ -90,97 +160,230 @@ export function drawGrenades(enabledTypes = [], enabledSides = []) {
                 grenade.end
             ]
 
-            for (let i = 0; i < points.length - 1; i++) {
+            for (
+                let i = 0;
+                i < points.length - 1;
+                i++
+            ) {
+
                 const current = points[i]
                 const next = points[i + 1]
 
-                const line = document.createElementNS(
-                    "http://www.w3.org/2000/svg",
-                    "line"
+                const line =
+                    document.createElementNS(
+                        "http://www.w3.org/2000/svg",
+                        "line"
+                    )
+
+                line.setAttribute(
+                    "x1",
+                    current.x
                 )
 
-                line.setAttribute("x1", current.x)
-                line.setAttribute("y1", current.y)
-                line.setAttribute("x2", next.x)
-                line.setAttribute("y2", next.y)
-                line.classList.add("grenade-line")
-                line.style.pointerEvents = "none"
+                line.setAttribute(
+                    "y1",
+                    current.y
+                )
+
+                line.setAttribute(
+                    "x2",
+                    next.x
+                )
+
+                line.setAttribute(
+                    "y2",
+                    next.y
+                )
+
+                line.classList.add(
+                    "grenade-line"
+                )
+
+                line.style.pointerEvents =
+                    "none"
 
                 throwGroup.appendChild(line)
+
             }
 
-            const startDot = document.createElementNS(
-                "http://www.w3.org/2000/svg",
-                "circle"
+            const startDot =
+                document.createElementNS(
+                    "http://www.w3.org/2000/svg",
+                    "circle"
+                )
+
+            startDot.setAttribute(
+                "cx",
+                throwData.start.x
             )
 
-            startDot.setAttribute("cx", throwData.start.x)
-            startDot.setAttribute("cy", throwData.start.y)
-            startDot.setAttribute("r", "9")
-            startDot.classList.add("grenade-start")
+            startDot.setAttribute(
+                "cy",
+                throwData.start.y
+            )
+
+            startDot.setAttribute(
+                "r",
+                "9"
+            )
+
+            startDot.classList.add(
+                "grenade-start"
+            )
 
             if (
                 selectedGrenadeId === grenade.id &&
                 selectedThrowId === throwData.id
             ) {
-                startDot.classList.add("selected")
-            }
 
-            startDot.style.pointerEvents = "auto"
-
-            startDot.addEventListener("click", event => {
-                event.stopPropagation()
-                selectGrenadeThrow(grenade, throwData)
-            })
-
-            throwGroup.appendChild(startDot)
-
-            ;(throwData.bounces || []).forEach(bounce => {
-                const bounceDot = document.createElementNS(
-                    "http://www.w3.org/2000/svg",
-                    "circle"
+                startDot.classList.add(
+                    "selected"
                 )
 
-                bounceDot.setAttribute("cx", bounce.x)
-                bounceDot.setAttribute("cy", bounce.y)
-                bounceDot.setAttribute("r", "6")
-                bounceDot.classList.add("grenade-bounce")
-                bounceDot.style.pointerEvents = "none"
+            }
 
-                throwGroup.appendChild(bounceDot)
-            })
+            startDot.style.pointerEvents =
+                "auto"
 
-            grenadeGroup.appendChild(throwGroup)
+            startDot.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation()
+
+                    selectGrenadeThrow(
+                        grenade,
+                        throwData
+                    )
+
+                }
+            )
+
+            throwGroup.appendChild(
+                startDot
+            )
+
+            ;(throwData.bounces || [])
+                .forEach(bounce => {
+
+                    const bounceDot =
+                        document.createElementNS(
+                            "http://www.w3.org/2000/svg",
+                            "circle"
+                        )
+
+                    bounceDot.setAttribute(
+                        "cx",
+                        bounce.x
+                    )
+
+                    bounceDot.setAttribute(
+                        "cy",
+                        bounce.y
+                    )
+
+                    bounceDot.setAttribute(
+                        "r",
+                        "6"
+                    )
+
+                    bounceDot.classList.add(
+                        "grenade-bounce"
+                    )
+
+                    bounceDot.style.pointerEvents =
+                        "none"
+
+                    throwGroup.appendChild(
+                        bounceDot
+                    )
+
+                })
+
+            grenadeGroup.appendChild(
+                throwGroup
+            )
+
         })
 
-        const iconPath = grenadeIcons[grenade.type]
+        /*
+            Don't show the grenade icon if
+            no throws from this grenade
+            are part of the selected debut.
+        */
+
+        if (visibleThrows.length === 0) {
+            return
+        }
+
+        const iconPath =
+            grenadeIcons[grenade.type]
 
         if (iconPath) {
-            const icon = document.createElementNS(
-                "http://www.w3.org/2000/svg",
-                "image"
-            )
+
+            const icon =
+                document.createElementNS(
+                    "http://www.w3.org/2000/svg",
+                    "image"
+                )
 
             const iconSize = 40
 
-            icon.setAttribute("x", grenade.end.x - iconSize / 2)
-            icon.setAttribute("y", grenade.end.y - iconSize / 2)
-            icon.setAttribute("width", iconSize)
-            icon.setAttribute("height", iconSize)
-            icon.setAttribute("href", iconPath)
+            icon.setAttribute(
+                "x",
+                grenade.end.x - iconSize / 2
+            )
 
-            icon.classList.add("grenade-end-icon")
-            icon.style.pointerEvents = "auto"
+            icon.setAttribute(
+                "y",
+                grenade.end.y - iconSize / 2
+            )
 
-            icon.addEventListener("click", event => {
-                event.stopPropagation()
-                selectGrenadeLineup(grenade)
-            })
+            icon.setAttribute(
+                "width",
+                iconSize
+            )
 
-            grenadeGroup.appendChild(icon)
+            icon.setAttribute(
+                "height",
+                iconSize
+            )
+
+            icon.setAttribute(
+                "href",
+                iconPath
+            )
+
+            icon.classList.add(
+                "grenade-end-icon"
+            )
+
+            icon.style.pointerEvents =
+                "auto"
+
+            icon.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation()
+
+                    selectGrenadeLineup(
+                        grenade
+                    )
+
+                }
+            )
+
+            grenadeGroup.appendChild(
+                icon
+            )
+
         }
 
-        svg.appendChild(grenadeGroup)
+        svg.appendChild(
+            grenadeGroup
+        )
+
     })
 }
 

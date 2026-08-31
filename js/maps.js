@@ -2,6 +2,7 @@ import { createCallouts, resetPositionDescription } from "./callouts.js"
 import { enableDrawing } from "./drawing.js"
 import { setCurrentMap } from "./displayMode.js"
 import { loadGrenadeData } from "./grenades.js"
+import { loadDebutData } from "./debuts.js"
 import { setCookie } from "./helper.js"
 
 let mapData = {}
@@ -11,28 +12,28 @@ export function setupMapButtons() {
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            loadMap(button.dataset.map)
+            const mapName = button.dataset.map
+            loadMap(mapName)
         })
     })
 }
 
 function setActiveMapButton(buttons, mapName) {
     buttons.forEach(button => {
-        if (button.dataset.map === mapName) {
-            button.classList.add("active")
-        } else {
-            button.classList.remove("active")
-        }
+        button.classList.toggle(
+            "active",
+            button.dataset.map === mapName
+        )
     })
 }
 
 export function loadMap(mapName) {
-    const mapContainer = document.getElementById("map-container")
+    setCookie("selectedMap", mapName)
     const buttons = document.querySelectorAll("#maps-menu button")
 
-    setCookie("selectedMap", mapName)
-
     setActiveMapButton(buttons, mapName)
+
+    const mapContainer = document.getElementById("map-container")
 
     mapContainer.innerHTML = `
         <div class="map-wrapper">
@@ -48,17 +49,22 @@ export function loadMap(mapName) {
     `
 
     enableDrawing()
+    setCurrentMap(mapName)
+
     loadMapData(mapName)
     loadGrenadeData(mapName)
+    loadDebutData(mapName)
+
     resetPositionDescription()
-    setCurrentMap(mapName)
 }
 
 function loadMapData(mapName) {
     fetch(`../assets/maps/${mapName}/${mapName}.json`)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Failed to load ${mapName}.json`)
+                throw new Error(
+                    `Failed to load ${mapName}.json`
+                )
             }
 
             return response.json()
@@ -68,6 +74,9 @@ function loadMapData(mapName) {
             createCallouts(mapData)
         })
         .catch(error => {
-            console.error("JSON loading error:", error)
+            console.error(
+                "JSON loading error:",
+                error
+            )
         })
 }

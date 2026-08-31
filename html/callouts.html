@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,27 +11,16 @@
     <link rel="stylesheet" href="../css/pages/callouts.css">
 </head>
 
-<body>
+<body class="loading">
 
 <header>
-
     <div class="header-top">
-
         <a href="../index.html" class="home-link">←</a>
-
         <h1>CS2 Callouts</h1>
-
         <div class="header-spacer"></div>
-
     </div>
 
-
-    <!-- =========================
-        DISPLAY MODE
-    ========================= -->
-
     <div id="mode-selector">
-
         <label>
             <input
                 type="radio"
@@ -53,95 +41,36 @@
             >
             <span>Nade Lineups</span>
         </label>
-
     </div>
-
-
-    <!-- =========================
-        MAPS
-    ========================= -->
 
     <div id="maps-menu">
-
-        <button data-map="mirage" class="active">
-            Mirage
-        </button>
-
-        <button data-map="dust2">
-            Dust 2
-        </button>
-
-        <button data-map="ancient">
-            Ancient
-        </button>
-
-        <button data-map="anubis">
-            Anubis
-        </button>
-
-        <button data-map="inferno">
-            Inferno
-        </button>
-
-        <button data-map="nuke">
-            Nuke
-        </button>
-
-        <button data-map="cache">
-            Cache
-        </button>
-
-        <button data-map="vertigo">
-            Vertigo
-        </button>
-
+        <button data-map="mirage">Mirage</button>
+        <button data-map="dust2">Dust 2</button>
+        <button data-map="ancient">Ancient</button>
+        <button data-map="anubis">Anubis</button>
+        <button data-map="inferno">Inferno</button>
+        <button data-map="nuke">Nuke</button>
+        <button data-map="cache">Cache</button>
+        <button data-map="vertigo">Vertigo</button>
     </div>
-
 </header>
 
-
 <main>
-
-    <!-- =========================
-        LEFT CONTROLS
-    ========================= -->
-
     <aside id="controls-panel">
 
-
-        <!-- =========================
-            CALLOUT CONTROLS
-        ========================= -->
-
         <div id="callout-controls">
-
             <h2>Callout Controls</h2>
 
             <div id="editor-controls">
-
-                <button id="draw-mode">
-                    Draw Polygon
-                </button>
-
-                <button id="finish-shape">
-                    Finish Shape
-                </button>
-
+                <button id="draw-mode">Draw Polygon</button>
+                <button id="finish-shape">Finish Shape</button>
             </div>
-
         </div>
 
-
-        <!-- =========================
-            NADE LINEUP CONTROLS
-        ========================= -->
-
         <div id="lineup-controls" class="hidden">
-
             <h2>Nade Lineups</h2>
 
             <div class="control-group">
-
                 <span>Side</span>
 
                 <label>
@@ -163,12 +92,9 @@
                     >
                     T
                 </label>
-
             </div>
 
-
             <div class="control-group">
-
                 <span>Grenades</span>
 
                 <label>
@@ -210,77 +136,39 @@
                     >
                     HE
                 </label>
-
             </div>
 
+            <div id="debuts-controls" class="hidden">
+                <span>Debuts:</span>
+                <div id="debuts-filters"></div>
+            </div>
 
             <div id="lineup-drawing-controls">
-
-                <button id="draw-lineup">
-                    Draw Lineup
-                </button>
-
-                <button id="finish-lineup">
-                    Finish Lineup
-                </button>
-
+                <button id="draw-lineup">Draw Lineup</button>
+                <button id="finish-lineup">Finish Lineup</button>
             </div>
-
         </div>
 
     </aside>
 
-
-    <!-- =========================
-        CENTER MAP
-    ========================= -->
-
     <section id="map-section">
-
-        <div id="map-container">
-            <!-- map loads here -->
-        </div>
-
+        <div id="map-container"></div>
     </section>
 
-
-    <!-- =========================
-        RIGHT DATA PANEL
-    ========================= -->
-
     <aside id="info-panel">
+        <h2 id="info-title">Area callout</h2>
 
-        <h2 id="info-title">
-            Area callout
-        </h2>
-
-        <h3 id="area-name">
-            Click a position
-        </h3>
+        <h3 id="area-name">Click a position</h3>
 
         <h3 id="area-name-ru"></h3>
 
+        <div id="area-description"></div>
 
-        <!-- Description -->
-
-        <div id="area-description">
-            <!-- Description loads here -->
-        </div>
-
-
-        <!-- Photos -->
-
-        <div id="area-photos">
-            <!-- Photos load here -->
-        </div>
-
+        <div id="area-photos"></div>
     </aside>
-
 </main>
-
 
 <script type="module" src="../js/main.js"></script>
 
 </body>
 </html>
-```
