@@ -358,7 +358,7 @@
                 },
                 {
                     "id": "truck-smoke",
-                    "type": "Jump + LKM",
+                    "type": "W + Jump + LKM",
                     "start": {"x": 679, "y": 433},
                     "image": [
                         "truck-smoke-1.png",
@@ -604,7 +604,7 @@
             "throws": [
                 {
                     "id": "toxic",
-                    "type": "LKM + PKM",
+                    "type": "W + LKM + PKM",
                     "start": {"x": 515, "y": 856},
                     "image": [
                         "ct-b.png"
@@ -638,7 +638,7 @@
             "throws": [
                 {
                     "id": "toxic",
-                    "type": "W + LKM",
+                    "type": "LKM",
                     "start": {"x": 515, "y": 856},
                     "bounces": [
                         { "x": 419, "y": 806 }
@@ -693,7 +693,7 @@
             "throws": [
                 {
                     "id": "outside-run",
-                    "type": "W + Jump + LKM",
+                    "type": "W + Jump + LKM + PKM",
                     "start": {"x": 703, "y": 538},
                     "bounces": [
                         {"x": 683,"y": 506},
@@ -762,7 +762,7 @@
             "throws": [
                 {
                     "id": "outside",
-                    "type": "Jump + LKM",
+                    "type": "Jump + LKM + PKM",
                     "start": {"x": 605, "y": 300},
                     "image": [
                         "a-execute.png"
