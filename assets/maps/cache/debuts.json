@@ -1,32 +1,67 @@
 {
-    "debuts": [
-        {
-            "id": "a-main-execute",
-            "name": "A Main Execute",
-            "nades": [
-                {
-                    "id": "a-main-smoke",
-                    "throw": "car"
-                },
-                {
-                    "id": "a-site-flash",
-                    "throw": "default"
-                }
-            ]
-        },
-        {
-            "id": "b-execute",
-            "name": "B Execute",
-            "nades": [
-                {
-                    "id": "b-site-smoke",
-                    "throw": "window"
-                },
-                {
-                    "id": "b-site-molotov",
-                    "throw": "short"
-                }
-            ]
-        }
-    ]
+    "debuts": [{
+        "id": "ct-highway-default",
+        "name": "CT highway default",
+        "nades": [{
+            "id": "boost-molotov",
+            "throw": "z"
+        }, {
+            "id": "boost-he",
+            "throw": "white"
+        }, {
+            "id": "middle-smoke",
+            "throw": "white"
+        }, {
+            "id": "middle-smoke",
+            "throw": "ticket"
+        }]
+    }, {
+        "id": "t-mid-default",
+        "name": "T mid default",
+        "nades": [{
+            "id": "sand-bags-molotov",
+            "throw": "run"
+        }, {
+            "id": "z",
+            "throw": "truck-smoke"
+        }, {
+            "id": "white-box-he",
+            "throw": "barrel"
+        }]
+    }, {
+        "id": "b-execute",
+        "name": "B - execute",
+        "nades": [{
+            "id": "headshot-molotov",
+            "throw": "toxic"
+        }, {
+            "id": "b-3-molotov",
+            "throw": "toxic"
+        }, {
+            "id": "ct-b",
+            "throw": "toxic"
+        }, {
+            "id": "b-site-flash",
+            "throw": "toxic"
+        }]
+    }, {
+        "id": "a-execute",
+        "name": "A - execute",
+        "nades": [{
+            "id": "a-9-smoke",
+            "throw": "outside"
+        }, {
+            "id": "a-site-smoke",
+            "throw": "outside"
+        }, {
+            "id": "a-site-flash",
+            "throw": "squeaky"
+        }, {
+            "id": "a-site-molotov",
+            "throw": "squeaky"
+        }, {
+            "id": "forklift-molotov-2",
+            "throw": "squeaky"
+        }]
+    }]
 }

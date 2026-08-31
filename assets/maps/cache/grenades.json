@@ -336,7 +336,7 @@
             "end": {"x": 303, "y": 590},
             "throws": [
                 {
-                    "id": "9",
+                    "id": "t-spawn",
                     "type": "W + Jump + LKM",
                     "start": {"x": 840, "y": 596},
                     "image": [
@@ -369,14 +369,14 @@
             ]
         },
         {
-            "id": "sand-bags",
+            "id": "sand-bags-molotov",
             "name": "Sand bags molotov",
             "type": "molotov",
             "side": "t",
             "end": {"x": 372, "y": 609},
             "throws": [
                 {
-                    "id": "9",
+                    "id": "run",
                     "type": "D + Jump + LKM",
                     "start": {"x": 661, "y": 415},
                     "bounces": [{"x": 597,"y": 419}],
@@ -407,7 +407,7 @@
             "end": {"x": 336, "y": 512},
             "throws": [
                 {
-                    "id": "9",
+                    "id": "barrel",
                     "type": "W + Jump + LKM",
                     "start": {"x": 593, "y": 499},
                     "image": [
@@ -692,7 +692,7 @@
             "end": {"x": 301,"y": 314},
             "throws": [
                 {
-                    "id": "outside",
+                    "id": "outside-run",
                     "type": "W + Jump + LKM",
                     "start": {"x": 703, "y": 538},
                     "bounces": [
