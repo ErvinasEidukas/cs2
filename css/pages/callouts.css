@@ -99,3 +99,81 @@ main {
 #info-panel {
     grid-column: 3;
 }
+
+/* =========================
+   NADE LINEUPS CONTROLS
+========================= */
+
+#lineup-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 8px;
+}
+
+
+/* Title */
+
+#lineup-controls h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Filter groups */
+
+#lineup-controls .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* Group label */
+
+#lineup-controls .control-group > span {
+    margin-bottom: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+
+/* Checkbox labels */
+
+#lineup-controls label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* Checkboxes */
+
+#lineup-controls input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+/* Drawing buttons */
+
+#lineup-drawing-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+
+#lineup-drawing-controls button {
+    width: 100%;
+}
