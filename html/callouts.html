@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CS2 Callouts</title>
 
     <link rel="icon" type="image/png" href="/../assets/icons/counter-strike-2.png">
@@ -13,13 +15,21 @@
 <body>
 
 <header>
+
     <div class="header-top">
+
         <a href="../index.html" class="home-link">←</a>
 
         <h1>CS2 Callouts</h1>
 
         <div class="header-spacer"></div>
+
     </div>
+
+
+    <!-- =========================
+        DISPLAY MODE
+    ========================= -->
 
     <div id="mode-selector">
 
@@ -31,7 +41,6 @@
                 id="callouts-radio"
                 checked
             >
-
             <span>Callouts</span>
         </label>
 
@@ -42,153 +51,209 @@
                 value="lineups"
                 id="lineups-radio"
             >
-
             <span>Nade Lineups</span>
         </label>
 
     </div>
 
+
+    <!-- =========================
+        MAPS
+    ========================= -->
+
     <div id="maps-menu">
+
         <button data-map="mirage" class="active">
             Mirage
         </button>
+
         <button data-map="dust2">
             Dust 2
         </button>
+
         <button data-map="ancient">
             Ancient
         </button>
+
         <button data-map="anubis">
             Anubis
         </button>
+
         <button data-map="inferno">
             Inferno
         </button>
+
         <button data-map="nuke">
             Nuke
         </button>
+
         <button data-map="cache">
             Cache
         </button>
+
         <button data-map="vertigo">
             Vertigo
         </button>
-    </div>
-
-
-    <!-- =========================
-        CALLOUT CONTROLS
-    ========================= -->
-
-    <div id="callout-controls">
-        <div id="editor-controls">
-            <button id="draw-mode">
-                Draw Polygon
-            </button>
-            <button id="finish-shape">
-                Finish Shape
-            </button>
-        </div>
-    </div>
-
-
-    <!-- =========================
-        NADE LINEUP CONTROLS
-    ========================= -->
-
-    <div
-        id="lineup-controls"
-        class="hidden"
-    >
-
-        <span>Side:</span>
-
-        <label>
-            <input
-                type="checkbox"
-                class="nade-side-filter"
-                value="ct"
-                checked
-            >
-            CT
-        </label>
-
-        <label>
-            <input
-                type="checkbox"
-                class="nade-side-filter"
-                value="t"
-                checked
-            >
-            T
-        </label>
-
-        <span>Grenades:</span>
-
-        <label>
-            <input
-                type="checkbox"
-                class="nade-filter"
-                value="smoke"
-                checked
-            >
-            Smoke
-        </label>
-
-        <label>
-            <input
-                type="checkbox"
-                class="nade-filter"
-                value="flash"
-                checked
-            >
-            Flash
-        </label>
-
-        <label>
-            <input
-                type="checkbox"
-                class="nade-filter"
-                value="molotov"
-                checked
-            >
-            Molotov
-        </label>
-
-        <label>
-            <input
-                type="checkbox"
-                class="nade-filter"
-                value="he"
-                checked
-            >
-            HE
-        </label>
-
-
-        <div id="lineup-drawing-controls">
-
-            <button id="draw-lineup">
-                Draw Lineup
-            </button>
-
-            <button id="finish-lineup">
-                Finish Lineup
-            </button>
-
-        </div>
 
     </div>
+
 </header>
 
+
 <main>
+
+    <!-- =========================
+        LEFT CONTROLS
+    ========================= -->
+
+    <aside id="controls-panel">
+
+
+        <!-- =========================
+            CALLOUT CONTROLS
+        ========================= -->
+
+        <div id="callout-controls">
+
+            <h2>Callout Controls</h2>
+
+            <div id="editor-controls">
+
+                <button id="draw-mode">
+                    Draw Polygon
+                </button>
+
+                <button id="finish-shape">
+                    Finish Shape
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+            NADE LINEUP CONTROLS
+        ========================= -->
+
+        <div
+            id="lineup-controls"
+            class="hidden"
+        >
+
+            <h2>Nade Lineups</h2>
+
+
+            <div class="control-group">
+
+                <span>Side:</span>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="nade-side-filter"
+                        value="ct"
+                        checked
+                    >
+                    CT
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="nade-side-filter"
+                        value="t"
+                        checked
+                    >
+                    T
+                </label>
+
+            </div>
+
+
+            <div class="control-group">
+
+                <span>Grenades:</span>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="nade-filter"
+                        value="smoke"
+                        checked
+                    >
+                    Smoke
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="nade-filter"
+                        value="flash"
+                        checked
+                    >
+                    Flash
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="nade-filter"
+                        value="molotov"
+                        checked
+                    >
+                    Molotov
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="nade-filter"
+                        value="he"
+                        checked
+                    >
+                    HE
+                </label>
+
+            </div>
+
+
+            <div id="lineup-drawing-controls">
+
+                <button id="draw-lineup">
+                    Draw Lineup
+                </button>
+
+                <button id="finish-lineup">
+                    Finish Lineup
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+        CENTER MAP
+    ========================= -->
+
     <section id="map-section">
+
         <div id="map-container">
             <!-- map loads here -->
         </div>
+
     </section>
 
+
+    <!-- =========================
+        RIGHT DATA PANEL
+    ========================= -->
+
     <aside id="info-panel">
+
         <h2 id="info-title">
             Area callout
         </h2>
@@ -198,10 +263,28 @@
         </h3>
 
         <h3 id="area-name-ru"></h3>
+
+
+        <!-- Description -->
+
+        <div id="area-description">
+            <!-- Description loads here -->
+        </div>
+
+
+        <!-- Photos -->
+
+        <div id="area-photos">
+            <!-- Photos load here -->
+        </div>
+
     </aside>
+
 </main>
+
 
 <script type="module" src="../js/main.js"></script>
 
 </body>
 </html>
+```

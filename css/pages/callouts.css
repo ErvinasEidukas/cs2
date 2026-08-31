@@ -74,3 +74,28 @@
 .image-popup-close:hover {
     background: rgb(255 255 255 / 30%);
 }
+
+main {
+    display: grid;
+    grid-template-columns:
+        280px
+        minmax(500px, 1fr)
+        320px;
+    gap: 20px;
+    width: 100%;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#controls-panel {
+    grid-column: 1;
+}
+
+#map-section {
+    grid-column: 2;
+}
+
+#info-panel {
+    grid-column: 3;
+}

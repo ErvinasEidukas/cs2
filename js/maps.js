@@ -2,6 +2,7 @@ import { createCallouts, resetPositionDescription } from "./callouts.js"
 import { enableDrawing } from "./drawing.js"
 import { setCurrentMap } from "./displayMode.js"
 import { loadGrenadeData } from "./grenades.js"
+import { setCookie } from "./helper.js"
 
 let mapData = {}
 
@@ -10,10 +11,7 @@ export function setupMapButtons() {
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            const mapName = button.dataset.map
-
-            loadMap(mapName)
-            setActiveMapButton(buttons, mapName)
+            loadMap(button.dataset.map)
         })
     })
 }
@@ -30,6 +28,11 @@ function setActiveMapButton(buttons, mapName) {
 
 export function loadMap(mapName) {
     const mapContainer = document.getElementById("map-container")
+    const buttons = document.querySelectorAll("#maps-menu button")
+
+    setCookie("selectedMap", mapName)
+
+    setActiveMapButton(buttons, mapName)
 
     mapContainer.innerHTML = `
         <div class="map-wrapper">
