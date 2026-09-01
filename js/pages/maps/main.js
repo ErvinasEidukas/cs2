@@ -4,13 +4,26 @@ import { setupDisplayMode } from "./displayMode.js"
 import { setupLineupDrawing } from "./lineupDrawing.js"
 import { getCookie } from "./helper.js"
 
-setupMapButtons()
-setupDrawing()
-setupDisplayMode()
-setupLineupDrawing()
+main()
 
-const savedMap = getCookie("selectedMap") || "mirage"
+function main() {
+    setupEventListeners()
+    loadPage()
+    removeLoadingAnimation()
+}
 
-loadMap(savedMap)
+function setupEventListeners() {
+    setupMapButtons()
+    setupDrawing()
+    setupDisplayMode()
+    setupLineupDrawing()
+}
 
-document.body.classList.remove("loading")
+function loadPage() {
+    const savedMap = getCookie("selectedMap") || "mirage"
+    loadMap(savedMap)
+}
+
+function removeLoadingAnimation() {
+    document.body.classList.remove("loading")
+}

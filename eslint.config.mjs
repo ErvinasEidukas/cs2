@@ -38,7 +38,7 @@ export default [
             "max-len": [
                 "warn",
                 {
-                    "code": 100
+                    "code": 120
                 }
             ],
             "no-multiple-empty-lines": [

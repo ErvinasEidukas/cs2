@@ -79,11 +79,20 @@ function showInfo(id) {
         return
     }
 
-    document.getElementById("area-name").textContent = area.name
-    document.getElementById("area-name-ru").textContent = area.ru || ""
+    const title = document.getElementById("info-title")
+    const description = document.getElementById("info-description")
+
+    title.innerHTML = "Area callout"
+    description.innerHTML = `
+        <div>${area.name}</div>
+        ${area.ru ? `<div>${area.ru}</div>` : ""}
+    `
 }
 
 export function resetPositionDescription() {
-    document.getElementById("area-name").textContent = "Click a position"
-    document.getElementById("area-name-ru").textContent = ""
+    const title = document.getElementById("info-title")
+    const description = document.getElementById("info-description")
+
+    title.innerHTML = "Area callout"
+    description.innerHTML = "Click a position"
 }
