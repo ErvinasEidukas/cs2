@@ -3,7 +3,7 @@ import { enableDrawing } from "./drawing.js"
 import { setCurrentMap } from "./displayMode.js"
 import { loadGrenadeData } from "./grenades.js"
 import { loadDebutData } from "./debuts.js"
-import { setCookie } from "./helper.js"
+import { getCookie, setCookie } from "./helper.js"
 
 let mapData = {}
 
@@ -51,32 +51,32 @@ export function loadMap(mapName) {
     enableDrawing()
     setCurrentMap(mapName)
 
-    loadMapData(mapName)
+    loadMapCallouts(mapName)
     loadGrenadeData(mapName)
     loadDebutData(mapName)
 
     resetPositionDescription()
 }
 
-function loadMapData(mapName) {
-    fetch(`../assets/maps/${mapName}/${mapName}.json`)
-        .then(response => {
+function loadMapCallouts(mapName) {
+    const mode = getCookie("displayMode") || "callouts"
+
+    if (mode === "callouts") {
+        fetch(`../assets/maps/${mapName}/${mapName}.json`).then(response => {
             if (!response.ok) {
                 throw new Error(
                     `Failed to load ${mapName}.json`
                 )
             }
-
             return response.json()
-        })
-        .then(data => {
+        }).then(data => {
             mapData = data
             createCallouts(mapData)
-        })
-        .catch(error => {
+        }).catch(error => {
             console.error(
                 "JSON loading error:",
                 error
             )
         })
+    }
 }
