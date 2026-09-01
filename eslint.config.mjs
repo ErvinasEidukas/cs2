@@ -1,12 +1,10 @@
-import globals from "globals";
-import js from "@eslint/js";
-
+import globals from "globals"
+import js from "@eslint/js"
 
 export default [
     js.configs.recommended,
-
     {
-        files: ["js/*.js"],
+        files: ["**/*.js"],
         languageOptions: {
             globals: {
                 ...globals.browser
@@ -48,7 +46,7 @@ export default [
                 {
                     "max": 1
                 }
-            ],
+            ]
         }
     }
-];
+]
