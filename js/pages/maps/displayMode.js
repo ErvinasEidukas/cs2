@@ -1,6 +1,7 @@
-import { drawLineups } from "./lineup.js"
+import { drawLineups, resetLineupDescription } from "./lineup.js"
 import { setCookie, getCookie } from "./helper.js"
 import { getEnabledDebuts } from "./debuts.js"
+import { resetPositionDescription } from "./callouts.js"
 
 let currentMode = "callouts"
 let currentMap = null
@@ -165,6 +166,7 @@ function showCalloutsMode(elements) {
 
     clearGrenades()
     setCalloutsVisibility(true)
+    resetPositionDescription()
 }
 
 function showLineupsMode(elements) {
@@ -180,6 +182,7 @@ function showLineupsMode(elements) {
 
     setCalloutsVisibility(false)
     redrawLineups()
+    resetLineupDescription()
 }
 
 function addEventListenerNadeFilterChange() {

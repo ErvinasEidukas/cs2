@@ -222,7 +222,6 @@ function showGrenadeIconInfo() {
     const description = document.getElementById("info-description")
 
     title.innerHTML = "Grenade lineup"
-    description.innerHTML = "Select starting position to view throw details"
     description.innerHTML = `
         <div>Select starting position to view throw details</div>
         <button id="deselect-grenade">
@@ -331,6 +330,14 @@ function openImagePopup(src, alt = "Grenade lineup") {
     document.body.style.overflow = "hidden"
 }
 
+export function resetLineupDescription() {
+    const title = document.getElementById("info-title")
+    const description = document.getElementById("info-description")
+
+    title.innerHTML = "Grenade lineup"
+    description.innerHTML = "Select starting position to view throw details"
+}
+
 function closeImagePopup() {
     const popup = document.getElementById("image-popup")
 
@@ -344,12 +351,6 @@ function closeImagePopup() {
 function deselectLineup() {
     selectedLineupId = null
     selectedThrowId = null
-
-    const title = document.getElementById("info-title")
-    const description = document.getElementById("info-description")
-
-    title.innerHTML = "Grenade lineup"
-    description.innerHTML = "Select starting position to view throw details"
-
+    resetLineupDescription()
     redrawCurrentLineup()
 }
