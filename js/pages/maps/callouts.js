@@ -1,3 +1,5 @@
+import { getCookie } from "./helper.js"
+
 let mapData = {}
 let calloutsEnabled = true
 
@@ -14,9 +16,9 @@ export function createCallouts(data) {
     mapData = data
 
     const svg = document.querySelector(".map-overlay")
+    const mode = getCookie("displayMode") || "callouts"
 
     Object.entries(data.areas).forEach(([id, area]) => {
-
         let shape
 
         if (area.shape.type === "polygon") {
@@ -25,10 +27,7 @@ export function createCallouts(data) {
                 "polygon"
             )
 
-            shape.setAttribute(
-                "points",
-                area.shape.points
-            )
+            shape.setAttribute("points", area.shape.points)
         }
 
         if (area.shape.type === "rectangle") {
@@ -49,6 +48,10 @@ export function createCallouts(data) {
 
         shape.classList.add("callout")
         shape.dataset.id = id
+
+        if (mode !== "callouts") {
+            shape.style.display = "none"
+        }
 
         shape.addEventListener("click", () => {
             if (!calloutsEnabled) {

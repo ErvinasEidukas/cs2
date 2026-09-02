@@ -5,7 +5,9 @@ export function setupLineupDrawing() {
     const drawButton = document.getElementById("draw-lineup")
     const finishButton = document.getElementById("finish-lineup")
 
-    if (!drawButton || !finishButton) return
+    if (!drawButton || !finishButton) {
+        return
+    }
 
     drawButton.addEventListener("click", startDrawing)
     finishButton.addEventListener("click", finishDrawing)
@@ -13,24 +15,32 @@ export function setupLineupDrawing() {
 
 function startDrawing() {
     const svg = document.querySelector(".map-overlay")
-    if (!svg) return
+    if (!svg) {
+        return
+    }
 
     drawing = true
     points = []
 
     const oldLine = svg.querySelector(".lineup-drawing")
-    if (oldLine) oldLine.remove()
+    if (oldLine) {
+        oldLine.remove()
+    }
 
     svg.classList.add("lineup-drawing-mode")
 
     const button = document.getElementById("draw-lineup")
-    if (button) button.classList.add("active")
+    if (button) {
+        button.classList.add("active")
+    }
 
     svg.addEventListener("click", handleMapClick)
 }
 
 function handleMapClick(event) {
-    if (!drawing) return
+    if (!drawing) {
+        return
+    }
 
     const svg = event.currentTarget
     const rect = svg.getBoundingClientRect()
@@ -48,22 +58,14 @@ function drawPreview(svg) {
     let polyline = svg.querySelector(".lineup-drawing")
 
     if (!polyline) {
-        polyline = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "polyline"
-        )
-
+        polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline")
         polyline.classList.add("lineup-drawing")
         polyline.style.pointerEvents = "none"
 
         svg.appendChild(polyline)
     }
 
-    polyline.setAttribute(
-        "points",
-        points.map(point => `${point.x},${point.y}`).join(" ")
-    )
-
+    polyline.setAttribute("points", points.map(point => `${point.x},${point.y}`).join(" "))
     drawPointMarkers(svg)
 }
 
@@ -71,10 +73,7 @@ function drawPointMarkers(svg) {
     svg.querySelectorAll(".lineup-drawing-point").forEach(point => point.remove())
 
     points.forEach((point, index) => {
-        const circle = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "circle"
-        )
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
 
         circle.setAttribute("cx", point.x)
         circle.setAttribute("cy", point.y)
@@ -113,15 +112,11 @@ function finishDrawing() {
         end
     }
 
-    console.log("========== LINEUP DATA ==========")
     console.log(JSON.stringify(lineupData, null, 4))
-    console.log("=================================")
 
-    navigator.clipboard?.writeText(
-        JSON.stringify(lineupData, null, 4)
-    )
-        .then(() => console.log("Lineup data copied to clipboard."))
-        .catch(() => console.log("Could not copy to clipboard."))
+    navigator.clipboard?.writeText(JSON.stringify(lineupData, null, 4)).then(() => {
+        console.log("Lineup data copied to clipboard.")
+    }).catch(() => console.log("Could not copy to clipboard."))
 
     clearLineupDrawing()
     stopDrawing()
@@ -145,9 +140,7 @@ export function clearLineupDrawing() {
     const svg = document.querySelector(".map-overlay")
     if (!svg) return
 
-    svg.querySelectorAll(
-        ".lineup-drawing, .lineup-drawing-point"
-    ).forEach(element => element.remove())
+    svg.querySelectorAll(".lineup-drawing, .lineup-drawing-point").forEach(element => element.remove())
 
     points = []
 }

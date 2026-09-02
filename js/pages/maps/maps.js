@@ -1,9 +1,9 @@
 import { createCallouts, resetPositionDescription } from "./callouts.js"
-import { enableDrawing } from "./drawing.js"
-import { setCurrentMap } from "./displayMode.js"
-import { loadGrenadeData } from "./grenades.js"
 import { loadDebutData } from "./debuts.js"
-import { getCookie, setCookie } from "./helper.js"
+import { setCurrentMap } from "./displayMode.js"
+import { enableDrawing } from "./drawing.js"
+import { loadGrenadeData } from "./grenades.js"
+import { setCookie } from "./helper.js"
 
 let mapData = {}
 
@@ -59,24 +59,20 @@ export function loadMap(mapName) {
 }
 
 function loadMapCallouts(mapName) {
-    const mode = getCookie("displayMode") || "callouts"
-
-    if (mode === "callouts") {
-        fetch(`../assets/maps/${mapName}/${mapName}.json`).then(response => {
-            if (!response.ok) {
-                throw new Error(
-                    `Failed to load ${mapName}.json`
-                )
-            }
-            return response.json()
-        }).then(data => {
-            mapData = data
-            createCallouts(mapData)
-        }).catch(error => {
-            console.error(
-                "JSON loading error:",
-                error
+    fetch(`../assets/maps/${mapName}/${mapName}.json`).then(response => {
+        if (!response.ok) {
+            throw new Error(
+                `Failed to load ${mapName}.json`
             )
-        })
-    }
+        }
+        return response.json()
+    }).then(data => {
+        mapData = data
+        createCallouts(mapData)
+    }).catch(error => {
+        console.error(
+            "JSON loading error:",
+            error
+        )
+    })
 }

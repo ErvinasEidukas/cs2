@@ -205,7 +205,7 @@ function selectGrenadeLineup(grenade) {
     selectedGrenadeId = grenade.id
     selectedThrowId = null
 
-    showGrenadeInfo(grenade)
+    showGrenadeIconInfo()
     redrawCurrentGrenades()
 }
 
@@ -217,7 +217,7 @@ function selectGrenadeThrow(grenade, throwData) {
     redrawCurrentGrenades()
 }
 
-function showGrenadeInfo(grenade) {
+function showGrenadeIconInfo() {
     const title = document.getElementById("info-title")
     const description = document.getElementById("info-description")
 
