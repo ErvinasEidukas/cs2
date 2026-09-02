@@ -1,8 +1,9 @@
 {
     "map": "Cache",
     "areas": {
-        "heaven": {
-            "name": "Heaven",
+        "a-heaven": {
+            "name": "9 / Heaven",
+            "ru": "9",
             "shape": {
                 "type": "polygon",
                 "points": "249,662 280,664 284,730 252,728"
@@ -12,7 +13,7 @@
             "name": "Headshot",
             "shape": {
                 "type": "polygon",
-                "points": "287,774 303,774 303,840 285,840"
+                "points": "285,774 301,775 302,812 286,813"
             }
         },
         "b-default": {
@@ -38,9 +39,10 @@
         },
         "garage": {
             "name": "Garage",
+            "ru": "Ангар / Гараж",
             "shape": {
                 "type": "polygon",
-                "points": "510,506 509,613 674,614 671,504"
+                "points": "669,505 617,503 614,611 672,611"
             }
         },
         "boost": {
@@ -58,14 +60,14 @@
             }
         },
         "highway": {
-            "name": "Highway",
+            "name": "Highway / Short",
             "shape": {
                 "type": "polygon",
                 "points": "300,410 354,415 354,490 305,490"
             }
         },
         "white-box": {
-            "name": "White box",
+            "name": "White box / X",
             "shape": {
                 "type": "polygon",
                 "points": "351,495 354,517 326,517 331,495"
@@ -96,14 +98,14 @@
             "name": "Vent room",
             "shape": {
                 "type": "polygon",
-                "points": "319,634 321,664 438,668 442,648 427,645 424,632"
+                "points": "321,633 325,666 412,669 407,633"
             }
         },
-        "yellow": {
-            "name": "Yellow",
+        "forklift": {
+            "name": "Forklift / Yellow",
             "shape": {
                 "type": "polygon",
-                "points": "426,320 427,337 385,338 386,356 447,357 447,321"
+                "points": "381,316 384,334 422,334 422,322"
             }
         },
         "squeaky": {
@@ -125,6 +127,196 @@
             "shape": {
                 "type": "polygon",
                 "points": "335,248 335,262 351,265 353,248"
+            }
+        },
+        "quad": {
+            "name": "Quad",
+            "shape": {
+                "type": "polygon",
+                "points": "282,178 282,203 340,206 336,180"
+            }
+        },
+        "nbk": {
+            "name": "NBK",
+            "shape": {
+                "type": "polygon",
+                "points": "364,180 364,199 380,200 380,181"
+            }
+        },
+        "a-boost": {
+            "name": "A boost",
+            "shape": {
+                "type": "polygon",
+                "points": "426,222 426,236 444,236 444,221"
+            }
+        },
+        "elevator": {
+            "name": "Elevator",
+            "shape": {
+                "type": "polygon",
+                "points": "516,228 516,281 593,293 598,231"
+            }
+        },
+        "sleeve": {
+            "name": "Sleeve",
+            "ru": "Рукав",
+            "shape": {
+                "type": "polygon",
+                "points": "545,294 602,297 603,404 542,408"
+            }
+        },
+        "pipe": {
+            "name": "Pipe",
+            "ru": "Труба",
+            "shape": {
+                "type": "polygon",
+                "points": "450,448 450,477 467,478 467,448"
+            }
+        },
+        "under-mid-boost": {
+            "name": "Under mid boost",
+            "shape": {
+                "type": "polygon",
+                "points": "475,490 476,505 501,503 504,486"
+            }
+        },
+        "???": {
+            "name": "???",
+            "ru": "Подъём",
+            "shape": {
+                "type": "polygon",
+                "points": "470,582 470,616 501,617 501,585"
+            }
+        },
+        "roof": {
+            "name": "Roof",
+            "shape": {
+                "type": "polygon",
+                "points": "388,579 391,611 448,613 450,584"
+            }
+        },
+        "barrels": {
+            "name": "Barrels",
+            "ru": "Бочки",
+            "shape": {
+                "type": "polygon",
+                "points": "453,671 454,696 467,701 467,673"
+            }
+        },
+        "under-vents": {
+            "name": "Under vents",
+            "shape": {
+                "type": "polygon",
+                "points": "429,650 432,663 444,666 443,648"
+            }
+        },
+        "simple": {
+            "name": "Simple",
+            "shape": {
+                "type": "polygon",
+                "points": "301,715 301,727 289,727 289,712"
+            }
+        },
+        "bridge": {
+            "name": "Bridge",
+            "shape": {
+                "type": "polygon",
+                "points": "305,670 305,712 317,712 321,673"
+            }
+        },
+        "b-9 / heaven": {
+            "name": "Heaven",
+            "ru": "9",
+            "shape": {
+                "type": "polygon",
+                "points": "340,336 337,385 355,385 355,358 380,360 380,338"
+            }
+        },
+        "b-2": {
+            "name": "2",
+            "shape": {
+                "type": "polygon",
+                "points": "385,786 387,802 402,802 402,787"
+            }
+        },
+        "b-3": {
+            "name": "3",
+            "shape": {
+                "type": "polygon",
+                "points": "365,832 366,844 384,843 383,828"
+            }
+        },
+        "generator": {
+            "name": "Generator",
+            "shape": {
+                "type": "polygon",
+                "points": "286,834 287,848 302,851 299,834"
+            }
+        },
+        "droplet": {
+            "name": "Drop / Droplet",
+            "ru": "Капля",
+            "shape": {
+                "type": "polygon",
+                "points": "286,645 305,645 308,666 290,666"
+            }
+        },
+        "tree": {
+            "name": "Tree",
+            "shape": {
+                "type": "polygon",
+                "points": "163,759 185,759 189,783 163,784"
+            }
+        },
+        "post": {
+            "name": "Post / Post office",
+            "shape": {
+                "type": "polygon",
+                "points": "163,680 204,688 203,737 166,743"
+            }
+        },
+        "?": {
+            "name": "?",
+            "ru": "Бутка",
+            "shape": {
+                "type": "polygon",
+                "points": "301,389 317,389 317,407 299,404"
+            }
+        },
+        "red": {
+            "name": "Red",
+            "shape": {
+                "type": "polygon",
+                "points": "584,509 586,572 608,573 603,508"
+            }
+        },
+        "b-loby": {
+            "name": "B Loby",
+            "shape": {
+                "type": "polygon",
+                "points": "428,748 522,746 526,690 621,695 622,743 570,743 567,791 426,780"
+            }
+        },
+        "b-main": {
+            "name": "B Main",
+            "shape": {
+                "type": "polygon",
+                "points": "406,674 443,676 444,736 409,736"
+            }
+        },
+        "a-main": {
+            "name": "A Main",
+            "shape": {
+                "type": "polygon",
+                "points": "453,236 454,342 504,345 510,233"
+            }
+        },
+        "????": {
+            "name": "????",
+            "ru": "Карниз",
+            "shape": {
+                "type": "polygon",
+                "points": "375,499 448,500 448,509 375,508"
             }
         },
         "": {
