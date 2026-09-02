@@ -1,4 +1,81 @@
 {
-    "grenades": []
+    "grenades": [
+        {
+            "id": "t-middle-smoke",
+            "name": "Mid smoke",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 470, "y": 376},
+            "throws": [
+                {
+                    "id": "suicide",
+                    "type": "LKM",
+                    "start": {"x": 451, "y": 786},
+                    "image": [
+                        "t-middle-smoke-suicide-1.jpg",
+                        "t-middle-smoke-suicide-2.jpg",
+                        "t-middle-smoke-suicide-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-long-start",
+            "name": "Long start",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 845, "y": 474},
+            "throws": [
+                {
+                    "id": "t-spawn",
+                    "type": "Jump + LKM",
+                    "start": {"x": 447, "y": 882},
+                    "image": [
+                        "t-long-start-t-spawn-1.jpg",
+                        "t-long-start-t-spawn-2.jpg",
+                        "t-long-start-t-spawn-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-mid-to-b",
+            "name": "Mid to B",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 523, "y": 250},
+            "throws": [
+                {
+                    "id": "x-box",
+                    "type": "Ctrl + Jump + LKM",
+                    "start": {"x": 502, "y": 429},
+                    "bounces": [{"x": 428, "y": 328}],
+                    "image": [
+                        "t-mid-to-b-x-box-1.jpg",
+                        "t-mid-to-b-x-box-2.jpg",
+                        "t-mid-to-b-x-box-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-a-ct",
+            "name": "CT smoke",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 826, "y": 252},
+            "throws": [
+                {
+                    "id": "long-box",
+                    "type": "Jump + LKM",
+                    "start": {"x": 682, "y": 664},
+                    "image": [
+                        "t-a-ct-long-box-1.png",
+                        "t-a-ct-long-box-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }
+    ]
 }
-
