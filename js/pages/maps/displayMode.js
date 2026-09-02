@@ -34,8 +34,10 @@ export function setupDisplayMode() {
 
 export function setCurrentMap(mapName) {
     currentMap = mapName
+}
 
-    loadLineupSettings(mapName)
+export function handleLineupControlsData() {
+    loadLineupSettings(currentMap)
     updateNadeCheckboxes()
 }
 

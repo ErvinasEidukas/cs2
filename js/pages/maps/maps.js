@@ -1,6 +1,6 @@
 import { createCallouts, resetPositionDescription } from "./callouts.js"
 import { loadDebutData } from "./debuts.js"
-import { setCurrentMap } from "./displayMode.js"
+import { handleLineupControlsData, setCurrentMap } from "./displayMode.js"
 import { enableDrawing } from "./drawing.js"
 import { loadGrenadeData } from "./grenades.js"
 import { setCookie } from "./helper.js"
@@ -18,21 +18,31 @@ export function setupMapButtons() {
     })
 }
 
-function setActiveMapButton(buttons, mapName) {
+export function loadMap(mapName) {
+    setCookie("selectedMap", mapName)
+    setActiveMapButton(mapName)
+
+    loadMapImage(mapName)
+
+    enableDrawing()
+    setCurrentMap(mapName)
+    handleLineupControlsData()
+
+    loadMapCallouts(mapName)
+    loadGrenadeData(mapName)
+    loadDebutData(mapName)
+
+    resetPositionDescription()
+}
+
+function setActiveMapButton(mapName) {
+    const buttons = document.querySelectorAll("#maps-menu button")
     buttons.forEach(button => {
-        button.classList.toggle(
-            "active",
-            button.dataset.map === mapName
-        )
+        button.classList.toggle("active", button.dataset.map === mapName)
     })
 }
 
-export function loadMap(mapName) {
-    setCookie("selectedMap", mapName)
-    const buttons = document.querySelectorAll("#maps-menu button")
-
-    setActiveMapButton(buttons, mapName)
-
+function loadMapImage(mapName) {
     const mapContainer = document.getElementById("map-container")
 
     mapContainer.innerHTML = `
@@ -47,19 +57,10 @@ export function loadMap(mapName) {
             ></svg>
         </div>
     `
-
-    enableDrawing()
-    setCurrentMap(mapName)
-
-    loadMapCallouts(mapName)
-    loadGrenadeData(mapName)
-    loadDebutData(mapName)
-
-    resetPositionDescription()
 }
 
 function loadMapCallouts(mapName) {
-    fetch(`../assets/maps/${mapName}/${mapName}.json`).then(response => {
+    fetch(`../assets/maps/${mapName}/callouts.json`).then(response => {
         if (!response.ok) {
             throw new Error(
                 `Failed to load ${mapName}.json`
