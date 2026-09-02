@@ -223,6 +223,13 @@ function showGrenadeInfo(grenade) {
 
     title.innerHTML = "Grenade lineup"
     description.innerHTML = "Select starting position to view throw details"
+    description.innerHTML = `
+        <div>Select starting position to view throw details</div>
+        <button id="deselect-grenade">
+            Show All Nades
+        </button>
+    `
+    setupDeselectButton()
 }
 
 function showThrowInfo(grenade, throwData) {

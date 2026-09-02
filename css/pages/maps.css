@@ -28,6 +28,12 @@ body.loading {
 #info-panel {
     display: flex;
     flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 8px;
+    grid-column: 3;
+    align-self: start;
 }
 
 #deselect-grenade {
@@ -82,7 +88,7 @@ body.loading {
 main {
     display: grid;
     grid-template-columns:
-        280px
+        300px
         minmax(500px, 1fr)
         320px;
     gap: 20px;
@@ -98,78 +104,20 @@ main {
 
 #map-section {
     grid-column: 2;
-}
-
-#info-panel {
-    grid-column: 3;
-}
-
-/* Nade Lineups Controls */
-
-#lineup-controls {
-    display: flex;
     flex-direction: column;
-    gap: 18px;
-    padding: 16px;
-    border: 1px solid rgb(255 255 255 / 10%);
-    border-radius: 8px;
-}
-
-#lineup-controls h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-#lineup-controls .control-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-#lineup-controls .control-group > span {
-    margin-bottom: 3px;
-    font-size: 13px;
-    font-weight: bold;
-    text-transform: uppercase;
-    opacity: 0.7;
-}
-
-#lineup-controls label {
-    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    font-size: 14px;
 }
-
-#lineup-controls input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    cursor: pointer;
-}
-
-#lineup-drawing-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 5px;
-}
-
-#lineup-drawing-controls button {
-    width: 100%;
-}
-
-/* Debuts */
 
 #debuts-controls {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-top: 4px;
-    padding-top: 15px;
     border-top: 1px solid rgb(255 255 255 / 10%);
+    padding: 15px 20px;
+    box-sizing: border-box;
 }
 
 #debuts-controls > span {
@@ -199,4 +147,89 @@ main {
     height: 16px;
     margin: 0;
     cursor: pointer;
+}
+
+#lineup-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#lineup-controls h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#lineup-controls .control-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#lineup-controls .control-group > span {
+    margin-bottom: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+#lineup-controls label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#lineup-controls input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+#lineup-drawing-controls {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+#lineup-drawing-controls button {
+    width: 100%;
+}
+
+#callout-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#callout-controls h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#editor-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#editor-controls button {
+    width: 100%;
 }

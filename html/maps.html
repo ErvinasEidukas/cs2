@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CS2 Callouts</title>
+    <title>CS2 Maps</title>
 
     <link rel="icon" type="image/png" href="/../assets/icons/counter-strike-2.png">
-    <link rel="stylesheet" href="../css/pages/callouts.css">
+    <link rel="stylesheet" href="../css/pages/maps.css">
 </head>
 
 <body class="loading">
@@ -16,7 +16,7 @@
 <header>
     <div class="header-top">
         <a href="../index.html" class="home-link">←</a>
-        <h1>CS2 Callouts</h1>
+        <h1>CS2 Maps</h1>
         <div class="header-spacer"></div>
     </div>
 
@@ -34,30 +34,6 @@
 
 <main>
     <aside id="controls-panel">
-
-        <div id="mode-selector">
-            <label>
-                <input
-                    type="radio"
-                    name="display-mode"
-                    value="callouts"
-                    id="callouts-radio"
-                    checked
-                >
-                <span>Callouts</span>
-            </label>
-
-            <label>
-                <input
-                    type="radio"
-                    name="display-mode"
-                    value="lineups"
-                    id="lineups-radio"
-                >
-                <span>Nade Lineups</span>
-            </label>
-        </div>
-
         <div id="callout-controls">
             <h2>Callout Controls</h2>
 
@@ -148,20 +124,42 @@
                 <button id="finish-lineup">Finish Lineup</button>
             </div>
         </div>
-
     </aside>
 
     <section id="map-section">
+        <div id="mode-selector">
+            <label>
+                <input
+                    type="radio"
+                    name="display-mode"
+                    value="callouts"
+                    id="callouts-radio"
+                    checked
+                >
+                <span>Callouts</span>
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="display-mode"
+                    value="lineups"
+                    id="lineups-radio"
+                >
+                <span>Nade Lineups</span>
+            </label>
+        </div>
+
         <div id="map-container"></div>
     </section>
 
     <aside id="info-panel">
-        <h2 id="info-title">Area callout</h2>
-        <div id="info-description">Click a position</div>
-
-        <div id="area-description"></div>
-
-        <div id="area-photos"></div>
+        <div>
+            <h2 id="info-title">Area callout</h2>
+            <div id="info-description">Click a position</div>
+            <div id="area-description"></div>
+            <div id="area-photos"></div>
+        </div>
     </aside>
 </main>
 
