@@ -1,4 +1,4 @@
-import { drawGrenades } from "./grenades.js"
+import { drawLineups } from "./lineup.js"
 import { setCookie, getCookie } from "./helper.js"
 import { getEnabledDebuts } from "./debuts.js"
 
@@ -179,7 +179,7 @@ function showLineupsMode(elements) {
     elements.lineupControls.classList.remove("hidden")
 
     setCalloutsVisibility(false)
-    redrawGrenades()
+    redrawLineups()
 }
 
 function addEventListenerNadeFilterChange() {
@@ -195,7 +195,7 @@ function addEventListenerNadeFilterChange() {
 
             saveLineupSettings()
             if (currentMode === "lineups") {
-                redrawGrenades()
+                redrawLineups()
             }
         })
     })
@@ -214,7 +214,7 @@ function addEventListenerNadeSideFilter() {
 
             saveLineupSettings()
             if (currentMode === "lineups") {
-                redrawGrenades()
+                redrawLineups()
             }
         })
     })
@@ -225,7 +225,7 @@ function addEventListenerDebutsChanged() {
         saveLineupSettings()
 
         if (currentMode === "lineups") {
-            redrawGrenades()
+            redrawLineups()
         }
     })
 }
@@ -233,7 +233,7 @@ function addEventListenerDebutsChanged() {
 function addEventListenerDebutsLoaded() {
     document.addEventListener("debutsLoaded", () => {
         if (currentMode === "lineups") {
-            redrawGrenades()
+            redrawLineups()
         }
     })
 }
@@ -248,8 +248,8 @@ function updateNadeCheckboxes() {
     })
 }
 
-function redrawGrenades() {
-    drawGrenades(
+function redrawLineups() {
+    drawLineups(
         [...enabledNadeTypes],
         [...enabledNadeSides]
     )

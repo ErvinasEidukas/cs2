@@ -10,32 +10,32 @@ const grenadeIcons = {
 let currentMap = null
 let currentEnabledTypes = []
 let currentEnabledSides = []
-let selectedGrenadeId = null
+let selectedLineupId = null
 let selectedThrowId = null
-let currentGrenades = []
+let currentLineup = []
 
-export function loadGrenadeData(mapName) {
+export function loadLineupData(mapName) {
     currentMap = mapName
-    currentGrenades = []
+    currentLineup = []
 
-    selectedGrenadeId = null
+    selectedLineupId = null
     selectedThrowId = null
 
-    fetch(`../assets/maps/${mapName}/grenades.json`).then(response => {
+    fetch(`../assets/maps/${mapName}/lineup.json`).then(response => {
         if (!response.ok) {
-            throw new Error(`Failed to load ${mapName}/grenades.json`)
+            throw new Error(`Failed to load ${mapName}/lineup.json`)
         }
 
         return response.json()
     }).then(data => {
-        currentGrenades = data.grenades || []
-        redrawCurrentGrenades()
+        currentLineup = data.grenades || []
+        redrawCurrentLineup()
     }).catch(error => {
-        console.error("Grenade data loading error:", error)
+        console.error("Lineup data loading error:", error)
     })
 }
 
-export function drawGrenades(enabledTypes = [], enabledSides = []) {
+export function drawLineups(enabledTypes = [], enabledSides = []) {
     currentEnabledTypes = [...enabledTypes]
     currentEnabledSides = [...enabledSides]
 
@@ -47,7 +47,7 @@ export function drawGrenades(enabledTypes = [], enabledSides = []) {
 
     svg.querySelectorAll(".grenade-trajectory").forEach(element => element.remove())
 
-    let visibleGrenades =currentGrenades.filter(grenade => {
+    let visibleLineups = currentLineup.filter(grenade => {
         return enabledTypes.includes(grenade.type) && enabledSides.includes(grenade.side)
     })
 
@@ -56,16 +56,16 @@ export function drawGrenades(enabledTypes = [], enabledSides = []) {
     const hasDebutFilter = debutNades.length > 0
 
     if (hasDebutFilter) {
-        visibleGrenades = visibleGrenades.filter(grenade => {
+        visibleLineups = visibleLineups.filter(grenade => {
             return debutNades.some(nade => nade.grenadeId === grenade.id)
         })
     }
 
-    if (selectedGrenadeId) {
-        visibleGrenades = visibleGrenades.filter(grenade => grenade.id === selectedGrenadeId)
+    if (selectedLineupId) {
+        visibleLineups = visibleLineups.filter(grenade => grenade.id === selectedLineupId)
     }
 
-    visibleGrenades.forEach(grenade => {
+    visibleLineups.forEach(grenade => {
         const grenadeGroup = document.createElementNS("http://www.w3.org/2000/svg", "g")
         let visibleThrows = grenade.throws
 
@@ -131,7 +131,7 @@ export function drawGrenades(enabledTypes = [], enabledSides = []) {
                 startPoint.setAttribute("r", "9")
                 startPoint.classList.add("grenade-start")
                 if (
-                    selectedGrenadeId === grenade.id &&
+                    selectedLineupId === grenade.id &&
                     selectedThrowId === throwData.id
                 ) {
                     startPoint.classList.add("selected")
@@ -197,24 +197,24 @@ export function drawGrenades(enabledTypes = [], enabledSides = []) {
     })
 }
 
-function redrawCurrentGrenades() {
-    drawGrenades(currentEnabledTypes, currentEnabledSides)
+function redrawCurrentLineup() {
+    drawLineups(currentEnabledTypes, currentEnabledSides)
 }
 
 function selectGrenadeLineup(grenade) {
-    selectedGrenadeId = grenade.id
+    selectedLineupId = grenade.id
     selectedThrowId = null
 
     showGrenadeIconInfo()
-    redrawCurrentGrenades()
+    redrawCurrentLineup()
 }
 
 function selectGrenadeThrow(grenade, throwData) {
-    selectedGrenadeId = grenade.id
+    selectedLineupId = grenade.id
     selectedThrowId = throwData.id
 
     showThrowInfo(grenade, throwData)
-    redrawCurrentGrenades()
+    redrawCurrentLineup()
 }
 
 function showGrenadeIconInfo() {
@@ -286,7 +286,7 @@ function setupDeselectButton() {
         return
     }
 
-    button.addEventListener("click", deselectGrenade)
+    button.addEventListener("click", deselectLineup)
 }
 
 function openImagePopup(src, alt = "Grenade lineup") {
@@ -341,8 +341,8 @@ function closeImagePopup() {
     document.body.style.overflow = ""
 }
 
-function deselectGrenade() {
-    selectedGrenadeId = null
+function deselectLineup() {
+    selectedLineupId = null
     selectedThrowId = null
 
     const title = document.getElementById("info-title")
@@ -351,5 +351,5 @@ function deselectGrenade() {
     title.innerHTML = "Grenade lineup"
     description.innerHTML = "Select starting position to view throw details"
 
-    redrawCurrentGrenades()
+    redrawCurrentLineup()
 }

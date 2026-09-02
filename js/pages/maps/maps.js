@@ -2,7 +2,7 @@ import { createCallouts, resetPositionDescription } from "./callouts.js"
 import { loadDebutData } from "./debuts.js"
 import { handleLineupControlsData, setCurrentMap } from "./displayMode.js"
 import { enableDrawing } from "./drawing.js"
-import { loadGrenadeData } from "./grenades.js"
+import { loadLineupData } from "./lineup.js"
 import { setCookie } from "./helper.js"
 
 let mapData = {}
@@ -29,7 +29,7 @@ export function loadMap(mapName) {
     handleLineupControlsData()
 
     loadMapCallouts(mapName)
-    loadGrenadeData(mapName)
+    loadLineupData(mapName)
     loadDebutData(mapName)
 
     resetPositionDescription()
