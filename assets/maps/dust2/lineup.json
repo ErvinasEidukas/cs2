@@ -212,6 +212,177 @@
                     "video": null
                 }
             ]
+        }, {
+            "id": "ct-tunnel-smoke",
+            "name": "Tunnel smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 116, "y": 341},
+            "throws": [
+                {
+                    "id": "window",
+                    "type": "LKM",
+                    "start": {"x": 312,"y": 126},
+                    "image": [
+                        "ct-tunnel-smoke-window-1.jpg",
+                        "ct-tunnel-smoke-window-2.jpg",
+                        "ct-tunnel-smoke-window-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-catwalk-molotov",
+            "name": "Catwalk Molotov",
+            "type": "molotov",
+            "side": "t",
+            "end": {"x": 523, "y": 415},
+            "throws": [
+                {
+                    "id": "suicide",
+                    "type": "Jump + W + LKM",
+                    "start": {"x": 451, "y": 810},
+                    "bounces": [
+                        {"x": 457, "y": 784}
+                    ],
+                    "image": [
+                        "t-catwalk-molotov-suicide-1.jpg",
+                        "t-catwalk-molotov-suicide-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-car-molotov",
+            "name": "Car Molotov",
+            "type": "molotov",
+            "side": "t",
+            "end": {"x": 949, "y": 275},
+            "throws": [
+                {
+                    "id": "barrel",
+                    "type": "Jump + LKM",
+                    "start": {"x": 751, "y": 551},
+                    "image": [
+                        "t-car-molotov-barrel-1.jpg",
+                        "t-car-molotov-barrel-2.jpg",
+                        "t-car-molotov-barrel-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-a-site-molotov",
+            "name": "A Site Molotov",
+            "type": "molotov",
+            "side": "t",
+            "end": {"x": 795, "y": 189},
+            "throws": [
+                {
+                    "id": "coffee-cup",
+                    "type": "Ctrl + Jump + LKM",
+                    "start": {"x": 921, "y": 480},
+                    "image": [
+                        "t-a-site-molotov-coffee-cup-1.jpg",
+                        "t-a-site-molotov-coffee-cup-2.jpg",
+                        "t-a-site-molotov-coffee-cup-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-short-molotov",
+            "name": "Short Molotov",
+            "type": "molotov",
+            "side": "t",
+            "end": {"x": 677, "y": 281},
+            "throws": [
+                {
+                    "id": "catwalk",
+                    "type": "W + Jump + LKM",
+                    "start": {"x": 533, "y": 374},
+                    "bounces": [
+                        {"x": 560, "y": 396},
+                        {"x": 615, "y": 436}
+                    ],
+                    "image": [
+                        "t-short-molotov-catwalk-1.png",
+                        "t-short-molotov-catwalk-2.png",
+                        "t-short-molotov-catwalk-3.png",
+                        "t-short-molotov-catwalk-4.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-mid-doors-molotov",
+            "name": "Mid Doors Molotov",
+            "type": "molotov",
+            "side": "t",
+            "end": {"x": 486, "y": 342},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "LKM",
+                    "start": {"x": 438,"y": 427},
+                    "image": [
+                        "t-mid-doors-molotov-tunnel-1.jpg",
+                        "t-mid-doors-molotov-tunnel-2.jpg"
+                    ],
+                    "video": null
+                }, {
+                    "id": "x-box",
+                    "type": "Ctrl + LKM",
+                    "start": {"x": 502, "y": 429},
+                    "image": [
+                        "t-mid-doors-molotov-x-box-1.jpg",
+                        "t-mid-doors-molotov-x-box-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "ct-b-dance-floor-molotov",
+            "name": "Dance floor molotov",
+            "type": "molotov",
+            "side": "ct",
+            "end": {"x": 151, "y": 164},
+            "throws": [
+                {
+                    "id": "window",
+                    "type": "W + LKM",
+                    "start": {"x": 295, "y": 161},
+                    "bounces": [
+                        { "x": 222, "y": 89 }
+                    ],
+                    "image": [
+                        "ct-b-dance-floor-molotov-window-1.jpg",
+                        "ct-b-dance-floor-molotov-window-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "ct-mid-vs-awp-he",
+            "name": "Dance floor he",
+            "type": "he",
+            "side": "ct",
+            "end": {"x": 470,"y": 370},
+            "throws": [
+                {
+                    "id": "ct-spawn",
+                    "type": "W + LKM",
+                    "start": {"x": 536, "y": 263},
+                    "bounces": [
+                        {"x": 429, "y": 317}
+                    ],
+                    "image": [
+                        "ct-mid-vs-awp-he-1.jpg",
+                        "ct-mid-vs-awp-he-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
         }
     ]
 }
