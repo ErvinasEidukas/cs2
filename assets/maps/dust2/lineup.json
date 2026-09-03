@@ -1,6 +1,27 @@
 {
     "grenades": [
         {
+            "id": "ct-mid-vs-awp-he",
+            "name": "Dance floor he",
+            "type": "he",
+            "side": "ct",
+            "end": {"x": 470,"y": 370},
+            "throws": [
+                {
+                    "id": "ct-spawn",
+                    "type": "W + LKM",
+                    "start": {"x": 536, "y": 263},
+                    "bounces": [
+                        {"x": 429, "y": 317}
+                    ],
+                    "image": [
+                        "ct-mid-vs-awp-he-1.jpg",
+                        "ct-mid-vs-awp-he-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
             "id": "t-middle-smoke",
             "name": "Mid smoke",
             "type": "smoke",
@@ -363,22 +384,180 @@
                 }
             ]
         }, {
-            "id": "ct-mid-vs-awp-he",
-            "name": "Dance floor he",
-            "type": "he",
+            "id": "ct-long-flash-1",
+            "name": "Long flash",
+            "type": "flash",
             "side": "ct",
-            "end": {"x": 470,"y": 370},
+            "end": {"x": 852, "y": 490},
             "throws": [
                 {
                     "id": "ct-spawn",
-                    "type": "W + LKM",
-                    "start": {"x": 536, "y": 263},
+                    "type": "LKM",
+                    "start": {"x": 848, "y": 279},
+                    "image": [
+                        "ct-long-flash-1.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "ct-long-flash-2",
+            "name": "Long flash",
+            "type": "flash",
+            "side": "ct",
+            "end": {"x": 900, "y": 511},
+            "throws": [
+                {
+                    "id": "ct-spawn",
+                    "type": "LKM",
+                    "start": {"x": 848, "y": 279},
+                    "image": [
+                        "ct-long-flash-2.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-b-site-flash",
+            "name": "B site flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 65, "y": 342},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "Jump + LKM",
+                    "start": {"x": 166, "y": 508},
+                    "image": [
+                        "t-b-site-tunnel-flash-1.jpg",
+                        "t-b-site-tunnel-flash-2.jpg",
+                        "t-b-site-tunnel-flash-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-lower-tunnel-flash",
+            "name": "Lower tunnel flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 308, "y": 437},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "LKM",
+                    "start": {"x": 213, "y": 505},
                     "bounces": [
-                        {"x": 429, "y": 317}
+                        {"x": 334, "y": 464}
                     ],
                     "image": [
-                        "ct-mid-vs-awp-he-1.jpg",
-                        "ct-mid-vs-awp-he-2.jpg"
+                        "t-lower-tunnel-flash-1.png",
+                        "t-lower-tunnel-flash-2.png",
+                        "t-lower-tunnel-flash-3.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-short-flash",
+            "name": "Short flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 625, "y": 389},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "LKM",
+                    "start": {"x": 444, "y": 429},
+                    "image": [
+                        "t-short-flash-1.jpg",
+                        "t-short-flash-2.jpg",
+                        "t-short-flash-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-short-flash-2",
+            "name": "Short flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 628,"y": 433},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "Jump + LKM",
+                    "start": {"x": 444, "y": 429},
+                    "image": [
+                        "t-short-flash-1.jpg",
+                        "t-short-flash-4.jpg",
+                        "t-short-flash-5.jpg",
+                        "t-short-flash-6.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-long-flash",
+            "name": "Long flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 783, "y": 597},
+            "throws": [
+                {
+                    "id": "t-spawn",
+                    "type": "Jump + LKM",
+                    "start": {"x": 649, "y": 824},
+                    "image": [
+                        "t-long-flash-t-spawn-1.png",
+                        "t-long-flash-t-spawn-2.png",
+                        "t-long-flash-t-spawn-3.png"
+                    ],
+                    "video": null
+                }, {
+                    "id": "taxi",
+                    "type": "Ctrl + LKM",
+                    "start": {"x": 710, "y": 774},
+                    "image": [
+                        "t-long-flash-taxi-1.jpg",
+                        "t-long-flash-taxi-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-long-door-flash",
+            "name": "Long door flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 709, "y": 549},
+            "throws": [
+                {
+                    "id": "taxi",
+                    "type": "Ctrl + LKM",
+                    "start": {"x": 710, "y": 774},
+                    "image": [
+                        "t-long-door-flash-1.jpg",
+                        "t-long-door-flash-2.jpg",
+                        "t-long-door-flash-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-a-side-flash",
+            "name": "A side flash",
+            "type": "flash",
+            "side": "t",
+            "end": {"x": 816, "y": 271},
+            "throws": [
+                {
+                    "id": "coffee-corner",
+                    "type": "Ctrl + Jump + LKM",
+                    "start": {"x": 922, "y": 499},
+                    "image": [
+                        "t-a-side-flash-1.jpg",
+                        "t-a-side-flash-2.jpg"
                     ],
                     "video": null
                 }
