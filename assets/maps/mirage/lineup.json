@@ -1,4 +1,125 @@
 {
-    "grenades": []
+    "grenades": [{
+        "id": "ct-b-apps-molotov",
+        "name": "B Apps Molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 431, "y": 218},
+        "throws": [{
+            "id": "a-site",
+            "type": "W + LKM",
+            "start": {"x": 225, "y": 265},
+            "bounces": [
+                {"x": 396, "y": 178}
+            ],
+            "image": [
+                "ct-b-apps-molotov-a-site-1.png",
+                "ct-b-apps-molotov-a-site-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-b-apps-he",
+        "name": "B Apps he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 428, "y": 208},
+        "throws": [{
+            "id": "car",
+            "type": "W + LKM",
+            "start": {"x": 184, "y": 184},
+            "image": [
+                "ct-b-apps-he-car-1.png",
+                "ct-b-apps-he-car-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-palas-smoke",
+        "name": "B Apps smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 660, "y": 786},
+        "throws": [{
+            "id": "kitchen",
+            "type": "Jump + LKM",
+            "start": {"x": 304, "y": 494},
+            "image": [
+                "ct-palas-smoke-kitchen-1.jpg",
+                "ct-palas-smoke-kitchen-2.jpg"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-b-apps-flash",
+        "name": "B Apps flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 289, "y": 197},
+        "throws": [{
+            "id": "backside",
+            "type": "LKM",
+            "start": {"x": 242, "y": 395},
+            "image": [
+                "ct-b-apps-flash-backside-1.png",
+                "ct-b-apps-flash-backside-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-makazi-flash",
+        "name": "Makazi flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 428, "y": 436},
+        "throws": [{
+            "id": "short",
+            "type": "W + Jump + LKM",
+            "start": {"x": 451, "y": 282},
+            "bounces": [
+                {"x": 510, "y": 361}
+            ],
+            "image": [
+                "ct-makazi-flash-1.png",
+                "ct-makazi-flash-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-under-molotov",
+        "name": "Under molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 444, "y": 439},
+        "throws": [{
+            "id": "short",
+            "type": "W + Jump + LKM + PKM",
+            "start": {"x": 498, "y": 357},
+            "bounces": [
+                {"x": 457, "y": 505}
+            ],
+            "image": [
+                "ct-under-molotov-short.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-b-apps-he",
+        "name": "B Apps he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 349, "y": 195},
+        "throws": [{
+            "id": "short",
+            "type": "W + LKM",
+            "start": {"x": 397, "y": 253},
+            "bounces": [
+                {"x": 268, "y": 211}
+            ],
+            "image": [
+                "ct-b-apps-he-short.png"
+            ],
+            "video": null
+        }]
+    }]
 }
-
