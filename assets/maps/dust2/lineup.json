@@ -56,6 +56,26 @@
                         "t-mid-to-b-x-box-3.jpg"
                     ],
                     "video": null
+                }, {
+                    "id": "outside-tunel",
+                    "type": "Jump + LKM",
+                    "start": {"x": 99, "y": 645},
+                    "image": [
+                        "t-mid-to-b-outside-tunel-1.png",
+                        "t-mid-to-b-outside-tunel-2.png",
+                        "t-mid-to-b-outside-tunel-3.png",
+                        "t-mid-to-b-outside-tunel-4.png"
+                    ],
+                    "video": null
+                }, {
+                    "id": "mid-doors",
+                    "type": "LKM",
+                    "start": {"x": 431, "y": 361},
+                    "image": [
+                        "t-mid-to-b-mid-doors-1.jpg",
+                        "t-mid-to-b-mid-doors-2.jpg"
+                    ],
+                    "video": null
                 }
             ]
         }, {
@@ -72,6 +92,122 @@
                     "image": [
                         "t-a-ct-long-box-1.png",
                         "t-a-ct-long-box-2.png"
+                    ],
+                    "video": null
+                }, {
+                    "id": "blue-box",
+                    "type": "Jump + LKM + PKM",
+                    "start": {"x": 769, "y": 480},
+                    "image": [
+                        "t-a-ct-blue-box-1.png",
+                        "t-a-ct-blue-box-2.png",
+                        "t-a-ct-blue-box-3.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-short",
+            "name": "Short smoke",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 650, "y": 279},
+            "throws": [
+                {
+                    "id": "blue-box",
+                    "type": "Jump + LKM + PKM",
+                    "start": {"x": 769, "y": 480},
+                    "image": [
+                        "t-short-blue-box-1.jpg",
+                        "t-short-blue-box-2.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-b-doors-smoke",
+            "name": "B doors smoke",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 279, "y": 224},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "LKM",
+                    "start": {"x": 166, "y": 508},
+                    "image": [
+                        "t-b-doors-smoke-tunnel-1.jpg",
+                        "t-b-doors-smoke-tunnel-2.jpg",
+                        "t-b-doors-smoke-tunnel-3.jpg"
+                    ],
+                    "video": null
+                }, {
+                    "id": "titanic",
+                    "type": "LKM + W + LKM",
+                    "start": {"x": 241, "y": 869},
+                    "bounces": [
+                        {"x": 244,"y": 780},
+                        {"x": 274,"y": 121}
+                    ],
+                    "image": [
+                        "t-b-doors-smoke-titanic-1.png",
+                        "t-b-doors-smoke-titanic-2.png",
+                        "t-b-doors-smoke-titanic-3.png",
+                        "t-b-doors-smoke-titanic-4.png"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "t-mid-start-smoke",
+            "name": "Mid start smoke",
+            "type": "smoke",
+            "side": "t",
+            "end": {"x": 438, "y": 257},
+            "throws": [
+                {
+                    "id": "tunnel",
+                    "type": "LKM",
+                    "start": {"x": 438,"y": 427},
+                    "image": [
+                        "t-mid-start-smoke-tunnel-1.jpg",
+                        "t-mid-start-smoke-tunnel-2.jpg",
+                        "t-mid-start-smoke-tunnel-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "ct-long-smoke",
+            "name": "Long smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 881, "y": 439},
+            "throws": [
+                {
+                    "id": "elevator",
+                    "type": "LKM",
+                    "start": {"x": 791, "y": 218},
+                    "bounces": [
+                        {"x": 927, "y": 386}
+                    ],
+                    "image": [
+                        "ct-long-smoke-elevator-1.jpg",
+                        "ct-long-smoke-elevator-2.jpg",
+                        "ct-long-smoke-elevator-3.jpg"
+                    ],
+                    "video": null
+                }, {
+                    "id": "jumper",
+                    "type": "LKM",
+                    "start": {"x": 691, "y": 215},
+                    "bounces": [
+                        {"x": 927, "y": 386}
+                    ],
+                    "image": [
+                        "ct-long-smoke-jumper-1.jpg",
+                        "ct-long-smoke-jumper-2.jpg",
+                        "ct-long-smoke-jumper-3.jpg"
                     ],
                     "video": null
                 }
