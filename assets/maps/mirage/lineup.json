@@ -67,6 +67,24 @@
             "video": null
         }]
     }, {
+        "id": "ct-robs-flash",
+        "name": "Robs flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 590, "y": 464},
+        "throws": [{
+            "id": "short",
+            "type": "W + Jump + LKM + PKM",
+            "start": {"x": 431, "y": 288},
+            "bounces": [
+                {"x": 467, "y": 323}
+            ],
+            "image": [
+                "ct-robs-flash.png"
+            ],
+            "video": null
+        }]
+    }, {
         "id": "ct-makazi-flash",
         "name": "Makazi flash",
         "type": "flash",
