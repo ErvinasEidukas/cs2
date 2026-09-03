@@ -1,3 +1,65 @@
 {
-    "debuts": []
+    "debuts": [{
+        "id": "ct-long-support",
+        "name": "CT long support",
+        "nades": [{
+            "id": "ct-long-door-smoke",
+            "throw": "elevator"
+        }, {
+            "id": "ct-long-flash-1",
+            "throw": "ct-spawn"
+        }, {
+            "id": "ct-long-flash-2",
+            "throw": "ct-spawn"
+        }]
+    }, {
+        "id": "t-middle-default",
+        "name": "T middle default",
+        "nades": [{
+            "id": "t-middle-smoke",
+            "throw": "suicide"
+        }, {
+            "id": "t-catwalk-molotov",
+            "throw": "suicide"
+        }]
+    }, {
+        "id": "t-mid-to-b",
+        "name": "T mid to B",
+        "nades": [{
+            "id": "t-lower-tunnel-flash",
+            "throw": "tunnel"
+        }, {
+            "id": "t-short-flash-2",
+            "throw": "tunnel"
+        }, {
+            "id": "t-mid-doors-molotov",
+            "throw": "tunnel"
+        }, {
+            "id": "t-mid-to-b",
+            "throw": "x-box"
+        }]
+    }, {
+        "id": "t-long-support",
+        "name": "T long support",
+        "nades": [{
+            "id": "t-long-flash",
+            "throw": "t-spawn"
+        }, {
+            "id": "t-a-ct",
+            "throw": "long-box"
+        }, {
+            "id": "t-car-molotov",
+            "throw": "barrel"
+        }]
+    }, {
+        "id": "t-b-execute",
+        "name": "T B execute",
+        "nades": [{
+            "id": "t-b-doors-smoke",
+            "throw": "tunnel"
+        }, {
+            "id": "t-b-site-flash",
+            "throw": "tunnel"
+        }]
+    }]
 }

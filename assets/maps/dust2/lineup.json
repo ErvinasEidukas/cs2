@@ -261,14 +261,14 @@
             "throws": [
                 {
                     "id": "suicide",
-                    "type": "Jump + W + LKM",
+                    "type": "W + LKM",
                     "start": {"x": 451, "y": 810},
                     "bounces": [
                         {"x": 457, "y": 784}
                     ],
                     "image": [
-                        "t-catwalk-molotov-suicide-1.jpg",
-                        "t-catwalk-molotov-suicide-2.jpg"
+                        "t-catwalk-molotov-suicide-1.png",
+                        "t-catwalk-molotov-suicide-2.png"
                     ],
                     "video": null
                 }
@@ -540,6 +540,27 @@
                         "t-long-door-flash-1.jpg",
                         "t-long-door-flash-2.jpg",
                         "t-long-door-flash-3.jpg"
+                    ],
+                    "video": null
+                }
+            ]
+        }, {
+            "id": "ct-long-door-smoke",
+            "name": "Long door smoke",
+            "type": "smoke",
+            "side": "ct",
+            "end": {"x": 712, "y": 572},
+            "throws": [
+                {
+                    "id": "elevator",
+                    "type": "LKM",
+                    "start": {"x": 789, "y": 197},
+                    "bounces": [
+                        { "x": 726, "y": 604 }
+                    ],
+                    "image": [
+                        "ct-long-door-smoke-1.png",
+                        "ct-long-door-smoke-2.png"
                     ],
                     "video": null
                 }
