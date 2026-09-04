@@ -28,9 +28,3 @@ The content may include personal observations, community knowledge, testing, and
 The project is a **static website**. All required data is loaded with the page, so no backend or database is required.
 
 The website is hosted using **GitHub Pages**.
-
-## Disclaimer
-
-This is an independent, fan-made project and is **not affiliated with or endorsed by Valve Corporation**.
-
-Counter-Strike 2 and related game content are trademarks and/or property of their respective owners.
