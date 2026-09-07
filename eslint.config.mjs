@@ -7,7 +7,8 @@ export default [
         files: ["**/*.js"],
         languageOptions: {
             globals: {
-                ...globals.browser
+                ...globals.browser,
+                ...globals.node
             }
         },
         rules: {

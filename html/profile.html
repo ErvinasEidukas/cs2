@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Ziagas</title>
+    <link rel="icon" type="image/png" href="../assets/icons/counter-strike-2.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/pages/profile.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header class="profile">
+        <div class="avatar">Z</div>
+
+        <h1 id="profile-name">Ziagas</h1>
+
+        <div class="username">
+            Counter-Strike 2 player
+        </div>
+
+        <p class="bio">
+            Competitive CS2 player. You can find my gaming
+            profiles and statistics below.
+        </p>
+    </header>
+
+    <section class="section">
+        <div class="section-title">
+            Gaming
+        </div>
+
+        <div class="links">
+
+            <a
+                class="link"
+                href="https://steamcommunity.com/profiles/76561197987241891"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <div class="link-icon">
+                    <span class="glyphicon glyphicon-console"></span>
+                </div>
+
+                <div class="link-content">
+                    <div class="link-title">Steam</div>
+                    <div class="link-description">My Steam profile</div>
+                </div>
+
+                <span class="glyphicon glyphicon-chevron-right arrow"></span>
+            </a>
+
+            <a
+                class="link"
+                href="https://www.faceit.com/en/players/ziagas/cs2"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <div class="link-icon">
+                    <span class="glyphicon glyphicon-king"></span>
+                </div>
+
+                <div class="link-content">
+                    <div class="link-title">FACEIT</div>
+                    <div class="link-description">My FACEIT profile</div>
+                </div>
+
+                <span class="glyphicon glyphicon-chevron-right arrow"></span>
+            </a>
+
+            <a
+                class="link"
+                href="https://leetify.com/app/profile/76561197987241891"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <div class="link-icon">
+                    <span class="glyphicon glyphicon-stats"></span>
+                </div>
+
+                <div class="link-content">
+                    <div class="link-title">Leetify</div>
+                    <div class="link-description">My CS2 performance</div>
+                </div>
+
+                <span class="glyphicon glyphicon-chevron-right arrow"></span>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            CS2 Statistics
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <div class="stat-label">Leetify Rating</div>
+                <div class="stat-value" id="leetify-rating">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Aim</div>
+                <div class="stat-value" id="leetify-aim">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Utility</div>
+                <div class="stat-value" id="leetify-utility">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Positioning</div>
+                <div class="stat-value" id="leetify-positioning">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Clutch</div>
+                <div class="stat-value" id="leetify-clutch">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Opening</div>
+                <div class="stat-value" id="leetify-opening">—</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            Ranks
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <div class="stat-label">Premier</div>
+                <div class="stat-value" id="premier-rating">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">FACEIT Level</div>
+                <div class="stat-value" id="faceit-level">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Win Rate</div>
+                <div class="stat-value" id="win-rate">—</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Total Matches</div>
+                <div class="stat-value" id="total-matches">—</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            About
+        </div>
+
+        <div class="about">
+            <strong id="about-name">Ziagas</strong>
+
+            <br>
+
+            Counter-Strike 2 player.
+
+            <br><br>
+
+            Steam ID:
+            <code>76561197987241891</code>
+
+            <br><br>
+
+            First match:
+            <span id="first-match">—</span>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Ziagas
+    </footer>
+
+</div>
+
+<script type="module" src="../js/pages/profile/main.js"></script>
+
+</body>
+</html>
