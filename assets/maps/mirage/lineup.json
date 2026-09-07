@@ -49,6 +49,39 @@
                 "ct-palas-smoke-kitchen-2.jpg"
             ],
             "video": null
+        }, {
+            "id": "ct",
+            "type": "W + Jump + LKM",
+            "start": {"x": 473, "y": 809},
+            "bounces": [
+                { "x": 485, "y": 791 },
+                { "x": 568, "y": 645}
+            ],
+            "image": [
+                "ct-palas-smoke-ct.png"
+            ],
+            "video": null
+        }, {
+            "id": "ticket",
+            "type": "W + Jump + LKM",
+            "start": {"x": 451, "y": 867},
+            "bounces": [
+                { "x": 580, "y": 642 }
+            ],
+            "image": [
+                "ct-palas-smoke-ticket-1.png",
+                "ct-palas-smoke-ticket-2.png",
+                "ct-palas-smoke-ticket-3.png"
+            ],
+            "video": null
+        }, {
+            "id": "connector",
+            "type": "W + LKM",
+            "start": {"x": 501, "y": 590},
+            "image": [
+                "ct-palas-smoke-connector.png"
+            ],
+            "video": null
         }]
     }, {
         "id": "ct-b-apps-flash",
@@ -136,6 +169,202 @@
             ],
             "image": [
                 "ct-b-apps-he-short.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-connector-smoke",
+        "name": "Connector smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 519, "y": 480},
+        "throws": [{
+            "id": "connector",
+            "type": "LKM",
+            "start": {"x": 501, "y": 603},
+            "bounces": [
+                {"x": 517, "y": 449}
+            ],
+            "image": [
+                "ct-connector-smoke.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-connector-flash",
+        "name": "Connector flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 519, "y": 500},
+        "throws": [{
+            "id": "firebox",
+            "type": "W + LKM",
+            "start": {"x": 502, "y": 771},
+            "image": [
+                "ct-connector-flash.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-white-boxes-molotov",
+        "name": "Mid boxes molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 732, "y": 473},
+        "throws": [{
+            "id": "window",
+            "type": "W + LKM",
+            "start": {"x": 396, "y": 467},
+            "bounces": [
+                { "x": 419, "y": 467 }
+            ],
+            "image": [
+                "ct-white-boxes-molotov-window-1.png",
+                "ct-white-boxes-molotov-window-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-window-he",
+        "name": "Window reveal he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 397, "y": 452},
+        "throws": [{
+            "id": "window",
+            "type": "PKM",
+            "start": {"x": 425, "y": 433},
+            "image": [
+                "ct-window-he.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-window-he-2",
+        "name": "Window reveal he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 415, "y": 508},
+        "throws": [{
+            "id": "window",
+            "type": "LKM + PKM",
+            "start": {"x": 394, "y": 497},
+            "bounces": [
+                { "x": 425, "y": 506}
+            ],
+            "image": [
+                "ct-window-he-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-mid-flash",
+        "name": "Mid flash vs AWP",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 643, "y": 502},
+        "throws": [{
+            "id": "firebox",
+            "type": "W + Jump + LKM",
+            "start": {"x": 482, "y": 802},
+            "image": [
+                "ct-mid-flash-firebox.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-under-flash",
+        "name": "Under flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 448, "y": 448},
+        "throws": [{
+            "id": "connector",
+            "type": "LKM + PKM",
+            "start": {"x": 527, "y": 513},
+            "image": [
+                "ct-under-flash-connector.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-he",
+        "name": "Pit he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 682, "y": 648},
+        "throws": [{
+            "id": "jungle",
+            "type": "W + Jump + LKM",
+            "start": {"x": 421, "y": 651},
+            "image": [
+                "ct-pit-he-jungle.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-molotov",
+        "name": "Pit molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 674, "y": 674},
+        "throws": [{
+            "id": "jungle",
+            "type": "W + LKM",
+            "start": {"x": 450,"y": 648},
+            "image": [
+                "ct-pit-molotov-jungle.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-flash",
+        "name": "Pit flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 628, "y": 657},
+        "throws": [{
+            "id": "jungle",
+            "type": "LKM",
+            "start": {"x": 434, "y": 647},
+            "image": [
+                "ct-pit-flash-jungle.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-molotov",
+        "name": "Pit molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 713, "y": 648},
+        "throws": [{
+            "id": "tiket",
+            "type": "LKM",
+            "start": {"x": 464, "y": 809},
+            "bounces": [
+                {"x": 690,"y": 629}
+            ],
+            "image": [
+                "ct-pit-molotov-tiket.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-smoke",
+        "name": "Pit smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 621, "y": 680},
+        "throws": [{
+            "id": "tiket",
+            "type": "W + LKM",
+            "start": {"x": 448, "y": 816},
+            "bounces": [
+                {"x": 639, "y": 701}
+            ],
+            "image": [
+                "ct-pit-smoke-tiket.png"
             ],
             "video": null
         }]
