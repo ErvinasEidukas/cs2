@@ -474,6 +474,23 @@
                 "t-window-smoke-trash-bin-3.png"
             ],
             "video": null
+        }, {
+            "id": "mid-back-wall",
+            "type": "W + LKM",
+            "start": {"x": 754, "y": 474},
+            "image": [
+                "t-window-smoke-mid-back-wall-1.png",
+                "t-window-smoke-mid-back-wall-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "white-box",
+            "type": "Ctrl + LKM",
+            "start": {"x": 712, "y": 471},
+            "image": [
+                "t-window-smoke-white-box.png"
+            ],
+            "video": null
         }]
     }, {
         "id": "t-connector",
@@ -487,6 +504,22 @@
             "start": {"x": 931, "y": 336},
             "image": [
                 "t-connector-trash-bin.png"
+            ],
+            "video": null
+        }, {
+            "id": "mid-back-wall",
+            "type": "LKM",
+            "start": {"x": 751, "y": 366},
+            "image": [
+                "t-connector-smoke-mid-back-wall.png"
+            ],
+            "video": null
+        }, {
+            "id": "mid-start",
+            "type": "LKM",
+            "start": {"x": 681, "y": 392},
+            "image": [
+                "t-connector-smoke-mid-start.png"
             ],
             "video": null
         }]
@@ -524,6 +557,27 @@
             "start": {"x": 668, "y": 797},
             "image": [
                 "t-top-connector-palas.png"
+            ],
+            "video": null
+        }, {
+            "id": "mid-door",
+            "type": "Ctrl + Jump + LKM",
+            "start": {"x": 739, "y": 269},
+            "image": [
+                "t-top-connector-mid-door-1.png",
+                "t-top-connector-mid-door-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "mid-ramp",
+            "type": "Jump + LKM",
+            "start": {"x": 697, "y": 377},
+            "bounces": [
+                { "x": 482, "y": 661}
+            ],
+            "image": [
+                "t-top-connector-mid-ramp-1.png",
+                "t-top-connector-mid-ramp-2.png"
             ],
             "video": null
         }]
@@ -714,6 +768,130 @@
             ],
             "image": [
                 "t-b-site-flash-b-apps.png"
+            ],
+            "video": null
+        }, {
+            "id": "run-b-apps",
+            "type": "W + LKM",
+            "start": {"x": 443, "y": 234},
+            "bounces": [
+                { "x": 418, "y": 219 },
+                { "x": 371, "y": 181 }
+            ],
+            "image": [
+                "t-b-site-flash-run-b-apps-1.png",
+                "t-b-site-flash-run-b-apps-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "apps",
+            "type": "W + Jump + LKM",
+            "start": {"x": 612, "y": 222},
+            "image": [
+                "t-b-site-flash-apps.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-flash",
+        "name": "Connector flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 513, "y": 500},
+        "throws": [{
+            "id": "white-box",
+            "type": "LKM",
+            "start": {"x": 712, "y": 471},
+            "image": [
+                "t-connector-flash-white-box.png"
+            ],
+            "video": null
+        }, {
+            "id": "mid-start",
+            "type": "LKM",
+            "start": {"x": 681, "y": 392},
+            "image": [
+                "t-connector-flash-mid-start.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-kitchen-window-smoke",
+        "name": "Kitchen window",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 261, "y": 411},
+        "throws": [{
+            "id": "apps",
+            "type": "Jump + LKM",
+            "start": {"x": 618, "y": 225},
+            "image": [
+                "t-kitchen-window-smoke-apps-1.png",
+                "t-kitchen-window-smoke-apps-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "b-default",
+            "type": "Jump + LKM",
+            "start": {"x": 252, "y": 253},
+            "bounces": [
+                { "x": 167, "y": 342 }
+            ],
+            "image": [
+                "t-kitchen-window-smoke-b-default.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-short-smoke",
+        "name": "Short smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 435, "y": 307},
+        "throws": [{
+            "id": "apps",
+            "type": "Jump + LKM",
+            "start": {"x": 628, "y": 165},
+            "bounces": [
+                { "x": 450, "y": 331}
+            ],
+            "image": [
+                "t-short-smoke-apps-1.png",
+                "t-short-smoke-apps-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-lader",
+        "name": "Lader room molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 422, "y": 383},
+        "throws": [{
+            "id": "bench",
+            "type": "LKM",
+            "start": {"x": 466, "y": 503},
+            "bounces": [
+                { "x": 406, "y": 410 }
+            ],
+            "image": [
+                "t-short-molotov-bench-1.png",
+                "t-short-molotov-bench-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-window-flash",
+        "name": "Window flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 421, "y": 481},
+        "throws": [{
+            "id": "bench",
+            "type": "Jump + PKM",
+            "start": {"x": 489, "y": 502},
+            "image": [
+                "t-window-flash-bench.png"
             ],
             "video": null
         }]
