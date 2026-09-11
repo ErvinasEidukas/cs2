@@ -189,6 +189,30 @@
                 "ct-connector-smoke.png"
             ],
             "video": null
+        }, {
+            "id": "firebox",
+            "type": "LKM",
+            "start": {"x": 504, "y": 765},
+            "image": [
+                "ct-connector-smoke-firebox.png"
+            ],
+            "video": null
+        }, {
+            "id": "short",
+            "type": "LKM",
+            "start": {"x": 460, "y": 329},
+            "image": [
+                "ct-connector-smoke-short.png"
+            ],
+            "video": null
+        }, {
+            "id": "short-2",
+            "type": "LKM",
+            "start": {"x": 498, "y": 284},
+            "image": [
+                "ct-connector-smoke-short-2.png"
+            ],
+            "video": null
         }]
     }, {
         "id": "ct-connector-flash",
@@ -351,7 +375,7 @@
             "video": null
         }]
     }, {
-        "id": "ct-pit-smoke",
+        "id": "ct-retake-pit-smoke",
         "name": "Pit smoke",
         "type": "smoke",
         "side": "ct",
@@ -580,6 +604,46 @@
                 "t-top-connector-mid-ramp-2.png"
             ],
             "video": null
+        }, {
+            "id": "road",
+            "type": "LKM",
+            "start": {"x": 545, "y": 451},
+            "bounces": [
+                { "x": 488, "y": 563 }
+            ],
+            "image": [],
+            "video": null
+        }, {
+            "id": "catwalk",
+            "type": "W + LKM",
+            "start": {"x": 558, "y": 411},
+            "bounces": [
+                { "x": 488, "y": 563 }
+            ],
+            "image": [
+                "t-top-connector-mid-catwalk.png"
+            ],
+            "video": null
+        }, {
+            "id": "under",
+            "type": "LKM",
+            "start": {"x": 482, "y": 448},
+            "bounces": [
+                { "x": 546, "y": 566 }
+            ],
+            "image": [
+                "t-top-connector-under.png"
+            ],
+            "video": null
+        }, {
+            "id": "under-2",
+            "type": "LKM",
+            "start": {"x": 440, "y": 432},
+            "bounces": [
+                { "x": 546, "y": 566 }
+            ],
+            "image": [],
+            "video": null
         }]
     }, {
         "id": "t-stairs-smoke",
@@ -668,7 +732,7 @@
         "end": {"x": 554, "y": 658},
         "throws": [{
             "id": "alley",
-            "type": "Jump + LKM",
+            "type": "W + Jump + LKM",
             "start": {"x": 839, "y": 587},
             "image": [
                 "t-stairs-smoke-alley-1.png",
@@ -784,7 +848,7 @@
             ],
             "video": null
         }, {
-            "id": "apps",
+            "id": "slow-apps",
             "type": "W + Jump + LKM",
             "start": {"x": 612, "y": 222},
             "image": [
@@ -862,7 +926,7 @@
             "video": null
         }]
     }, {
-        "id": "t-lader",
+        "id": "t-lader-molotov",
         "name": "Lader room molotov",
         "type": "molotov",
         "side": "t",
@@ -892,6 +956,279 @@
             "start": {"x": 489, "y": 502},
             "image": [
                 "t-window-flash-bench.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-molotov",
+        "name": "Connector molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 513, "y": 551},
+        "throws": [{
+            "id": "road",
+            "type": "LKM",
+            "start": {"x": 555, "y": 473},
+            "bounces": [
+                { "x": 481, "y": 530}
+            ],
+            "image": [],
+            "video": null
+        }, {
+            "id": "catwalk",
+            "type": "W + LKM",
+            "start": {"x": 558, "y": 411},
+            "image": [
+                "t-connector-molotov-catwalk.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-he",
+        "name": "Connector he",
+        "type": "he",
+        "side": "t",
+        "end": {"x": 514, "y": 502},
+        "throws": [{
+            "id": "road",
+            "type": "LKM",
+            "start": {"x": 541, "y": 492},
+            "bounces": [
+                { "x": 481, "y": 530}
+            ],
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "t-lader-he",
+        "name": "Lader room he",
+        "type": "he",
+        "side": "t",
+        "end": {"x": 447, "y": 373},
+        "throws": [{
+            "id": "bench",
+            "type": "W + LKM",
+            "start": {"x": 495, "y": 499},
+            "bounces": [
+                { "x": 457, "y": 351 }
+            ],
+            "image": [
+                "t-lader-he-bench.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-jungle-he",
+        "name": "Jungle he",
+        "type": "he",
+        "side": "t",
+        "end": {"x": 387, "y": 576},
+        "throws": [{
+            "id": "under",
+            "type": "LKM",
+            "start": {"x": 457, "y": 434},
+            "image": [
+                "t-jungle-he-under.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-jungle-molotov",
+        "name": "Jungle molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 387, "y": 576},
+        "throws": [{
+            "id": "under",
+            "type": "LKM",
+            "start": {"x": 457, "y": 434},
+            "image": [
+                "t-jungle-he-under.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-b-backside-molotov",
+        "name": "B backside molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 232, "y": 357},
+        "throws": [{
+            "id": "apps",
+            "type": "W + LKM",
+            "start": {"x": 328, "y": 184},
+            "bounces": [
+                { "x": 165, "y": 335 }
+            ],
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "t-b-car-molotov",
+        "name": "Car molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 192, "y": 196},
+        "throws": [{
+            "id": "apps",
+            "type": "W + LKM",
+            "start": {"x": 328, "y": 184},
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "t-b-bench-molotov",
+        "name": "B bench molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 137, "y": 262},
+        "throws": [{
+            "id": "apps",
+            "type": "W + LKM",
+            "start": {"x": 328, "y": 184},
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "ct-deep-pit-smoke",
+        "name": "Deep pit smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 767, "y": 673},
+        "throws": [{
+            "id": "a-site",
+            "type": "W + Jump + LKM",
+            "start": {"x": 609, "y": 709},
+            "bounces": [
+                { "x": 719, "y": 578}
+            ],
+            "image": [
+                "ct-deep-pit-smoke-a-site.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-deep-pit-he",
+        "name": "Deep pit he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 741, "y": 664},
+        "throws": [{
+            "id": "a-site",
+            "type": "W + LKM",
+            "start": {"x": 561, "y": 765},
+            "bounces": [
+                { "x": 696, "y": 628}
+            ],
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-smoke",
+        "name": "Pit smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 691, "y": 645},
+        "throws": [{
+            "id": "ct",
+            "type": "LKM",
+            "start": {"x": 467, "y": 806},
+            "image": [
+                "ct-pit-smoke-ct-1.png",
+                "ct-pit-smoke-ct-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-pit-flash",
+        "name": "Pit flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 696, "y": 645},
+        "throws": [{
+            "id": "ct",
+            "type": "LKM",
+            "start": {"x": 533, "y": 765},
+            "image": [
+                "ct-pit-flash-a-site.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-mid-start-he",
+        "name": "Mid start he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 703, "y": 383},
+        "throws": [{
+            "id": "connector",
+            "type": "LKM",
+            "start": {"x": 507, "y": 515},
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-retake-molotov",
+        "name": "A site retake molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 589, "y": 802},
+        "throws": [{
+            "id": "connector",
+            "type": "LKM",
+            "start": {"x": 526, "y": 600},
+            "image": [
+                "a-site-retake-molotov-connector.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-retake-smoke",
+        "name": "A site retake smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 539, "y": 701},
+        "throws": [{
+            "id": "connector",
+            "type": "LKM",
+            "start": {"x": 530, "y": 613},
+            "image": [
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "firebox-retake-molotov",
+        "name": "Firebox retake molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 557, "y": 746},
+        "throws": [{
+            "id": "ct",
+            "type": "W + Jump + LKM",
+            "start": {"x": 369, "y": 790},
+            "bounces": [
+                { "x": 520, "y": 843 }
+            ],
+            "image": [
+                "firebox-retake-molotov-ct.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-under-he",
+        "name": "Under he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 445, "y": 437},
+        "throws": [{
+            "id": "window",
+            "type": "LKM",
+            "start": {"x": 425, "y": 541},
+            "bounces": [
+                { "x": 404, "y": 506 }
+            ],
+            "image": [
+                "ct-under-he-window.png"
             ],
             "video": null
         }]

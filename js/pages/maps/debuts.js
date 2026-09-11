@@ -19,40 +19,28 @@ export function loadDebutData(mapName) {
     controls.classList.add("hidden")
     filters.innerHTML = ""
 
-    fetch(`../assets/maps/${mapName}/debuts.json`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load ${mapName}/debuts.json`)
-            }
+    fetch(`../assets/maps/${mapName}/debuts.json`).then(response => {
+        if (!response.ok) {
+            throw new Error(`Failed to load ${mapName}/debuts.json`)
+        }
 
-            return response.json()
-        })
-        .then(data => {
-            currentDebuts = data.debuts || []
-
-            if (currentDebuts.length === 0) {
-                enabledDebuts = new Set()
-                controls.classList.add("hidden")
-
-                document.dispatchEvent(
-                    new CustomEvent("debutsLoaded")
-                )
-
-                return
-            }
-
-            controls.classList.remove("hidden")
-
-            createDebutFilters()
-
-            document.dispatchEvent(
-                new CustomEvent("debutsLoaded")
-            )
-        })
-        .catch(error => {
-            console.error("Debut data loading error:", error)
+        return response.json()
+    }).then(data => {
+        currentDebuts = data.debuts || []
+        if (currentDebuts.length === 0) {
+            enabledDebuts = new Set()
             controls.classList.add("hidden")
-        })
+            document.dispatchEvent(new CustomEvent("debutsLoaded"))
+
+            return
+        }
+        controls.classList.remove("hidden")
+        createDebutFilters()
+        document.dispatchEvent(new CustomEvent("debutsLoaded"))
+    }).catch(error => {
+        console.error("Debut data loading error:", error)
+        controls.classList.add("hidden")
+    })
 }
 
 function getSavedDebuts() {

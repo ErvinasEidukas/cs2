@@ -1,3 +1,197 @@
 {
-    "debuts": []
+    "debuts": [{
+        "id": "insta-window",
+        "name": "Insta window",
+        "nades": [{
+            "id": "t-window",
+            "throw": "spawn-1"
+        }, {
+            "id": "t-window",
+            "throw": "spawn-2"
+        }, {
+            "id": "t-window",
+            "throw": "spawn-3"
+        }, {
+            "id": "t-window",
+            "throw": "spawn-4"
+        }, {
+            "id": "t-window",
+            "throw": "spawn-5"
+        }]
+    }, {
+        "id": "insta-mid-start",
+        "name": "Insta mid start",
+        "nades": [{
+            "id": "t-mid-start-smoke",
+            "throw": "spawn-1"
+        }, {
+            "id": "t-mid-start-smoke",
+            "throw": "spawn-2"
+        }, {
+            "id": "t-mid-start-smoke",
+            "throw": "spawn-3"
+        }, {
+            "id": "t-mid-start-smoke",
+            "throw": "spawn-6"
+        }]
+    }, {
+        "id": "a-pistol-round",
+        "name": "A - pistol round",
+        "nades": [{
+            "id": "t-stairs-molotov",
+            "throw": "alley"
+        }, {
+            "id": "t-jungle-smoke",
+            "throw": "alley"
+        }]
+    }, {
+        "id": "a-execute-pit",
+        "name": "A - execute (pit)",
+        "nades": [{
+            "id": "t-jungle-smoke",
+            "throw": "pit"
+        }, {
+            "id": "t-stairs-smoke",
+            "throw": "pit"
+        }, {
+            "id": "t-sandwich-molotov",
+            "throw": "pit"
+        }, {
+            "id": "t-b-flash",
+            "throw": "pit"
+        }]
+    }, {
+        "id": "a-execute-palas",
+        "name": "A - execute (palas)",
+        "nades": [{
+            "id": "t-under-wood-molotov",
+            "throw": "palas"
+        }, {
+            "id": "t-top-connector",
+            "throw": "palas"
+        }]
+    }, {
+        "id": "a-execute-tetris",
+        "name": "A - execute (tetris)",
+        "nades": [{
+            "id": "t-ticket-molotov",
+            "throw": "tetris"
+        }, {
+            "id": "t-ct-smoke",
+            "throw": "tetris"
+        }]
+    }, {
+        "id": "a-execute-jungle",
+        "name": "A - execute (jungle)",
+        "nades": [{
+            "id": "t-jungle-molotov",
+            "throw": "apex"
+        }, {
+            "id": "t-top-connector",
+            "throw": "apex"
+        }]
+    }, {
+        "id": "vs-connector-default",
+        "name": "Connector - retake",
+        "nades": [{
+            "id": "t-connector-he",
+            "throw": "road"
+        }, {
+            "id": "t-connector-molotov",
+            "throw": "road"
+        }, {
+            "id": "t-top-connector",
+            "throw": "road"
+        }]
+    }, {
+        "id": "window-push",
+        "name": "Window - retake",
+        "nades": [{
+            "id": "t-lader-he",
+            "throw": "bench"
+        }, {
+            "id": "t-lader-molotov",
+            "throw": "bench"
+        }, {
+            "id": "t-window-flash",
+            "throw": "bench"
+        }, {
+            "id": "t-top-connector",
+            "throw": "under"
+        }, {
+            "id": "t-jungle-he",
+            "throw": "under"
+        }, {
+            "id": "t-jungle-molotov",
+            "throw": "under"
+        }]
+    }, {
+        "id": "short-push",
+        "name": "Short - retake",
+        "nades": [{
+            "id": "t-connector-molotov",
+            "throw": "catwalk"
+        }, {
+            "id": "t-top-connector",
+            "throw": "catwalk"
+        }]
+    }, {
+        "id": "b-execute",
+        "name": "B - execute",
+        "nades": [{
+            "id": "t-b-site-flash",
+            "throw": "slow-apps"
+        }, {
+            "id": "t-kitchen-window-smoke",
+            "throw": "apps"
+        }, {
+            "id": "t-b-backside-molotov",
+            "throw": "apps"
+        }]
+    }, {
+        "id": "ct-pit-push",
+        "name": "CT - Pit push",
+        "nades": [{
+            "id": "ct-deep-pit-smoke",
+            "throw": "a-site"
+        }, {
+            "id": "ct-pit-molotov",
+            "throw": "tiket"
+        }, {
+            "id": "ct-deep-pit-he",
+            "throw": "a-site"
+        }]
+    }, {
+        "id": "ct-connector-mid",
+        "name": "CT - Connector (mid)",
+        "nades": [{
+            "id": "ct-mid-flash",
+            "throw": "firebox"
+        }, {
+            "id": "ct-mid-start-he",
+            "throw": "connector"
+        }, {
+            "id": "ct-connector-smoke",
+            "throw": "connector"
+        }, {
+            "id": "ct-under-flash",
+            "throw": "connector"
+        }]
+    }, {
+        "id": "ct-connector-a-site",
+        "name": "CT - Connector (A - site)",
+        "nades": [{
+            "id": "ct-mid-flash",
+            "throw": "firebox"
+        }, {
+            "id": "ct-mid-start-he",
+            "throw": "connector"
+        }, {
+            "id": "a-site-retake-molotov",
+            "throw": "connector"
+        }, {
+            "id": "a-site-retake-smoke",
+            "throw": "connector"
+        }]
+    }]
 }
