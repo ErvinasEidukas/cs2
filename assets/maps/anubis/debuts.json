@@ -1,3 +1,16 @@
 {
-    "debuts": []
+    "debuts": [{
+        "id": "t-connector",
+        "name": "T - Connector",
+        "nades": [{
+            "id": "t-connector-smoke",
+            "throw": "right-mid"
+        }, {
+            "id": "t-connector-molotov",
+            "throw": "water"
+        }, {
+            "id": "t-connector-he",
+            "throw": "water"
+        }]
+    }]
 }

@@ -1,4 +1,50 @@
 {
-    "grenades": []
+    "grenades": [{
+        "id": "t-connector-he",
+        "name": "connector he",
+        "type": "he",
+        "side": "t",
+        "end": {"x": 437, "y": 629},
+        "throws": [{
+            "id": "water",
+            "type": "PKM",
+            "start": {"x": 471, "y": 598},
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-smoke",
+        "name": "connector smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 443, "y": 619},
+        "throws": [{
+            "id": "right-mid",
+            "type": "Jump + LKM",
+            "start": {"x": 699, "y": 787},
+            "bounces": [
+                { "x": 568, "y": 506 }
+            ],
+            "image": [
+                "t-connector-smoke-right-mid.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-molotov",
+        "name": "connector molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 382, "y": 578},
+        "throws": [{
+            "id": "water",
+            "type": "LKM",
+            "start": {"x": 471, "y": 598},
+            "bounces": [
+                { "x": 437, "y": 629 }
+            ],
+            "image": [],
+            "video": null
+        }]
+    }]
 }
-

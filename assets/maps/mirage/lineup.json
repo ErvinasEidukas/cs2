@@ -914,7 +914,7 @@
         "end": {"x": 435, "y": 307},
         "throws": [{
             "id": "apps",
-            "type": "Jump + LKM",
+            "type": "Jump + W + LKM",
             "start": {"x": 628, "y": 165},
             "bounces": [
                 { "x": 450, "y": 331}
@@ -1229,6 +1229,61 @@
             ],
             "image": [
                 "ct-under-he-window.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-under-molotov",
+        "name": "Under molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 448, "y": 458},
+        "throws": [{
+            "id": "top-mid",
+            "type": "W + LKM",
+            "start": {"x": 718, "y": 370},
+            "bounces": [
+                { "x": 692, "y": 394 },
+                { "x": 489, "y": 503 }
+            ],
+            "image": [
+                "t-under-molotov-top-mid.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-flash",
+        "name": "connector flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 508, "y": 464},
+        "throws": [{
+            "id": "top-mid",
+            "type": "W + LKM",
+            "start": {"x": 657, "y": 408},
+            "bounces": [
+                { "x": 553, "y": 502 }
+            ],
+            "image": [
+                "t-connector-flash-top-mid.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-connector-flash-2",
+        "name": "connector flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 516, "y": 477},
+        "throws": [{
+            "id": "top-mid",
+            "type": "W + LKM",
+            "start": {"x": 726, "y": 357},
+            "bounces": [
+                { "x": 568, "y": 506 }
+            ],
+            "image": [
+                "t-connector-flash-2-top-mid.png"
             ],
             "video": null
         }]
