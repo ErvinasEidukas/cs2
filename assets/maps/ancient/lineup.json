@@ -1,4 +1,408 @@
 {
-    "grenades": []
+    "grenades": [{
+        "id": "haven-smoke",
+        "name": "Haven smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 564, "y": 581},
+        "throws": [{
+            "id": "t-swan-5",
+            "type": "Jump + LKM",
+            "start": {"x": 532, "y": 865},
+            "image": [
+                "haven-smoke-spawn-5.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "mid-smoke",
+        "name": "Mid smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 484, "y": 399},
+        "throws": [{
+            "id": "t-swan-5",
+            "type": "Jump + W + LKM",
+            "start": {"x": 532, "y": 865},
+            "image": [
+                "window-smoke-spawn-5.png"
+            ],
+            "video": null
+        }, {
+            "id": "t-swan-4",
+            "type": "Jump + W + LKM",
+            "start": {"x": 514, "y": 869},
+            "image": [
+                "window-smoke-spawn-4.png"
+            ],
+            "video": null
+        }, {
+            "id": "t-swan-3",
+            "type": "Jump + W + LKM",
+            "start": {"x": 498, "y": 886},
+            "image": [
+                "window-smoke-spawn-3-1.png",
+                "window-smoke-spawn-3-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "t-swan-2",
+            "type": "Jump + W + LKM",
+            "start": {"x": 459, "y": 880},
+            "image": [
+                "window-smoke-spawn-2-1.png",
+                "window-smoke-spawn-2-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "elbow",
+            "type": "Jump + LKM",
+            "start": {"x": 341, "y": 638},
+            "image": [
+                "mid-smoke-elbow.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "cave-smoke",
+        "name": "Cave smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 627, "y": 570},
+        "throws": [{
+            "id": "t-swan-5",
+            "type": "Jump + W + LKM",
+            "start": {"x": 532, "y": 865},
+            "image": [
+                "cave-smoke-spawn-5.png"
+            ],
+            "video": null
+        }, {
+            "id": "rocks",
+            "type": "Jump + LKM",
+            "start": {"x": 445, "y": 909},
+            "image": [
+                "rocks-cave-smoke-1.png",
+                "rocks-cave-smoke-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "molotov-vs-insta-mid-smokes",
+        "name": "Molotov vs insta mid smoke",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 367, "y": 603},
+        "throws": [{
+            "id": "t-swan-5",
+            "type": "Shift + W + Jump + LKM",
+            "start": {"x": 532, "y": 865},
+            "image": [
+                "molotov-vs-insta-mid-smokes-1.png",
+                "molotov-vs-insta-mid-smokes-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "donat-smoke",
+        "name": "Donat smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 414, "y": 464},
+        "throws": [{
+            "id": "rock",
+            "type": "Jump + LKM",
+            "start": {"x": 439, "y": 861},
+            "image": [
+                "smoke-donat-rock-1.png",
+                "smoke-donat-rock-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "mid-flash",
+        "name": "Mid flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 445, "y": 604},
+        "throws": [{
+            "id": "t-spawn",
+            "type": "Jump + LKM",
+            "start": {"x": 440, "y": 817},
+            "image": [
+                "t-spawn-mid-flash-1.png",
+                "t-spawn-mid-flash-2.png",
+                "t-spawn-mid-flash-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "mid-right-molotov",
+        "name": "Midrright molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 550, "y": 473},
+        "throws": [{
+            "id": "t-swan-5",
+            "type": "W + LKM",
+            "start": {"x": 328, "y": 662},
+            "bounces": [
+                { "x": 530, "y": 450 }
+            ],
+            "image": [
+                "mid-tree-molotov-1.png",
+                "mid-tree-molotov-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "molotov-haven",
+        "name": "Molotov haven",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 532, "y": 574},
+        "throws": [{
+            "id": "elbow",
+            "type": "LKM",
+            "start": {"x": 366, "y": 600},
+            "image": [
+                "haven-molotov-elbow.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-ct-smoke",
+        "name": "A CT smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 370, "y": 217},
+        "throws": [{
+            "id": "donat",
+            "type": "LKM",
+            "start": {"x": 389, "y": 477},
+            "image": [
+                "donat-a-ct-smoke-1.png",
+                "donat-a-ct-smoke-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-split-smoke",
+        "name": "A split smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 595, "y": 283},
+        "throws": [{
+            "id": "mid",
+            "type": "LKM",
+            "start": {"x": 456, "y": 456},
+            "image": [
+                "a-split-smoke-1.png",
+                "a-split-smoke-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "cave-flash",
+        "name": "Cave flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 621, "y": 592},
+        "throws": [{
+            "id": "elbow",
+            "type": "Jump + W + LKM",
+            "start": {"x": 386, "y": 559},
+            "image": [
+                "cave-flash-mid.png"
+            ],
+            "video": null
+        }, {
+            "id": "t-side-lower",
+            "type": "W + LKM",
+            "start": {"x": 757, "y": 554},
+            "bounces": [
+                { "x": 657, "y": 612 }
+            ],
+            "image": [
+                "cave-flash-b-rush.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "dark-smoke",
+        "name": "B short smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 722, "y": 337},
+        "throws": [{
+            "id": "ruins",
+            "type": "Jump + LKM",
+            "start": {"x": 835, "y": 729},
+            "image": [
+                "smoke-dark.png"
+            ],
+            "video": null
+        }, {
+            "id": "doors",
+            "type": "LKM",
+            "start": {"x": 790, "y": 623},
+            "image": [
+                "dark-doors.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "light-smoke",
+        "name": "B Long smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 832, "y": 365},
+        "throws": [{
+            "id": "ruins",
+            "type": "Jump + LKM",
+            "start": {"x": 835, "y": 729},
+            "image": [
+                "smoke-light.png"
+            ],
+            "video": null
+        }, {
+            "id": "t-side-lower",
+            "type": "LKM",
+            "start": {"x": 709, "y": 561},
+            "image": [
+                "light-smoke-t-side-lower.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "b-site-molotov",
+        "name": "B site molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 728, "y": 400},
+        "throws": [{
+            "id": "ruins",
+            "type": "W + jump + LKM",
+            "start": {"x": 835, "y": 729},
+            "image": [
+                "b-site-molotov.png"
+            ],
+            "video": null
+        }, {
+            "id": "doors",
+            "type": "LKM",
+            "start": {"x": 790, "y": 623},
+            "image": [
+                "b-site-molotov-doors.png"
+            ],
+            "video": null
+        }, {
+            "id": "t-side-lower",
+            "type": "Jump + LKM + PKM",
+            "start": {"x": 709, "y": 561},
+            "image": [
+                "b-site-molotov-t-side-lower.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "light-molotov",
+        "name": "B long molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 836, "y": 324},
+        "throws": [{
+            "id": "doors",
+            "type": "jump + W + LKM",
+            "start": {"x": 817, "y": 617},
+            "image": [
+                "light-molotov-doors-1.png",
+                "light-molotov-doors-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "flash-vs-light",
+        "name": "Flash vs light",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 736, "y": 375},
+        "throws": [{
+            "id": "doors",
+            "type": "jump + W + LKM",
+            "start": {"x": 817, "y": 617},
+            "image": [
+                "flash-vs-light.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "cave-b-smoke",
+        "name": "Cave b smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 693, "y": 392},
+        "throws": [{
+            "id": "water",
+            "type": "Jump + LKM",
+            "start": {"x": 735, "y": 755},
+            "image": [
+                "cave-b-rush-1.png",
+                "cave-b-rush-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "brolan-molotov",
+        "name": "brolan molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 681, "y": 506},
+        "throws": [{
+            "id": "doors",
+            "type": "W + Jump + LKM",
+            "start": {"x": 809, "y": 632},
+            "image": [
+                "brolan-molotov-1.png",
+                "brolan-molotov-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "cave-molotov-vs-close",
+        "name": "Cave molotov vs close",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 678, "y": 453},
+        "throws": [{
+            "id": "cave",
+            "type": "LKM",
+            "start": {"x": 662, "y": 547},
+            "bounces": [
+                { "x": 687, "y": 480 }
+            ],
+            "image": [
+                "cave-molotov-vs-close.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ct-b-smoke",
+        "name": "CT b smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 693, "y": 259},
+        "throws": [{
+            "id": "cave",
+            "type": "W + LKM",
+            "start": {"x": 699, "y": 399},
+            "bounces": [
+                { "x": 742, "y": 333 }
+            ],
+            "image": [
+                "b-ct-smoke-cave.png"
+            ],
+            "video": null
+        }]
+    }]
 }
-
