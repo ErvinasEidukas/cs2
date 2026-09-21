@@ -241,11 +241,11 @@ function showThrowInfo(grenade, throwData) {
         <h3>${grenade.name}</h3>
         <div>Type: ${throwData.type}</div>
 
-        <div id="lineup-images" class="lineup-images"></div>
-
         <button id="deselect-grenade">
             Show All Nades
         </button>
+
+        <div id="lineup-images" class="lineup-images"></div>
     `
 
     showThrowImages(throwData.image)
@@ -263,7 +263,7 @@ function showThrowImages(images) {
         return
     }
 
-    images.forEach(imageName => {
+    images.forEach((imageName, index) => {
         const image = document.createElement("img")
 
         image.src = `../assets/maps/${currentMap}/grenades/images/${imageName}`
@@ -271,7 +271,7 @@ function showThrowImages(images) {
         image.classList.add("lineup-image")
 
         image.addEventListener("click", () => {
-            openImagePopup(image.src, image.alt)
+            openImagePopup(images, index, image.alt)
         })
 
         imageContainer.appendChild(image)
@@ -288,7 +288,7 @@ function setupDeselectButton() {
     button.addEventListener("click", deselectLineup)
 }
 
-function openImagePopup(src, alt = "Grenade lineup") {
+function openImagePopup(images, currentIndex, alt = "Grenade lineup") {
     const existingPopup = document.getElementById("image-popup")
 
     if (existingPopup) {
@@ -296,18 +296,14 @@ function openImagePopup(src, alt = "Grenade lineup") {
     }
 
     const popup = document.createElement("div")
-
     popup.id = "image-popup"
     popup.classList.add("image-popup")
 
     const image = document.createElement("img")
-
-    image.src = src
-    image.alt = alt
     image.classList.add("image-popup-content")
+    image.alt = alt
 
     const closeButton = document.createElement("button")
-
     closeButton.classList.add("image-popup-close")
     closeButton.textContent = "×"
     closeButton.setAttribute("aria-label", "Close image")
@@ -316,6 +312,59 @@ function openImagePopup(src, alt = "Grenade lineup") {
         event.stopPropagation()
         closeImagePopup()
     })
+
+    const updateImage = () => {
+        image.src = `../assets/maps/${currentMap}/grenades/images/${images[currentIndex]}`
+
+        updateNavigationButtons()
+    }
+
+    const updateNavigationButtons = () => {
+        const oldPreviousButton = popup.querySelector(".image-popup-previous")
+        const oldNextButton = popup.querySelector(".image-popup-next")
+
+        if (oldPreviousButton) {
+            oldPreviousButton.remove()
+        }
+
+        if (oldNextButton) {
+            oldNextButton.remove()
+        }
+
+        if (currentIndex > 0) {
+            const previousButton = document.createElement("button")
+
+            previousButton.classList.add("image-popup-navigation", "image-popup-previous")
+            previousButton.textContent = "‹"
+            previousButton.setAttribute("aria-label", "Previous image")
+
+            previousButton.addEventListener("click", event => {
+                event.stopPropagation()
+
+                currentIndex--
+                updateImage()
+            })
+
+            popup.appendChild(previousButton)
+        }
+
+        if (currentIndex < images.length - 1) {
+            const nextButton = document.createElement("button")
+
+            nextButton.classList.add("image-popup-navigation", "image-popup-next")
+            nextButton.textContent = "›"
+            nextButton.setAttribute("aria-label", "Next image")
+
+            nextButton.addEventListener("click", event => {
+                event.stopPropagation()
+
+                currentIndex++
+                updateImage()
+            })
+
+            popup.appendChild(nextButton)
+        }
+    }
 
     popup.addEventListener("click", event => {
         if (event.target === popup) {
@@ -328,6 +377,8 @@ function openImagePopup(src, alt = "Grenade lineup") {
 
     document.body.appendChild(popup)
     document.body.style.overflow = "hidden"
+
+    updateImage()
 }
 
 export function resetLineupDescription() {

@@ -197,7 +197,9 @@ main {
 }
 
 #deselect-grenade {
+    width: 100%;
     margin-top: 15px;
+    margin-bottom: 10px;
     padding: 8px 12px;
     cursor: pointer;
 }
@@ -239,6 +241,37 @@ main {
     font-size: 32px;
     line-height: 1;
     cursor: pointer;
+}
+
+.image-popup-navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(255 255 255 / 15%);
+    color: white;
+    font-size: 50px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.image-popup-navigation:hover {
+    background: rgb(255 255 255 / 30%);
+}
+
+.image-popup-previous {
+    left: 25px;
+}
+
+.image-popup-next {
+    right: 25px;
 }
 
 .image-popup-close:hover {
