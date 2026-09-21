@@ -185,6 +185,15 @@
                 "donat-a-ct-smoke-2.png"
             ],
             "video": null
+        }, {
+            "id": "outside",
+            "type": "Jump + LKM",
+            "start": {"x": 366, "y": 720},
+            "image": [
+                "a-ct-rush-1.png",
+                "a-ct-rush-2.png"
+            ],
+            "video": null
         }]
     }, {
         "id": "a-split-smoke",
@@ -401,6 +410,337 @@
             ],
             "image": [
                 "b-ct-smoke-cave.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-backside-molotov",
+        "name": "A backside molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 364, "y": 267},
+        "throws": [{
+            "id": "a-main",
+            "type": "W + LKM",
+            "start": {"x": 166, "y": 379},
+            "bounces": [
+                { "x": 327, "y": 240 }
+            ],
+            "image": [
+                "a-backside-molotov.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-vs-default.png",
+        "name": "A site vs default flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 234, "y": 334},
+        "throws": [{
+            "id": "a-main",
+            "type": "W + LKM",
+            "start": {"x": 231, "y": 512},
+            "image": [
+                "a-site-vs-default.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-rush-flash-vs-close",
+        "name": "A site vs close",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 146, "y": 310},
+        "throws": [{
+            "id": "a-main",
+            "type": "W + LKM",
+            "start": {"x": 235, "y": 443},
+            "image": [
+                "a-rush-flash-1.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-rush-flash-vs-donat",
+        "name": "A site vs donat",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 244, "y": 239},
+        "throws": [{
+            "id": "a-main",
+            "type": "W + LKM",
+            "start": {"x": 193, "y": 404},
+             "bounces": [
+                { "x": 223, "y": 190 }
+            ],
+            "image": [
+                "a-rush-flash-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-smoke",
+        "name": "A site smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 340, "y": 251},
+        "throws": [{
+            "id": "execute",
+            "type": "Ctrl + Jump + LKM",
+            "start": {"x": 162, "y": 630},
+            "image": [
+                "a-ct-smoke-execute.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-donat-smoke",
+        "name": "A donat smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": {"x": 316, "y": 426},
+        "throws": [{
+            "id": "execute",
+            "type": "Ctrl + Jump + LKM",
+            "start": {"x": 162, "y": 630},
+            "image": [
+                "a-donat-smoke.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "mid-retake-flash",
+        "name": "Mid retake flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 370, "y": 599},
+        "throws": [{
+            "id": "outside",
+            "type": "LKM",
+            "start": {"x": 296, "y": 735},
+            "image": [
+                "mid-retake-flash-1.png",
+                "mid-retake-flash-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "donat-flash",
+        "name": "Donat flash",
+        "type": "flash",
+        "side": "t",
+        "end": {"x": 358, "y": 450},
+        "throws": [{
+            "id": "haven",
+            "type": "Jump + LKM",
+            "start": {"x": 544, "y": 569},
+            "image": [
+                "donat-flash.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-molotov",
+        "name": "A site molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": {"x": 339, "y": 268},
+        "throws": [{
+            "id": "temple",
+            "type": "A + LKM",
+            "start": {"x": 436, "y": 170},
+            "bounces": [
+                { "x": 402, "y": 137 }
+            ],
+            "image": [
+                "a-side-molotov-1.png",
+                "a-side-molotov-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-main-smoke",
+        "name": "A main smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 180, "y": 372},
+        "throws": [{
+            "id": "ct",
+            "type": "Jump + LKM",
+            "start": {"x": 571, "y": 82},
+            "image": [
+                "a-main-smoke.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "elbow-smoke",
+        "name": "Elbow smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": {"x": 358, "y": 603},
+        "throws": [{
+            "id": "spawn-1",
+            "type": "Shift + W + Jump + LKM",
+            "start": {"x": 548, "y": 97},
+            "image": [
+                "elbow-smoke-spwan-1.png"
+            ],
+            "video": null
+        }, {
+            "id": "spawn-2",
+            "type": "Shift + W + Jump + LKM",
+            "start": {"x": 525, "y": 93},
+            "image": [
+                "elbow-smoke-spwan-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "spawn-3",
+            "type": "Shift + W + Jump + LKM",
+            "start": {"x": 503, "y": 94},
+            "image": [
+                "elbow-smoke-spwan-3.png"
+            ],
+            "video": null
+        }, {
+            "id": "spawn-4",
+            "type": "Shift + W + Jump + LKM",
+            "start": {"x": 482, "y": 94},
+            "image": [
+                "elbow-smoke-spwan-4.png"
+            ],
+            "video": null
+        }, {
+            "id": "spawn-5",
+            "type": "Shift + W + Jump + LKM",
+            "start": {"x": 463, "y": 89},
+            "image": [
+                "elbow-smoke-spwan-5.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "mid-he",
+        "name": "Mid he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 417, "y": 581},
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": {"x": 498, "y": 371},
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "mid-molotov",
+        "name": "Mid molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 417, "y": 581},
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": {"x": 502, "y": 260},
+            "image": [
+                "mid-molotov.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-cave-molotov",
+        "name": "Outside cave molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": {"x": 720, "y": 588},
+        "throws": [{
+            "id": "ct",
+            "type": "Run + Jump + LKM",
+            "start": {"x": 712, "y": 257},
+            "bounces": [
+                { "x": 718, "y": 325 }
+            ],
+            "image": [
+                "molotov-outside-cave.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-cave-he",
+        "name": "Outside cave he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 718, "y": 586},
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": {"x": 715, "y": 357},
+            "bounces": [
+                { "x": 738, "y": 510 }
+            ],
+            "image": [
+                "he-outside-cave-1.png",
+                "he-outside-cave-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "cave-flash",
+        "name": "Cave flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 635, "y": 518},
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": {"x": 684, "y": 423},
+            "bounces": [
+                { "x": 673, "y": 547 }
+            ],
+            "image": [
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ramp-flash",
+        "name": "Ramp flash",
+        "type": "flash",
+        "side": "ct",
+        "end": {"x": 829, "y": 514},
+        "throws": [{
+            "id": "ct",
+            "type": "LKM",
+            "start": {"x": 707, "y": 384},
+            "image": [
+                "ramp-flash.png"
+            ],
+            "video": null
+        },{
+            "id": "ct",
+            "type": "Jump + LKM",
+            "start": {"x": 704, "y": 275},
+            "image": [
+                "ramp-flash-ct.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ramp-he",
+        "name": "Ramp he",
+        "type": "he",
+        "side": "ct",
+        "end": {"x": 804, "y": 580},
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": {"x": 808, "y": 477},
+            "bounces": [
+                { "x": 865, "y": 518 }
+            ],
+            "image": [
+                "ramp-he.png"
             ],
             "video": null
         }]
