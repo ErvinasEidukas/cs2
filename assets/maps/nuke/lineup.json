@@ -1,4 +1,208 @@
 {
-    "grenades": []
+    "grenades": [{
+        "id": "a-hut-molotov",
+        "name": "Hut molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": { "x": 533, "y": 635 },
+        "throws": [{
+            "id": "9",
+            "type": "W + LKM",
+            "start": { "x": 643, "y": 538},
+            "bounces": [
+                { "x": 529, "y": 620}
+            ],
+            "image": [
+                "a-hut-molotov-1.png",
+                "a-hut-molotov-2.png",
+                "a-hut-molotov-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "9-squeaky-smoke",
+        "name": "Squeaky smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": { "x": 506,"y": 666 },
+        "throws": [{
+            "id": "9",
+            "type": "Jump + LKM",
+            "start": { "x": 621, "y": 554 },
+            "bounces": [{ "x": 538, "y": 694 }],
+            "image": [
+                "9-squeaky-smoke-1.png",
+                "9-squeaky-smoke-2.png",
+                "9-squeaky-smoke-3.png"
+            ],
+            "video": null
+        }, {
+            "id": "a-site",
+            "type": "W + LKM",
+            "start": { "x": 595, "y": 650 },
+            "bounces": [
+                { "x": 487, "y": 679 }
+            ],
+            "image": [
+                "a-site-squeaky-smoke.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-squeaky-molotov",
+        "name": "Squeaky molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": { "x": 526, "y": 669 },
+        "throws": [{
+            "id": "9",
+            "type": "W + LKM",
+            "start": { "x": 619, "y": 555 },
+            "bounces": [
+                { "x": 538, "y": 696 }
+            ],
+            "image": [
+                "9-squeaky-molotov.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-squeaky-he",
+        "name": "Squeaky he",
+        "type": "he",
+        "side": "ct",
+        "end": { "x": 530, "y": 669 },
+        "throws": [{
+            "id": "silo",
+            "type": "W + LKM",
+            "start": { "x": 592, "y": 582 },
+            "bounces": [
+                { "x": 528, "y": 650 }
+            ],
+            "image": [
+                "silo-squeaky-he.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-strait-wall-smokes",
+        "name": "Strait wall",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 618, "y": 797 },
+        "throws": [{
+            "id": "car",
+            "type": "Jump + LKM",
+            "start": { "x": 313, "y": 651 },
+            "image": [
+                "strait-wall-1.png",
+                "strait-wall-2.png",
+                "strait-wall-3.png",
+                "strait-wall-4.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-diagonal-wall-smokes",
+        "name": "Diagonal wall",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 631, "y": 756 },
+        "throws": [{
+            "id": "door",
+            "type": "Jump + LKM",
+            "start": { "x": 302, "y": 631 },
+            "image": [
+                "diagonal-wall-1.png",
+                "diagonal-wall-2.png",
+                "diagonal-wall-3.png",
+                "diagonal-wall-4.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-molotov",
+        "name": "Outside molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": { "x": 502, "y": 789 },
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": { "x": 727, "y": 611 },
+            "bounces": [
+                { "x": 727, "y": 638 }
+            ],
+            "image": [
+                "outside-molotov-1.png",
+                "outside-molotov-2.png",
+                "outside-molotov-3.png",
+                "outside-molotov-4.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-smoke",
+        "name": "Outside smoke",
+        "type": "smoke",
+        "side": "ct",
+        "end": { "x": 568, "y": 754 },
+        "throws": [{
+            "id": "ct",
+            "type": "W + LKM",
+            "start": { "x": 658, "y": 675 },
+            "bounces": [
+                { "x": 573, "y": 771 }
+            ],
+            "image": [
+                "ct-outside-smoke-1.png",
+                "ct-outside-smoke-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "silo-molotov",
+        "name": "Silo molotov",
+        "type": "molotov",
+        "side": "ct",
+        "end": { "x": 511, "y": 709 },
+        "throws": [{
+            "id": "ct",
+            "type": "Jump + LKM",
+            "start": { "x": 687, "y": 727 },
+            "image": [
+                "silo-molotov-1.png",
+                "silo-molotov-2.png",
+                "silo-molotov-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "radio-he",
+        "name": "Radio he",
+        "type": "he",
+        "side": "ct",
+        "end": { "x": 501, "y": 543 },
+        "throws": [{
+            "id": "ramp",
+            "type": "Jump + LKM",
+            "start": { "x": 556, "y": 407 },
+            "image": [
+                "radio-he-1.png",
+                "radio-he-2.png"
+            ],
+            "video": null
+        }, {
+            "id": "ramp",
+            "type": "W + LKM",
+            "start": { "x": 546, "y": 497 },
+            "bounces": [
+                { "x": 497, "y": 472 }
+            ],
+            "image": [
+                "radio-push-he.png"
+            ],
+            "video": null
+        }]
+    }]
 }
-
