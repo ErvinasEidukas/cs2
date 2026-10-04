@@ -687,7 +687,7 @@
             "video": null
         }]
     }, {
-        "id": "cave-flash",
+        "id": "ct-cave-flash",
         "name": "Cave flash",
         "type": "flash",
         "side": "ct",
@@ -700,6 +700,8 @@
                 { "x": 673, "y": 547 }
             ],
             "image": [
+                "ct-cave-flash-1.png",
+                "ct-cave-flash-2.png"
             ],
             "video": null
         }]
