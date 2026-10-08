@@ -85,6 +85,107 @@
             "video": null
         }]
     }, {
+        "id": "door-he",
+        "name": "Door he",
+        "type": "he",
+        "side": "t",
+        "end": { "x": 518, "y": 667 },
+        "throws": [{
+            "id": "loby",
+            "type": "Run + LKM",
+            "start": { "x": 430, "y": 617 },
+            "bounces": [
+                { "x": 494, "y": 677 }
+            ],
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "main-molotov",
+        "name": "Main molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": { "x": 572, "y": 705 },
+        "throws": [{
+            "id": "loby",
+            "type": "Run + LKM",
+            "start": { "x": 449, "y": 635 },
+            "image": [],
+            "video": null
+        }]
+    }, {
+        "id": "double-door-molotov",
+        "name": "Double door molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": { "x": 293, "y": 325 },
+        "throws": [{
+            "id": "ramp",
+            "type": "Run + LKM",
+            "start": { "x": 248, "y": 217 },
+            "bounces": [
+                { "x": 325, "y": 290 }
+            ],
+            "image": [
+                "double-door-molotov-1.png",
+                "double-door-molotov-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ramp-flash-vs-awp",
+        "name": "Ramp flash vs awp",
+        "type": "flash",
+        "side": "t",
+        "end": { "x": 561, "y": 425 },
+        "throws": [{
+            "id": "radio",
+            "type": "LKM",
+            "start": { "x": 498, "y": 532 },
+            "image": [
+                "flash-ramp-vs-awp-0.png",
+                "flash-ramp-vs-awp-1.png",
+                "flash-ramp-vs-awp-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "vent-flash",
+        "name": "Vent flash",
+        "type": "flash",
+        "side": "t",
+        "end": { "x": 193, "y": 386 },
+        "throws": [{
+            "id": "a-site",
+            "type": "Jump + LKM",
+            "start": { "x": 564, "y": 646 },
+            "image": [
+                "flash-vent-1.png",
+                "flash-vent-2.png",
+                "flash-vent-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "ramp-flash-vs-close",
+        "name": "ramp flash vs close",
+        "type": "flash",
+        "side": "t",
+        "end": { "x": 554, "y": 483 },
+        "throws": [{
+            "id": "radio",
+            "type": "Run + LKM",
+            "start": { "x": 513, "y": 545 },
+            "bounces": [
+                { "x": 498, "y": 472 }
+            ],
+            "image": [
+                "ramp-flash-vs-close-1.png",
+                "ramp-flash-vs-close-2.png"
+            ],
+            "video": null
+        }]
+    }, {
         "id": "outside-strait-wall-smokes",
         "name": "Strait wall",
         "type": "smoke",
@@ -99,6 +200,23 @@
                 "strait-wall-2.png",
                 "strait-wall-3.png",
                 "strait-wall-4.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "outside-cross-smoke",
+        "name": "Cross smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 639, "y": 714 },
+        "throws": [{
+            "id": "red",
+            "type": "LKM",
+            "start": { "x": 548, "y": 787 },
+            "image": [
+                "outside-cross-smoke-1.png",
+                "outside-cross-smoke-2.png",
+                "outside-cross-smoke-3.png"
             ],
             "video": null
         }]
@@ -128,6 +246,18 @@
                 "t-start.png",
                 "jump-outside-wall.png",
                 "w-jump-outside-wall.png"
+            ],
+            "video": null
+        }, {
+            "id": "start",
+            "type": "1: Jump + LKM 2: Jump + LKM 3: Jump + W + LKM",
+            "start": { "x": 382, "y": 678 },
+            "image": [
+                "diagonal-wall-fence-0.png",
+                "diagonal-wall-fence-1.png",
+                "diagonal-wall-fence-2.png",
+                "diagonal-wall-fence-3.png",
+                "diagonal-wall-fence-4.png"
             ],
             "video": null
         }]
@@ -172,6 +302,23 @@
             "video": null
         }]
     }, {
+        "id": "vent-smoke",
+        "name": "Vent smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 549, "y": 670 },
+        "throws": [{
+            "id": "corner",
+            "type": "Jump + LKM",
+            "start": { "x": 366, "y": 608 },
+            "image": [
+                "vent-smoke-1.png",
+                "vent-smoke-2.png",
+                "vent-smoke-3.png"
+            ],
+            "video": null
+        }]
+    }, {
         "id": "heaven-smoke",
         "name": "Heaven smoke",
         "type": "smoke",
@@ -207,6 +354,22 @@
                 "hut-roof-molorov-1.png",
                 "hut-roof-molorov-2.png",
                 "hut-roof-molorov-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "secret-molotov",
+        "name": "Secret molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": { "x": 669, "y": 814 },
+        "throws": [{
+            "id": "box",
+            "type": "LKM",
+            "start": { "x": 509, "y": 770 },
+            "image": [
+                "secret-molotov-1.png",
+                "secret-molotov-2.png"
             ],
             "video": null
         }]
@@ -296,6 +459,18 @@
                 "t-a-main-smoke-3.png"
             ],
             
+            "video": null
+        }, {
+            "id": "box",
+            "type": "Run + LKM",
+            "start": { "x": 448, "y": 764 },
+            "bounces": [
+                { "x": 662, "y": 736 }
+            ],
+            "image": [
+                "box-main-smoke-1.png",
+                "box-main-smoke-2.png"
+            ],
             "video": null
         }]
     }, {
