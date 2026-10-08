@@ -110,7 +110,7 @@
         "end": { "x": 631, "y": 756 },
         "throws": [{
             "id": "door",
-            "type": "Jump + LKM",
+            "type": "1: Jump + LKM 2: Jump + LKM",
             "start": { "x": 302, "y": 631 },
             "image": [
                 "diagonal-wall-1.png",
@@ -118,6 +118,184 @@
                 "diagonal-wall-3.png",
                 "diagonal-wall-4.png"
             ],
+            "video": null
+        }, {
+            "id": "start",
+            "type": "1: Jump + LKM 2: Jump + W + LKM",
+            "start": { "x": 258, "y": 640 },
+            "image": [
+                "diagonal-wall-1.png",
+                "t-start.png",
+                "jump-outside-wall.png",
+                "w-jump-outside-wall.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "strait-wall-anti-reaveal",
+        "name": "Strait wall anti reaveal",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 621, "y": 776 },
+        "throws": [{
+            "id": "yellow",
+            "type": "Jump + LKM",
+            "start": { "x": 255, "y": 665 },
+            "image": [
+                "strait-wall-anti-reaveal-1.png",
+                "strait-wall-anti-reaveal-2.png",
+                "strait-wall-anti-reaveal-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "window-smoke",
+        "name": "Window smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 633, "y": 609 },
+        "throws": [{
+            "id": "car",
+            "type": "Run + Jump + LKM",
+            "start": { "x": 331, "y": 647 },
+            "bounces": [
+                { "x": 358, "y": 647 },
+                { "x": 730, "y": 628 }
+            ],
+            "image": [
+                "window-smoke-0.png",
+                "window-smoke-1.png",
+                "window-smoke-2.png",
+                "window-smoke-3.png",
+                "window-smoke-4.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "heaven-smoke",
+        "name": "Heaven smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 626, "y": 546 },
+        "throws": [{
+            "id": "wall",
+            "type": "Run + Jump + LKM",
+            "start": { "x": 258, "y": 640 },
+            "bounces": [
+                { "x": 363, "y": 632},
+                { "x": 757, "y": 594}
+            ],
+            "image": [
+                "t-start.png",
+                "heaven-smoke-1.png",
+                "heaven-smoke-2.png",
+                "heaven-smoke-0.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "hut-roof-molorov",
+        "name": "Hut roof molorov",
+        "type": "molotov",
+        "side": "t",
+        "end": { "x": 537, "y": 635 },
+        "throws": [{
+            "id": "roof",
+            "type": "Run + Jump + LKM",
+            "start": { "x": 413, "y": 650 },
+            "image": [
+                "hut-roof-molorov-1.png",
+                "hut-roof-molorov-2.png",
+                "hut-roof-molorov-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-molotov",
+        "name": "A site molotov",
+        "type": "molotov",
+        "side": "t",
+        "end": { "x": 594, "y": 558 },
+        "throws": [{
+            "id": "roof",
+            "type": "Jump + LKM",
+            "start": { "x": 475, "y": 600 },
+            "image": [
+                "a-site-molotov-1.png",
+                "a-site-molotov-2.png",
+                "a-site-molotov-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-flash",
+        "name": "A site flash",
+        "type": "flash",
+        "side": "t",
+        "end": { "x": 571, "y": 577 },
+        "throws": [{
+            "id": "roof",
+            "type": "Jump + LKM",
+            "start": { "x": 475, "y": 600 },
+            "image": [
+                "a-site-molotov-1.png",
+                "roof-a-site-flash-1.png",
+                "roof-a-site-flash-2.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "a-site-flash",
+        "name": "A site flash",
+        "type": "flash",
+        "side": "t",
+        "end": { "x": 571, "y": 577 },
+        "throws": [{
+            "id": "roof",
+            "type": "Run + Jump + LKM",
+            "start": { "x": 386, "y": 596 },
+            "image": [
+                "a-site-flash-1.png",
+                "a-site-flash-2.png",
+                "a-site-flash-3.png"
+            ],
+            "video": null
+        }]
+    }, {
+        "id": "t-a-main-smoke-1.png",
+        "name": "A main smoke",
+        "type": "smoke",
+        "side": "t",
+        "end": { "x": 602, "y": 718 },
+        "throws": [{
+            "id": "car",
+            "type": "Jump + LKM",
+            "start": { "x": 325, "y": 655 },
+            "image": [
+                "t-a-main-smoke-1.png",
+                "t-a-main-smoke-2.png",
+                "t-a-main-smoke-3.png"
+            ],
+            "video": null
+        }, {
+            "id": "car",
+            "type": "Jump + W + LKM",
+            "start": { "x": 246, "y": 651 },
+            "image": [
+                "insta-main-smoke.png",
+                "t-a-main-smoke-3.png"
+            ],
+            "video": null
+        }, {
+            "id": "trash",
+            "type": "Jump + LKM",
+            "start": { "x": 269, "y": 666 },
+            "image": [
+                "a-main-smoke-trash-0.png",
+                "a-main-smoke-trash-1.png",
+                "t-a-main-smoke-3.png"
+            ],
+            
             "video": null
         }]
     }, {
