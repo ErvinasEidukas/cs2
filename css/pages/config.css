@@ -1,0 +1,875 @@
+/* ========================================
+   FONTS
+======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ========================================
+   THEME VARIABLES
+======================================== */
+:root {
+  --bg: #101214;
+  --panel: #191c1f;
+  --panel-alt: #202428;
+  --line: #353b40;
+  --text: #f1f3f4;
+  --muted: #9ca6ae;
+  --accent: #e5a33d;
+  --accent-light: #ffd18a;
+  --red: #e18478;
+  --green: #8acda3;
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% -15%,
+      #2b251b 0,
+      transparent 44%
+    ),
+    var(--bg);
+  color: var(--text);
+  font: 14px/1.5 Inter, system-ui, -apple-system, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================
+   SITE HEADER
+======================================== */
+.site-header {
+  min-height: 92px;
+  padding: 18px max(24px, calc((100% - 1320px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  background: #151719;
+}
+
+.back-link {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  color: var(--accent-light);
+}
+
+.eyebrow,
+.step {
+  margin: 0 0 3px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  color: var(--accent);
+}
+
+.site-header h1 {
+  margin: 0;
+  font: 800 30px/1 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.site-header h1 span {
+  color: var(--accent);
+}
+
+.header-right {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+/* ========================================
+   MAIN CONTENT AND WORKSPACE
+======================================== */
+main {
+  max-width: 1320px;
+  padding: 24px;
+  margin: auto;
+}
+
+.intro {
+  margin: 0 0 22px;
+  color: var(--muted);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.panel {
+  min-width: 0;
+  padding: 20px;
+  background: linear-gradient(145deg, #1b1e21, #17191b);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px #00000014;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.panel h2 {
+  margin: 0;
+  font: 700 23px/1.15 'Barlow Condensed', Impact, sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.panel-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #5a482d;
+  border-radius: 8px;
+  background: #2b251b;
+  color: var(--accent-light);
+  font-size: 20px;
+}
+
+.muted {
+  margin: 7px 0 15px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.compact {
+  margin: 5px 0 10px;
+}
+
+/* ========================================
+   MAIN KEYBOARD
+======================================== */
+.keyboard {
+  display: grid;
+  gap: 6px;
+  padding: 13px;
+  background: #121416;
+  border: 1px solid #30363a;
+  border-radius: 9px;
+  overflow-x: auto;
+}
+
+.key-row {
+  display: flex;
+  gap: 5px;
+  min-width: 550px;
+}
+
+/* ========================================
+   SHARED KEY STYLES
+======================================== */
+.key {
+  position: relative;
+  min-width: 0;
+  flex: 1;
+  height: 43px;
+  padding: 4px 3px;
+  border: 1px solid #4b5258;
+  border-bottom-width: 3px;
+  border-radius: 5px;
+  background: linear-gradient(160deg, #33393e, #24282c);
+  color: #e5e8ea;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: inset 0 1px #ffffff0a;
+  transition:
+    background 0.12s,
+    border-color 0.12s,
+    transform 0.12s;
+}
+
+.key:hover {
+  border-color: var(--accent-light);
+  background: #454039;
+}
+
+.key:active {
+  transform: translateY(1px);
+  border-bottom-width: 2px;
+}
+
+.key .sub {
+  display: block;
+  color: #9ea7ad;
+  font-size: 8px;
+  font-weight: 500;
+}
+
+/* Keyboard key widths */
+.key.w15 {
+  flex: 1.5;
+}
+
+.key.w2 {
+  flex: 2;
+}
+
+.key.w25 {
+  flex: 2.5;
+}
+
+.key.w3 {
+  flex: 3;
+}
+
+.key.space {
+  flex: 6;
+}
+
+/* Selected key */
+.key.selected {
+  background: linear-gradient(145deg, #f2b451, #d99025);
+  border-color: #ffe0a8;
+  color: #20180c;
+  box-shadow:
+    0 0 0 2px #e5a33d36,
+    inset 0 1px #fff8;
+}
+
+.key.selected .sub {
+  color: #5c3b0d;
+}
+
+/* Keys that already have a bind */
+.key.bound:not(.selected) {
+  border-color: #bb8334;
+  box-shadow: inset 0 -2px #bb8334;
+}
+
+/* ========================================
+   INPUT DEVICE LAYOUT
+======================================== */
+.input-devices {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 15px;
+}
+
+.numpad-wrap,
+.navigation-wrap,
+.mouse-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-devices h3,
+.binds-footer h3,
+.pending h3 {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   NUMPAD
+======================================== */
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30px, 1fr));
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.numpad .key {
+  height: 38px;
+}
+
+/* ========================================
+   NAVIGATION KEYS
+======================================== */
+.navigation-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(48px, 1fr));
+  grid-template-rows: repeat(4, 46px);
+  gap: 5px;
+  width: 100%;
+  max-width: 180px;
+}
+
+.navigation-layout .key {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  padding: 4px;
+}
+
+/* ========================================
+   MOUSE LAYOUT
+======================================== */
+.mouse-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 52px 32px 28px;
+  gap: 4px;
+  min-height: 135px;
+  margin-top: 8px;
+  padding: 12px 10px 10px;
+  border: 1px solid #41484d;
+  border-radius: 48px 48px 30px 30px;
+  background: linear-gradient(140deg, #363d42, #1c2023 75%);
+  overflow: hidden;
+}
+
+.mouse-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 58px;
+  left: 50%;
+  border-left: 2px solid #687178;
+  pointer-events: none;
+}
+
+.mouse-layout .key {
+  z-index: 1;
+  height: auto;
+  border-radius: 9px 9px 5px 5px;
+  background: #252a2e;
+  font-size: 9px;
+}
+
+.mouse-layout .key[data-key="MOUSE1"] {
+  border-radius: 25px 5px 5px;
+}
+
+.mouse-layout .key[data-key="MOUSE2"] {
+  border-radius: 5px 25px 5px 5px;
+}
+
+.mouse-layout .mouse-wheel {
+  grid-column: 1 / 3;
+  justify-self: center;
+  width: 44px;
+  height: 24px;
+  flex: none;
+}
+
+.mouse-layout .mouse-side {
+  display: flex;
+  grid-column: 1 / 3;
+  gap: 4px;
+}
+
+.mouse-layout .mouse-side .key {
+  flex: 1;
+  border-radius: 5px;
+}
+
+/* ========================================
+   SELECTED KEY CARD
+======================================== */
+.selected-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 13px 14px;
+  border: 1px solid #55452c;
+  border-radius: 9px;
+  background: #252117;
+}
+
+.selected-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.selected-card strong {
+  color: var(--accent-light);
+  font: 800 26px/1.1 'Barlow Condensed', Impact, sans-serif;
+}
+
+/* ========================================
+   INPUTS AND FORM FIELDS
+======================================== */
+.field {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.field label {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #111315;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #e5a33d60;
+  border-color: var(--accent);
+}
+
+.search {
+  width: 100%;
+  margin: 12px 0;
+}
+
+.inline-field {
+  display: flex;
+  gap: 7px;
+}
+
+.inline-field input {
+  flex: 1;
+}
+
+/* ========================================
+   COMMAND TYPE RADIO FILTERS
+======================================== */
+.command-type-filter,
+.command-type-filters,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 12px;
+}
+
+.command-type-filter label,
+.command-type-filters label,
+.radio-group label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #111315;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.command-type-filter input[type="radio"],
+.command-type-filters input[type="radio"],
+.radio-group input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.command-type-filter label:has(input[type="radio"]:checked),
+.command-type-filters label:has(input[type="radio"]:checked),
+.radio-group label:has(input[type="radio"]:checked) {
+  border-color: var(--accent);
+  background: #2b251b;
+  color: var(--accent-light);
+}
+
+.command-type-filter label:focus-within,
+.command-type-filters label:focus-within,
+.radio-group label:focus-within {
+  outline: 2px solid #e5a33d60;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   COMMAND LIST
+======================================== */
+.command-list {
+  display: grid;
+  gap: 5px;
+  max-height: 300px;
+  padding-right: 3px;
+  overflow: auto;
+}
+
+.command-group {
+  padding: 8px 2px 2px;
+  color: var(--accent-light);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.command-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: #22262a;
+  color: var(--text);
+  text-align: left;
+}
+
+.command-option:hover,
+.command-option.chosen {
+  border-color: #8a672f;
+  background: #2d281f;
+}
+
+.command-option strong {
+  font-size: 12px;
+}
+
+.command-option code {
+  max-width: 48%;
+  color: #c3a77b;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-list {
+  padding: 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+.btn {
+  padding: 9px 13px;
+  border: 1px solid #4a5157;
+  border-radius: 7px;
+  background: #292e32;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  border-color: var(--accent-light);
+}
+
+.btn.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #1e170c;
+}
+
+.btn.primary:hover {
+  background: #f2b452;
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+.btn.danger-ghost {
+  background: transparent;
+  color: var(--red);
+}
+
+.btn.small {
+  padding: 7px 10px;
+  font-size: 11px;
+}
+
+.btn.full {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ========================================
+   PENDING ACTIONS
+======================================== */
+.pending {
+  margin-top: 17px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #141618;
+}
+
+.pending-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pending-heading span {
+  color: var(--accent-light);
+  font-size: 11px;
+}
+
+.pending-list {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.pending-list li {
+  padding-right: 4px;
+  color: #e2e5e7;
+  font-size: 12px;
+}
+
+.pending-list button {
+  float: right;
+  border: 0;
+  background: none;
+  color: var(--red);
+  font-size: 16px;
+}
+
+.pending-list:empty {
+  display: none;
+}
+
+/* ========================================
+   CONFIG EDITOR
+======================================== */
+.config-panel {
+  margin-top: 18px;
+}
+
+.config-heading {
+  margin-bottom: 4px;
+}
+
+.config-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0 10px;
+}
+
+.status {
+  color: var(--green);
+  font-size: 11px;
+}
+
+#configText {
+  display: block;
+  width: 100%;
+  min-height: 260px;
+  padding: 15px;
+  border: 1px solid #343b40;
+  border-radius: 8px;
+  background: #101214;
+  color: #dce2e5;
+  font: 12px/1.7 ui-monospace, SFMono-Regular, Menlo, monospace;
+  tab-size: 2;
+  resize: vertical;
+}
+
+/* ========================================
+   DETECTED BINDS
+======================================== */
+.binds-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 17px 0 9px;
+}
+
+.binds-footer .muted {
+  margin: 0;
+}
+
+.detected-binds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.detected-chip {
+  padding: 5px 8px;
+  border: 1px solid #66502f;
+  border-radius: 5px;
+  background: #272219;
+  color: var(--accent-light);
+  font: 11px ui-monospace, monospace;
+}
+
+/* ========================================
+   PERSONAL CONFIG PANEL
+======================================== */
+.personal-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.personal-panel p {
+  max-width: 800px;
+}
+
+.privacy-note {
+  margin: 15px 2px;
+  color: #7e898f;
+  font-size: 11px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+  padding: 20px;
+  border-top: 1px solid var(--line);
+  color: #69737a;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE: TABLETS
+======================================== */
+@media (width <= 930px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .keyboard {
+    overflow-x: auto;
+  }
+
+  .keyboard-panel {
+    min-width: 0;
+  }
+
+  .command-list {
+    max-height: 260px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MOBILE
+======================================== */
+@media (width <= 600px) {
+  main {
+    padding: 16px 11px;
+  }
+
+  .site-header {
+    padding: 15px 12px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .input-devices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .key-row {
+    gap: 3px;
+  }
+
+  .key {
+    height: 36px;
+    padding: 2px 1px;
+    font-size: 9px;
+  }
+
+  .key .sub {
+    font-size: 7px;
+  }
+
+  .personal-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .config-toolbar .btn {
+    flex: 1;
+  }
+
+  .selected-card strong {
+    font-size: 24px;
+  }
+}
+
+/* ========================================
+   INPUT DEVICE LAYOUT OVERRIDES
+======================================== */
+@media (width <= 700px) {
+  .input-devices {
+    gap: 20px;
+  }
+}

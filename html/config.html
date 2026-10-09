@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS2 Config Builder</title>
+  <link rel="stylesheet" href="../css/pages/config.css">
+  <script src="../js/pages/config/main.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="back-link" href="../index.html" aria-label="Back to home">←</a>
+  <div><p class="eyebrow">COUNTER-STRIKE 2</p><h1>Config <span>Builder</span></h1></div>
+  <div class="header-right">BUILD YOUR BINDS</div>
+</header>
+
+<main>
+  <p class="intro">Select a key, add one or more actions, then save them into your config. Your work is kept in this browser automatically.</p>
+
+  <div class="workspace">
+    <section class="panel keyboard-panel">
+      <div class="panel-heading"><div><p class="step">STEP 01</p><h2>Select a key</h2></div><span class="panel-icon">⌨</span></div>
+      <p class="muted">Choose a key on the keyboard or mouse. Click the selected key again to deselect it. Keys already used in a bind are highlighted.</p>
+      <div id="keyboard" class="keyboard" aria-label="Clickable keyboard layout"></div>
+      <div class="input-devices">
+        <div class="numpad-wrap"><h3>Numpad</h3><div id="numpad" class="numpad" aria-label="Clickable numeric keypad"></div></div>
+        <div class="navigation-wrap"><h3>Navigation</h3><div id="navigation" class="navigation-layout" aria-label="Clickable navigation keys"></div></div>
+        <div class="mouse-wrap"><h3>Mouse</h3><div id="mouse" class="mouse-layout" aria-label="Clickable mouse controls"></div></div>
+      </div>
+      <div class="selected-card"><div><span class="label">SELECTED KEY</span><strong id="selectedKey">A</strong></div><button class="btn ghost small" id="unbindSelected">Unbind key</button></div>
+    </section>
+
+    <section class="panel actions-panel">
+      <div class="panel-heading"><div><p class="step">STEP 02</p><h2>Choose actions</h2></div><span class="panel-icon">＋</span></div>
+      <p class="muted">Choose what kind of command you want to add, then filter and select an action.</p>
+      <fieldset class="command-type-filter">
+        <legend>Command type</legend>
+        <label><input type="radio" name="commandType" value="bind" checked> Binds</label>
+        <label><input type="radio" name="commandType" value="game"> Game EXE</label>
+        <label><input type="radio" name="commandType" value="steam"> Steam EXE</label>
+      </fieldset>
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="All">All Categories</option>
+          <option value="Movement">Movement</option>
+          <option value="Weapons">Weapons</option>
+          <option value="Grenades">Grenades</option>
+          <option value="Buy binds">Buy binds</option>
+          <option value="Communication">Communication</option>
+          <option value="Gameplay">Gameplay</option>
+          <option value="Radar">Radar</option>
+          <option value="Demo Review">Demo Review</option>
+          <option value="HUD">HUD</option>
+          <option value="Crosshair">Crosshair</option>
+          <option value="Practice Setup">Practice Setup</option>
+          <option value="Grenade Practice">Grenade Practice</option>
+          <option value="Aim Training">Aim Training</option>
+          <option value="Bot Practice">Bot Practice</option>
+          <option value="Server Settings">Server Settings</option>
+          <option value="Knife Commands">Knife Commands</option>
+          <option value="Autoexec / Startup Config">Autoexec / Startup Config</option>
+          <option value="Steam Launch Options">Steam Launch Options</option>
+          <option value="Custom">Custom command</option>
+        </select>
+      </div>
+      <input id="commandSearch" class="search" type="search" placeholder="Search commands, e.g. noclip…" aria-label="Search commands">
+      <div id="commandList" class="command-list"></div>
+      <div class="custom-command field">
+        <label for="customCommand">Custom command / launch option</label>
+        <div class="inline-field"><input id="customCommand" placeholder="e.g. noclip, say_team rotate B, or -novid"><button class="btn" id="addCustom">Add</button></div>
+      </div>
+      <div class="pending">
+        <div class="pending-heading"><h3>Pending actions</h3><span id="pendingCount">0 actions</span></div>
+        <p class="muted compact">Selected actions are collected here first. Save them using the button below.</p>
+        <ol id="pendingList" class="pending-list"></ol>
+        <button id="saveBind" class="btn primary full">Save to config</button>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel config-panel">
+    <div class="panel-heading config-heading"><div><p class="step">STEP 03</p><h2>Generated config</h2></div><span class="muted" id="bindSummary">0 detected key binds</span></div>
+    <p class="muted">This editor is fully editable. New commands are appended to the end. Use Order to group Steam EXE options first, Game EXE commands second, and binds alphabetically by key.</p>
+    <div class="config-toolbar">
+      <button class="btn primary" id="downloadConfig">Download .cfg</button>
+      <button class="btn" id="copyConfig">Copy text</button>
+      <button class="btn" id="orderConfig">Order</button>
+      <button class="btn danger-ghost" id="clearConfig">Clear config</button>
+      <span id="saveStatus" class="status" role="status" aria-live="polite"></span>
+    </div>
+    <textarea id="configText" spellcheck="false" aria-label="Editable CS2 config text" placeholder='// Your config appears here&#10;bind "w" "+forward"'></textarea>
+    <div class="binds-footer"><h3>Detected binds</h3><span class="muted">Parsed from the text above</span></div>
+    <div id="detectedBinds" class="detected-binds"><p class="muted">No binds detected yet.</p></div>
+  </section>
+
+  <section class="panel personal-panel" id="personal-config">
+    <div><p class="step">STATIC DOWNLOAD</p><h2>Personal config</h2><p class="muted">A personal config can be embedded here and downloaded whenever this page is hosted. Replace the example text in <code>main.js</code> with your own tested config.</p></div>
+    <button class="btn" id="downloadPersonal">Download personal.cfg</button>
+  </section>
+  <p class="privacy-note">Drafts are stored in this browser using localStorage. No config is uploaded to a server. Browser data clearing or a different browser/device may remove or not include your saved draft.</p>
+</main>
+<footer>CS2 Config Builder</footer>
+</body>
+</html>
